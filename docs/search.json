@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Virginia Beach Housing Study Update",
+    "section": "",
+    "text": "About\nCurrent outline:\nExecutive summary\n\nPreface\n└── About VCHR and HFV\n└── Acknowledgements\n└── Scope of work and process\n\nIntroduction\n└── Major changes since 2016\n\nData and methodological notes\n└── Quantitative analysis\n└── Qualitative analysis\n\nImportant terms and references\n\nHousehold characteristics\n└── Household demographics\n└── Household composition and living arrangement\n└── Households by tenure\n\nMarket dynamics\n└── Rental\n└── Homeownership\n└── Vacant housing\n\nHousing affordability\n└── Workforce housing affordability\n└── Affordable housing\n└── Owned/for─sale gap analysis\n└── Naturally occurring affordable housing (NOAH)\n\nConclusions\n\nSolutions\n└── Overview\n└── Strategic priorities\n└── Easy wins\n└── Background work\n\nAppendices\n└── Appendix 1: Public and expert engagement\n└── Appendix 2: Workforce housing affordability analysis\n└── Appendix 3: Naturally occurring affordable housing analysis\nRevised outline?\nExecutive summary\n\nPreface\n└── About VCHR and HFV\n└── Acknowledgements\n└── Scope of work and process\n\nIntroduction\n└── Major changes since 2016\n└── Data and methodological notes\n  └── Quantitative analysis\n  └── Qualitative analysis\n└── Important terms and references\n\nHousehold characteristics\n└── Household demographics\n└── Household composition and living arrangement\n└── Households by tenure\n\nMarket dynamics\n└── Rental\n└── Homeownership\n└── Vacant housing\n\nHousing affordability\n└── Workforce housing affordability\n└── Affordable housing\n└── Owned/for-sale gap analysis\n└── Naturally occurring affordable housing (NOAH)\n\nConclusions\n\nSolutions\n└── Overview\n└── Strategic priorities\n└── Easy wins\n└── Background work\n\nAppendices\n└── Appendix 1: Public and expert engagement\n└── Appendix 2: Workforce housing affordability analysis\n└── Appendix 3: Naturally occurring affordable housing analysis"
+  },
+  {
+    "objectID": "executive-summary.html",
+    "href": "executive-summary.html",
+    "title": "Executive summary",
+    "section": "",
+    "text": "Goes here"
+  },
+  {
+    "objectID": "preface.html",
+    "href": "preface.html",
+    "title": "Preface",
+    "section": "",
+    "text": "Goes here"
+  },
+  {
+    "objectID": "data-methods-notes.html#quantitative-analysis",
+    "href": "data-methods-notes.html#quantitative-analysis",
+    "title": "1  Data and methodological notes",
+    "section": "1.1 Quantitative analysis",
+    "text": "1.1 Quantitative analysis\n…"
+  },
+  {
+    "objectID": "data-methods-notes.html#qualitative-analysis",
+    "href": "data-methods-notes.html#qualitative-analysis",
+    "title": "1  Data and methodological notes",
+    "section": "1.2 Qualitative analysis",
+    "text": "1.2 Qualitative analysis\n…"
+  },
+  {
+    "objectID": "solutions-overview.html#policy-matrix",
+    "href": "solutions-overview.html#policy-matrix",
+    "title": "2  Overview",
+    "section": "2.1 Policy matrix",
+    "text": "2.1 Policy matrix\n…"
+  },
+  {
+    "objectID": "solutions-overview.html#policy-rankings",
+    "href": "solutions-overview.html#policy-rankings",
+    "title": "2  Overview",
+    "section": "2.2 Policy rankings",
+    "text": "2.2 Policy rankings\n…"
+  }
+]
