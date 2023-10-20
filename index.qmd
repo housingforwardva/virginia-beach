@@ -1,0 +1,97 @@
+# About {.unnumbered}
+
+Current outline:
+
+```
+Executive summary
+
+Preface
+└── About VCHR and HFV
+└── Acknowledgements
+└── Scope of work and process
+
+Introduction
+└── Major changes since 2016
+
+Data and methodological notes
+└── Quantitative analysis
+└── Qualitative analysis
+
+Important terms and references
+
+Household characteristics
+└── Household demographics
+└── Household composition and living arrangement
+└── Households by tenure
+
+Market dynamics
+└── Rental
+└── Homeownership
+└── Vacant housing
+
+Housing affordability
+└── Workforce housing affordability
+└── Affordable housing
+└── Owned/for─sale gap analysis
+└── Naturally occurring affordable housing (NOAH)
+
+Conclusions
+
+Solutions
+└── Overview
+└── Strategic priorities
+└── Easy wins
+└── Background work
+
+Appendices
+└── Appendix 1: Public and expert engagement
+└── Appendix 2: Workforce housing affordability analysis
+└── Appendix 3: Naturally occurring affordable housing analysis
+```
+
+Revised outline?
+
+```
+Executive summary
+
+Preface
+└── About VCHR and HFV
+└── Acknowledgements
+└── Scope of work and process
+
+Introduction
+└── Major changes since 2016
+└── Data and methodological notes
+  └── Quantitative analysis
+  └── Qualitative analysis
+└── Important terms and references
+
+Household characteristics
+└── Household demographics
+└── Household composition and living arrangement
+└── Households by tenure
+
+Market dynamics
+└── Rental
+└── Homeownership
+└── Vacant housing
+
+Housing affordability
+└── Workforce housing affordability
+└── Affordable housing
+└── Owned/for-sale gap analysis
+└── Naturally occurring affordable housing (NOAH)
+
+Conclusions
+
+Solutions
+└── Overview
+└── Strategic priorities
+└── Easy wins
+└── Background work
+
+Appendices
+└── Appendix 1: Public and expert engagement
+└── Appendix 2: Workforce housing affordability analysis
+└── Appendix 3: Naturally occurring affordable housing analysis
+```

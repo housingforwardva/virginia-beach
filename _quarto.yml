@@ -1,0 +1,59 @@
+project:
+  type: book
+  execute-dir: project
+  output-dir: docs
+
+execute: 
+  freeze: auto
+
+book:
+  title: "Virginia Beach Housing Study Update"
+  repo-url: https://github.com/housingforwardva/virginia-beach
+  output-file: "virginia-beach-housing-study-update"
+  downloads: pdf
+  author:
+    - name: Virginia Center for Housing Research
+      url: https://mlsoc.vt.edu/research/vchr.html
+    - name: HousingForward Virginia
+      url: https://housingforwardva.org/
+  date: today
+  date-format: long
+  chapters:
+    - index.qmd
+    - executive-summary.qmd
+    - preface.qmd
+    - part: "Introduction"
+      chapters:
+        - data-methods-notes.qmd
+    - part: "Solutions"
+      chapters:
+        - solutions-overview.qmd
+    - references.qmd
+  appendices: 
+    - appx-engagement.qmd
+
+format:
+  html:
+    theme:
+      - lumen
+    grid: 
+      sidebar-width: 350px
+    fontsize: "100%"
+    #template-partials:
+    #  - toc.html
+    toc-title: "On this page"
+  pdf:
+    documentclass: scrreprt
+    mainfont: "Open Sans"
+    fig-pos: "H"
+    include-in-header:
+      text: |
+        \usepackage{float}
+        \raggedbottom
+  docx: 
+    toc: true
+    number-sections: true
+    reference-doc: custom-reference-doc.docx
+
+bibliography: references.bib
+
