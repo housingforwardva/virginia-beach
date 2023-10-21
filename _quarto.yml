@@ -37,7 +37,7 @@ format:
     theme:
       - lumen
     grid: 
-      sidebar-width: 350px
+      sidebar-width: 300px
     fontsize: "100%"
     #template-partials:
     #  - toc.html
@@ -54,6 +54,6 @@ format:
     toc: true
     number-sections: true
     reference-doc: custom-reference-doc.docx
+    fig-align: left
 
 bibliography: references.bib
-
