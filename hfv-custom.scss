@@ -1,0 +1,55 @@
+// import fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/*-- scss:defaults --*/
+
+// custom colors
+
+$hfv-shadow: #1a3454;
+$hfv-sky: #53c6c6;
+$hfv-lilac: #9691cf;
+$hfv-grass: #3a9f9c;
+$hfv-berry: #B1005F;
+$hfv-desert: #e66b3f;
+
+$hfv-shadow-muted: #808ea0;
+$hfv-sky-muted: #9fdfdf;
+
+// global colors
+
+//$body-bg: #FFFCF0;
+$body-color: #1C1B1A;
+
+// global fonts
+
+//$font-family-sans-serif: 'Open Sans', sans-serif;
+
+// other
+
+/*-- scss:rules --*/
+
+.hfv-shadow {
+  color: $hfv-shadow;
+}
+
+.hfv-sky {
+  color: $hfv-sky;
+}
+
+.hfv-lilac {
+  color: $hfv-lilac;
+}
+
+.hfv-grass {
+  color: $hfv-grass;
+}
+
+.hfv-berry {
+  color: $hfv-berry;
+}
+
+.hfv-desert {
+  color: $hfv-desert;
+}

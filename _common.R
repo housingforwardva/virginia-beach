@@ -1,5 +1,4 @@
-library(tidyverse)
-library(hdatools)
+# Set global knitr chunk options
 
 knitr::opts_chunk$set(
   echo = FALSE,
@@ -11,21 +10,26 @@ knitr::opts_chunk$set(
   fig.align = "left"
 )
 
+# Load core packages
+
+library(tidyverse)
+library(hdatools)
+
+# Set plot rendering options
+
 if (knitr::is_html_output()) {
   
   knitr::opts_chunk$set(
     out.width = "100%"
   )
   
-  
-  
   ggplot2::theme_set(
-    hdatools::theme_hfv(base_size = 16)
+    hdatools::theme_hfv(base_size = 11)
   )
 
   } else {
   
     ggplot2::theme_set(
-      hdatools::theme_hfv(base_size = 10)
+      hdatools::theme_hfv(base_size = 9)
     )
 }

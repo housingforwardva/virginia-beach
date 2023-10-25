@@ -7,10 +7,11 @@ execute:
   freeze: auto
 
 book:
+
   title: "Virginia Beach Housing Study Update"
   repo-url: https://github.com/housingforwardva/virginia-beach
   output-file: "virginia-beach-housing-study-update"
-  downloads: pdf
+  downloads: [pdf, docx]
   author:
     - name: Virginia Center for Housing Research
       url: https://mlsoc.vt.edu/research/vchr.html
@@ -18,8 +19,10 @@ book:
       url: https://housingforwardva.org/
   date: today
   date-format: long
+  
   chapters:
     - index.qmd
+    - test.qmd
     - executive-summary.qmd
     - preface.qmd
     - part: "Introduction"
@@ -30,31 +33,39 @@ book:
         - current-efforts.qmd
         - solutions-overview.qmd
     - references.qmd
+  
   appendices: 
     - a1-engagement.qmd
 
 format:
+
   html:
     theme:
       - lumen
+      - hfv-custom.scss
     grid: 
-      sidebar-width: 300px
+      sidebar-width: 375px
     fontsize: "100%"
     #template-partials:
     #  - toc.html
     toc-title: "On this page"
-  pdf:
-    documentclass: scrreprt
-    mainfont: "Open Sans"
-    fig-pos: "H"
-    include-in-header:
-      text: |
-        \usepackage{float}
-        \raggedbottom
+    
   docx: 
     toc: true
+    toc-depth: 1
     number-sections: true
-    reference-doc: custom-reference-doc.docx
+    reference-doc: hfv-report-template.docx
     fig-align: left
+    filters: 
+      - hfv-colors.lua
+    
+  #pdf:
+  #  documentclass: scrreprt
+  #  mainfont: "Open Sans"
+  #  fig-pos: "H"
+  #  include-in-header:
+  #    text: |
+  #      \usepackage{float}
+  #      \raggedbottom
 
 bibliography: references.bib
