@@ -1,9 +1,63 @@
 # Overview
 
+This section proposes and describes eight different policy and programmatic recommendations for the City to pursue as part of its efforts to address housing affordability and opportunity.
+
+The recommendations are based on VCHR’s analysis of housing needs in the City, VCHR’s engagement with community members, and conversations with City Council and City staff. They also incorporate input from City Council at two working sessions between August and September.
+
+Solutions are organized into three categories:
+
+* **Strategic priorities** that build the City’s capacity to make significant strides, but may require substantial planning and investment.
+* **Easy wins** that require fewer decision points and could demonstrate meaningful success in the near future.
+* **Background work** activities that take advantage of ongoing or upcoming efforts to improve the City’s planning, regulatory, and operational approaches to housing.
+
 ## Policy matrix
 
-...
+To help evaluate and prioritize housing policy strategies, Virginia Beach can use a matrix like the one below. Relative to one another, proposals are ranked according to their expected positive impact and their complexity (or level of effort) to implement.
+
+![](img/matrix.png)
+
+Each strategy then falls into one of these categories:
+
+**Strategic priorities**
+
+* Focused activities that require more effort but have the biggest payoff.
+* Build long-term capacity to address housing needs.
+* Provide opportunity for City to innovate and lead among peers.
+
+**Easy wins**
+
+* Simple tasks to begin soon that do not require as much work but still result in meaningful progress.
+* Fewer decision points required, but some may involve novel funding or policy choices.
+* Build on clear, proven examples of success.
+* Take advantage of existing infrastructure without much need for additional capacity.
+
+**Background work**
+
+* Activities that require additional homework but can likely be completed within current or future planning efforts.
+* Long-term objectives to migrate day-to-day City operations to support its housing goals.
+
+**Thankless tasks**
+
+* Not advisable; revise or abandon tasks in the future if they begin to meet this criteria.
 
 ## Policy rankings
 
-...
+Based on these criteria, these are the rankings for the eight solutions.
+
+**Strategic priorities**
+
+* Develop a City-managed Housing Trust Fund
+* Use Virginia Beach Development Authority to fund new large-scale, mixed-use development projects
+* Design and incorporate a housing education campaign into successful community engagement efforts
+
+**Easy wins**
+
+* Create a Housing Assistance Fund for workers
+* Leverage Virginia Statewide Community Land Trust to create permanent affordable homeownership opportunities
+
+**Background work**
+
+* Pursue innovative self-sustaining mixed-income, mixed-use rental development options
+* Research opportunities to simplify and streamline the permitting and review processes
+* Consider an advisory board to guide the development of new zoning ordinance changes *and* assess options for redesigning the Workforce Housing Program to increase its impact
+

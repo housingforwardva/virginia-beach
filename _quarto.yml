@@ -27,6 +27,7 @@ book:
         - data-methods-notes.qmd
     - part: "Solutions"
       chapters:
+        - current-efforts.qmd
         - solutions-overview.qmd
     - references.qmd
   appendices: 
