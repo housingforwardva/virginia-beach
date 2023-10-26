@@ -11,7 +11,7 @@ book:
   title: "Virginia Beach Housing Study Update"
   repo-url: https://github.com/housingforwardva/virginia-beach
   output-file: "virginia-beach-housing-study-update"
-  downloads: [pdf, docx]
+  downloads: docx
   author:
     - name: Virginia Center for Housing Research
       url: https://mlsoc.vt.edu/research/vchr.html

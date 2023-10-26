@@ -61,36 +61,30 @@ This is a citation [@ref1].
 
 ## Callout boxes
 
-
-
-::: {.callout-tip}
-### Tip
-This is a tip callout box.
-:::
-
-
 ::: {.callout-note}
 ### Note
 This is a note callout box.
 :::
-
-
-::: {.callout-important}
-### Important
-This is an important callout box.
-:::
-
-::: {.callout-caution}
-### Caution
-This is a caution callout box.
-:::
-
 
 ::: {.callout-warning}
 ### Warning
 This is a warning callout box.
 :::
 
+::: {.callout-important}
+### Important
+This is an important callout box.
+:::
+
+::: {.callout-tip}
+### Tip
+This is a tip callout box.
+:::
+
+::: {.callout-caution}
+### Caution
+This is a caution callout box.
+:::
 
 ## Images
 
