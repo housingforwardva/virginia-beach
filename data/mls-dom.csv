@@ -1,0 +1,11 @@
+type,dom,price
+Total,40,
+Quartile 1 ,36,260000
+Quartile 2,38,338000
+Quartile 3,40,457125
+Quartile 4,44,10300000
+Quintile 1,36,240000
+Quintile 2,38,310000
+Quintile 3,39.5,375000
+Quintile 4,41,500000
+Quintile 5,45,10300000

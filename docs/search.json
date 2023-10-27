@@ -25,7 +25,7 @@
     "href": "test.html#text",
     "title": "Test content",
     "section": "Text",
-    "text": "Text\nHere is a link.\n\nTerm\n\nThis is the definition\n\n\n\nThis is a blockquote\nThis is a blockquote\nThis is a blockquote\nThis is a blockquote\n\nCustom SHADOW color\nCustom GRASS color"
+    "text": "Text\nHere is a link.\n\nTerm\n\nThis is the definition\n\n\n\nThis is a blockquote\nThis is a blockquote\nThis is a blockquote\nThis is a blockquote"
   },
   {
     "objectID": "test.html#lists",
@@ -53,14 +53,7 @@
     "href": "test.html#callout-boxes",
     "title": "Test content",
     "section": "Callout boxes",
-    "text": "Callout boxes\n\n\n\n\n\n\nNote\n\n\n\nThis is a note callout box.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nThis is a warning callout box.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis is an important callout box.\n\n\n\n\n\n\n\n\nTip\n\n\n\nThis is a tip callout box.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThis is a caution callout box."
-  },
-  {
-    "objectID": "test.html#images",
-    "href": "test.html#images",
-    "title": "Test content",
-    "section": "Images",
-    "text": "Images\nHere is an image:\n\n\n\nHousingForward Virginia logo"
+    "text": "Callout boxes\n\n\n\n\n\n\nNote\n\n\n\nThis is a note callout box.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nThis is a warning callout box.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis is an important callout box.\n\n\n\n\n\n\n\n\nTip\n\n\n\nThis is a tip callout box."
   },
   {
     "objectID": "test.html#figures",
@@ -147,6 +140,62 @@
     "text": "3.2 Policy rankings\nBased on these criteria, these are the rankings for the eight solutions.\nStrategic priorities\n\nDevelop a City-managed Housing Trust Fund\nUse Virginia Beach Development Authority to fund new large-scale, mixed-use development projects\nDesign and incorporate a housing education campaign into successful community engagement efforts\n\nEasy wins\n\nCreate a Housing Assistance Fund for workers\nLeverage Virginia Statewide Community Land Trust to create permanent affordable homeownership opportunities\n\nBackground work\n\nPursue innovative self-sustaining mixed-income, mixed-use rental development options\nResearch opportunities to simplify and streamline the permitting and review processes\nConsider an advisory board to guide the development of new zoning ordinance changes and assess options for redesigning the Workforce Housing Program to increase its impact"
   },
   {
+    "objectID": "sp-htf.html",
+    "href": "sp-htf.html",
+    "title": "4  Develop housing trust fund",
+    "section": "",
+    "text": "…"
+  },
+  {
+    "objectID": "sp-vbda.html",
+    "href": "sp-vbda.html",
+    "title": "5  Expand VBDA role",
+    "section": "",
+    "text": "…"
+  },
+  {
+    "objectID": "sp-education.html",
+    "href": "sp-education.html",
+    "title": "6  Design education campaign",
+    "section": "",
+    "text": "…"
+  },
+  {
+    "objectID": "ew-haf.html",
+    "href": "ew-haf.html",
+    "title": "7  Create housing fund for workers",
+    "section": "",
+    "text": "…"
+  },
+  {
+    "objectID": "ew-clt.html",
+    "href": "ew-clt.html",
+    "title": "8  Leverage VSCLT",
+    "section": "",
+    "text": "…"
+  },
+  {
+    "objectID": "bw-mumi.html",
+    "href": "bw-mumi.html",
+    "title": "9  Pursue innovative development models",
+    "section": "",
+    "text": "…"
+  },
+  {
+    "objectID": "bw-permits.html",
+    "href": "bw-permits.html",
+    "title": "10  Streamline permitting",
+    "section": "",
+    "text": "…"
+  },
+  {
+    "objectID": "bw-advisory.html",
+    "href": "bw-advisory.html",
+    "title": "11  Explore zoning advisory board",
+    "section": "",
+    "text": "…"
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
@@ -157,6 +206,20 @@
     "objectID": "a1-engagement.html",
     "href": "a1-engagement.html",
     "title": "Appendix A — Public and expert engagement",
+    "section": "",
+    "text": "…"
+  },
+  {
+    "objectID": "a2-workforce.html",
+    "href": "a2-workforce.html",
+    "title": "Appendix B — Workforce housing affordability analysis",
+    "section": "",
+    "text": "…"
+  },
+  {
+    "objectID": "a3-noah.html",
+    "href": "a3-noah.html",
+    "title": "Appendix C — Naturally occurring affordable housing analysis",
     "section": "",
     "text": "…"
   }
