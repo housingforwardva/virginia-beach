@@ -1,5 +1,47 @@
 # Public and expert engagement
 
-...
+## Public Engagement Summary/Themes 
+
+City of Virginia Beach staff received 109 responses to the online survey posted on the city\'s town hall platform. Housing affordability was the most common theme in survey responses. Respondents called on the City to address affordability challenges, either generally or via specific mechanisms, which included:
+
+-   building or purchasing affordable housing
+
+-   requiring or incentivizing developers to build affordable housing
+
+-   capping rents or regulating rent increases
+
+-   preventing new developments considered to be unaffordable
+
+-   reforming the zoning code to enable more multifamily and accessory dwellings, thereby increasing supply
+
+Respondents observed that high housing costs have pushed families to unsafe, poorly maintained dwelling units in less safe and desirable neighborhoods, and in some cases, forced households to leave Virginia Beach.
+
+Survey respondents identified specific housing affordability challenges affecting various resident groups. Middle- and lower-income workers (people with \"regular jobs\") are affected by the imbalance between prevailing wages and housing costs; they frequently cannot afford decent-quality, family-sized dwelling units in desirable neighborhoods. Meanwhile, young families cannot find affordable starter homes, and smaller households, such as single workers, single-parent families, or downsizing empty-nesters, face a shortage of smaller dwelling units appropriate to their household size.
+
+For homeowners, most respondents focused on the affordability challenges caused by rising home values --- most frequently higher tax payments --- rather than equity gains. Owner responsibilities such as maintenance and upkeep costs were also cited as an affordability challenge for many households. Rising ownership costs particularly affect seniors and retirees living on fixed incomes. Middle-income seniors, receiving both Social Security and a private pension, may earn too much to qualify for housing assistance or subsidized dwelling units but too little to purchase housing at the market rate.
+
+Households with incomes low enough to qualify for rental assistance face a long waitlist for Section 8 vouchers --- thus the assistance needed to stabilize housing and prevent homelessness may not be available. Respondents called for expedited and expanded emergency housing assistance or shelter capacity for households at acute risk of, or experiencing, homelessness. Respondents also cited the need for supportive housing for residents with disabilities, psychological or behavioral challenges, or addiction. Respondents identified micro-housing or single-room units as potential emergency housing for those who would otherwise be unsheltered.
+
+Survey respondents also voiced qualitative considerations beyond basic affordability. Many respondents placed a high value on dwelling units offering space, lawns, and space between units, and were concerned that dedicated affordable housing lacked these qualities. Respondents wanted to avoid affordable housing that looked like \"sardine boxes.\" Furthermore, given the affordability challenges specific to seniors and residents with disabilities, respondents underscored the importance of making dedicated affordable housing accessible for people with mobility constraints.
+
+Survey respondents also recognized the correlation between housing and transportation costs, calling for improved transit service, especially between the oceanfront areas where lower-wage service jobs are concentrated, and the more peripheral neighborhoods where many lower-wage workers must live to afford housing. Respondents called for safer pedestrian and bicycle routes, while wanting to avoid traffic congestion and noise. Some respondents also noted the lack of street parking in neighborhoods and objected to the expense of parking in amenity-rich areas. 
+
+Responses pointed to divides between renters, landlords, and homeowners. Many responses attributed rising rents and purchase prices to the greed of landlords, developers, or house-flippers. Some responses blamed rentals for reducing the supply of housing for purchase; others claimed the lack of affordable rental options allows landlords to offer unsafe or poorly maintained dwellings. Many responses connected rental housing to nuisances such as unkept structures, yards, and fences and either blamed the character of tenants or their ignorance of responsibilities or landlords for failing to maintain investment properties.
+
+Finally, despite the importance of the hospitality industry to the city\'s economy, many respondents identified tourism as a problem, believing that the City favors tourist areas over residential communities. Short-term rentals (STRs) in particular were associated with nuisances such as noise, littering, and violence, as well as disruptions to the housing market because they reduce the supply of rental housing.
+
+In addition to soliciting responses online, the city hosted several in-person meetings. 
+
+## **Expert Focus Group Summary/Themes**
+
+Expert stakeholders offered information about the state of the housing market and housing challenges experienced by residents and workers, as well as builders and developers. These stakeholders explained that both renters and prospective buyers face a \"take what you can get\" market that is already excluding less-competitive households. They emphasized the need for committed affordable housing to recruit and retain workers with families. Participants specifically encouraged more rental and homeownership opportunities for public school employees, hospitality management workers, and people transitioning from non-career military. 
+
+In the rental market, they described landlords rejecting (illegally) people with housing assistance, Housing Choice Vouchers, and other voucher types, as well as temporary, emergency assistance. They also described households with children, people aging out of foster care, and seniors being effectively evicted or experiencing discrimination. Stakeholders also explained that discrimination and decreased unit availability have led to prolonged homelessness.
+
+They explained that those who need non-conventional financing (e.g., FHA, VHDA, VA) are at a disadvantage in the homebuying process because of inspection requirements and the lengthier time for loan approval. As more investors and buyers who have substantial cash assets compete in the market and shrink inventory, households with financing requirements are disadvantaged. Stakeholders also discussed the benefits gap for families who don\'t make enough to buy but don\'t qualify for unconventional lending or down payment assistance programs.
+
+Stakeholders also identified elder homeowners as being extremely vulnerable. They explained that in addition to home repair and modification, many need services and case management. They explained that many are worried about asking for assistance because they\'re afraid of being forced to leave their home and therefore enduring isolation and substandard living conditions. Respondents advocated for expanding the existing critical home repair program, adding supports for aging in place, and creating more affordable, attainable choices for independent and assisted living. Because affordable assisted living has long waitlists, stakeholders suggested a coordinated waitlist for all units across the city to benefit seniors seeking alternative residences. 
+
+Focus group participants also discussed development challenges faced in the city. Developers (for-profit and nonprofit) need more by-right development and re-development opportunities because they face increasing development costs (e.g., land, redevelopment, stormwater, labor, materials, process risks). Stakeholders (and citizens) want to see a clear housing plan and progress toward explicit goals. Participants referenced the Richmond 300 plan and the Fairfax Housing Blueprint.
 
 <!-- {{< pagebreak >}} -->

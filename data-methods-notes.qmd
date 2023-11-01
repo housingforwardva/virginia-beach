@@ -2,10 +2,82 @@
 
 ## Quantitative analysis
 
-...
+The [American Community Survey (ACS) Public Use Microdata Sample (PUMS)](https://www.census.gov/programs-surveys/acs/microdata/access.html) is VCHR's main source of information on city households, including demographic profile (e.g., family size, family type, householder age); occupancy characteristics (e.g., number of occupants, presence of children, seniors, elderly, and/or people with disabilities); and tenure (i.e., whether the household rents or owns the home where they live). The ACS PUMS also enables VCHR to create custom tabulations of U.S. Census data: households headed by a millennial, households headed by a baby boomer, households with one or more senior members, households by income, etc. VCHR analyzed five-year estimates from 2021, the most recent data year at the time of writing. In limited circumstances, VCHR used one-year data for analysis but has reported five-year data throughout the report for consistency. One-year estimates were not reliable for many sub-population measures.
+
+In rare instances, VCHR used the ACS published tables to conduct analysis over time. Household non-response increased substantially in the ACS during the COVID-19 pandemic because of the challenges of conducting a household survey, especially for households with lower socioeconomic status --- those most likely to experience housing cost burden and other housing-related challenges. Although the Census Bureau has refined its methodology to reduce the effect of non-response bias owing to the COVID-19 pandemic, the organization still labels 2020 data as experimental. As such, VCHR has omitted 2020 ACS data from longitudinal analysis and, where necessary, represented the period from 2019 to 2021 as a broken line.
+
+VCHR used a special ACS tabulation called Consolidated Housing Affordability Strategy (CHAS) data to estimate the degree to which economic means of households are matched with affordability of the housing supply. The housing affordability gap analysis can be found in the \["Housing Affordability"\] section of the report. The CHAS data designates each unit as affordable to specific income levels based on the size of the unit, the unit's value or rent, and the level of income required for a household of corresponding size to affordably rent or own the unit. The CHAS tabulation also provides data on the income levels of occupants currently living in units at each unit affordability level.
+
+VCHR used 2020 OnTheMap data from the U.S. Census Bureau's Center for Economic Studies to analyze commuting patterns and identify groups that disproportionately commute into the city for work. VCHR described the inflow and outflow of workers in the city and documented trends of note by worker's income, age, and industry. Full details can be found in the \["Workforce Housing Affordability"\] section of the report.
+
+VCHR's workforce housing affordability analysis compares maximum affordable housing costs by occupation to city housing costs to determine which workers may struggle to afford housing in the city or may commute from outside the city because they cannot find appropriate, affordable housing close to their job.
+
+Using May 2022 annual wage data of the Virginia Beach-Norfolk-Newport News MSA from the Bureau of Labor Statistics, VCHR calculated maximum affordable monthly housing costs (30% of monthly income) for each occupation using three scenarios:
+
+-   A single earner with a median wage 
+
+-   A single earner with a 90th percentile wage to represent highly skilled or experienced workers 
+
+-   Two earners with a median wage for a single occupation to represent a dual-earner household
+
+VCHR used 2021 ACS survey data on median gross rent and median selected monthly owner costs with a mortgage to define housing costs. Full details regarding the workforce housing affordability analysis methodology can be found in \[Appendix X.\]
+
+The concept of *Naturally Occurring Affordable Housing* (NOAH) has gained attention as home prices and rents increase rapidly and as housing affordability, from both homeownership and rental perspectives, remains a pressing concern for residents in many cities. NOAH refers to affordable housing units that arise in the marketplace without specific incentives or regulations.
+
+VCHR used FY 2022 Income Limits from the Department of Housing and Urban Development (HUD) to categorize affordability levels for 145,498 units in Virginia Beach assessment data. The NOAH analysis is driven by two primary objectives:
+
+1.  To realistically gauge the costs for low- to moderate-income households to own a home and to evaluate how many homes in the current market align with their affordability thresholds
+
+2.  To estimate the availability of affordable rental multifamily units in the market
+
+For homeownership, VCHR relies on assessment data, with supplemental datasets helping to estimate other associated costs (e.g., insurance, utilities, HOA and condo fees, interest rates), ultimately leading to the computation of the monthly payment. For rental, VCHR employs CoStar data, extracted in May 2023, to derive monthly housing costs for multifamily units. Full details regarding the NOAH analysis methodology can be found in \[Appendix X.\]
+
+VCHR analyzed 2015-2022 home sale data provided by the Real Estate Information Network (REIN) on behalf of the Hampton Roads Realtors Association. VCHR used this data to analyze trends and demand in the homeownership market. VCHR further used this data to adjust assessed value to estimated current market value and to estimate HOA and condo fees for the NOAH analysis.
+
+In addition to using CoStar data to categorize rental units by affordability, VCHR used CoStar data to supplement ACS data on rental market trends. VCHR reviewed 2023-Q1 CoStar data on rental vacancy rate and rental absorption rates to provide a more current perspective on rental market trends.
+
+The City of Virginia Beach provided data including real estate assessment data; data on existing income-restricted housing and on building trends; and housing policies, plans, and prior studies. VCHR used this data throughout its analysis and documented its use in the source lines of graphs and tables. VCHR and HFV used information regarding housing policies and plans to develop solutions. In instances where analysis was not included in this scope of work but has been conducted elsewhere, VCHR noted those references for the reader.
 
 ## Qualitative analysis
 
-...
+Qualitative data from experts, stakeholders, and citizens helped the study team assess the validity of quantitative data analysis, identify additional topics for analysis, and contextualize study findings. VCHR has summarized themes of the discussions as a whole to promote earnest conversation and protect the anonymity of participants. Details regarding the data collection approach and findings are documented here and in the report appendices.
+
+VCHR collaborated with Virginia Beach staff to conduct public engagement. VCHR designed a public engagement protocol to be used for in-person meetings and to collect data from residents online through the Virginia Beach town hall online platform. VCHR and City staff conducted one virtual and five in-person engagement sessions and received 109 responses to protocol questions on the town hall platform. Summaries of in-person and online responses are included in the report appendices. 
+
+Local experts such as builders, developers, REALTORS lenders, housing service providers, employers, business groups (i.e. resort area contingency and Town Center business), and school representatives are valuable resources in understanding housing-related challenges and opportunities. VCHR partnered with city staff to conduct eight focus groups with these experts. Themes from these focus groups are documented throughout the report and summarized in the report appendices.
+
+VCHR collaborated with HFV to conduct interviews of each Virginia Beach sitting councilmember. Interviews with councilmembers had a dual focus: (1) collecting information about housing challenges by district and perceptions regarding the role of housing in the broader well-being of the city, and (2) understanding perspectives on policy and programs to gauge councilmembers\' willingness/inclination to make policy or to dedicate funds and other resources. Questions focused on prior and current efforts to expand housing affordability, complementary initiatives in economic development and similar sectors, and aspirational goals for housing in the city.
+
+## Important Terms and References
+
+-   **Tenure**
+
+    -   The term \"tenure\" refers to the method by which a household possesses their home: renting, fully owned with no home loan, or owned with a mortgage or other home loan.
+
+-   **Cost-burdened Households**
+
+    -   The U.S. Department of Housing and Urban Development (HUD) established the term \"cost-burdened\" to describe households who need more affordable housing. HUD defines cost-burdened households as \"families who pay more than 30% of their income for housing\... and may have difficulty affording necessities such as food, clothing, transportation, and medical care.\" Severely cost-burdened households pay 50% or more of their income for housing and are likely to be making tough choices between housing and other necessities.
+
+-   **Percent of Area Median Income (AMI)**
+
+    -   HUD sets income limits by household size that determine eligibility for assisted housing programs. HUD develops these income limits based on Median Family Income estimates and Fair Market Rent (FMR) area definitions for each metropolitan area, parts of some metropolitan areas, and each non-metropolitan county. These income limits are useful tools for assessing housing needs because they standardize income-based household categories while considering household size. The 2021 and 2023 income limits for the Virginia Beach HUD Metro Fair Market Rent Area are provided for reference, and the appropriate annual income limits based on data vintage were applied in the analysis.
+
+-   **Housing Affordability**
+
+    -   Housing affordability is a broad term used to discuss the degree to which housing units in a market or submarket meet the income-based needs of households in that market. Researchers and practitioners generally consider housing affordability for income groups that may face challenges related to affording housing, including (but not limited to) the following:
+
+        -   extremely low-income households who do not make enough money to obtain decent housing
+
+        -   young workers who wish to become homeowners but cannot find a starter home with associated costs within their budget
+
+        -   established owners who cannot find an appropriate home to \"upgrade\" to as their families grow and they enter their professional prime
+
+        -   seniors who struggle to find affordable, accessible housing that meets their needs, including maintenance and modifications to make their existing homes suitable for aging
+
+    -   Housing affordability is not usually a concern for higher-income households who can obtain their desired housing without sacrificing other household needs such as safety, transportation, medical care, food, education, and childcare. However, a shortage of housing for households at any income level may affect businesses expanding in the market or economic development efforts for attracting new businesses.
+
+-   **Householder**
+
+    -   This report refers to \"householders\" when the available data pertains to the householder as defined by the U.S. Census: \"the householder refers to the person (or one of the people) in whose name the housing unit is owned or rented (maintained) or, if there is no such person, any adult member, excluding roomers, boarders, or paid employees. If the house is owned or rented jointly by a married couple, the householder may be either the husband or the wife. The person designated as the householder is the \'reference person\' to whom the relationship of all other household members, if any, is recorded.\"
 
 <!-- {{< pagebreak >}} -->

@@ -1,5 +1,49 @@
 # Preface {.unnumbered}
 
-Goes here
+## About VCHR & HFV
+
+The [**Virginia Center for Housing Research at Virginia Tech (VCHR)**](https://mlsoc.vt.edu/research/vchr.html) was created by the Virginia General Assembly and Virginia Tech in 1989 to respond to the housing research needs of Virginia and the nation. In its 25-year record of performance, VCHR has established an unparalleled reputation for high-quality research on affordable housing that integrates policy, building technology, and the housing industry. In response to every request, VCHR identifies the best talent within Virginia Tech and beyond providing the capacity, talent, and drive to deliver the best proposal possible. VCHR works with multiple partners and sponsors to fulfill its mission within the commonwealth, including Virginia Housing, DHCD, HousingForward Virginia, and the Virginia Association of Realtors®.
+
+[**HousingForward Virginia (HFV)**](https://www.housingforwardva.org/) is a Richmond-based 501(c)3 nonprofit organization that serves as the commonwealth's trusted resource for knowledge and insight on affordable housing. HFV is led by a diverse board of directors representing Virginia's geographies and housing stakeholders. Advocates, planners, developers, and mission-aligned organizations rely on HFV to understand challenges, build solutions, and advance their work. For more than a decade, HFV has helped complete numerous local, regional, and statewide housing studies in Virginia, often in partnership with VCHR. Its collective expertise in policy, finance, and research helps practitioners translate information into meaningful action.
+
+## Acknowledgements
+
+This study benefited from data and input from the Real Estate Information Network (REIN), Virginia Beach city staff, Virginia Beach City Council members, focus group participants, and Virginia Beach residents and workers. 
+
+REIN provided historic sale data, which is the best data source for analyzing for-sale housing market trends and a fundamental component for estimating housing costs in VCHR's Naturally Occurring Affordable Housing (NOAH) analysis. 
+
+Virginia Beach staff provided data such as the number of dedicated, affordable housing units and real estate assessment data and analysis. They also coordinated and led public engagement sessions; participated in focus groups and supported note-taking; and provided significant feedback and input as the study team refined content and developed potential solutions. 
+
+Many Virginia Beach City Council members participated in study interviews to share housing challenges experienced by constituents in their districts, as well as offering their own perspectives as residents, workers, business owners, and committee members. The Virginia Beach City Council also actively contributed feedback and input on study deliverables.
+
+Virginia Beach residents, business owners, service providers, developers, and others participated in the study's qualitative information gathering process, helping to ground the study in real-life examples of housing-related challenges and concerns. Input from participants in public engagement sessions and expert focus groups helped the study team assess the validity of data analysis and focus policy and program recommendations on the priorities of residents and on the challenges faced by the businesses, organizations, and agencies that serve the city. 
+
+## Scope of Work and Process
+
+The City of Virginia Beach requested that VCHR and HFV replicate the housing market analysis and housing needs assessment from the prior, 2016 study, including housing stock characteristics and household characteristics. In addition to study updates, the City requested an analysis of "naturally occurring" affordable housing, an analysis of workforce affordability, and significant public engagement. 
+
+The study process began with public engagement. VCHR collaborated with Virginia Beach staff to conduct public meetings and to deploy an online questionnaire for residents via the Virginia Beach town hall online platform. VCHR hosted a training to prepare Virginia Beach staff to facilitate VCHR's public engagement design, which featured small group discussions. Virginia Beach staff coordinated meetings across the city, facilitated meetings, and took notes. VCHR analyzed meeting notes to draw out shared concerns and themes of the discussion. 
+
+VCHR also engaged local experts such as builders, developers, REALTORS, lenders, housing service providers, employers, business groups (i.e., resort area contingency and Town Center business), and school representatives. These important stakeholders in housing helped the research team understand housing-related challenges and opportunities. Virginia Beach staff recruited and scheduled these focus groups, while VCHR facilitated each group and identified themes and critical pieces of information from the groups as a whole. 
+
+Following data collection and analysis, VCHR collaborated with HFV to interview each Virginia Beach sitting councilmember as their schedules permitted. Interviews with councilmembers had a dual focus: (1) collecting information about housing challenges by district and perceptions regarding the role of housing in the broader well-being of the city, and (2) understanding perspectives on policy and programs to gauge councilmembers' willingness/inclination to make policy or dedicate funds and other resources. 
+
+HFV led the development of policy recommendations for the study. HFV examined recommendations from the previous study to determine which strategies have been implemented in full, in part, or not at all. Using data analysis from VCHR and information gathered from public engagement, focus groups, and Virginia Beach staff and councilmember interviews, HFV assessed whether any of the recommendations from the prior study or existing programs should be continued, expanded, or changed. HFV worked with VCHR and City staff to develop a preliminary list of housing priorities to be addressed by solutions in the plan update and --- in consultation with VCHR and city staff --- proposed initial solutions ideas to the city council. Following refinement, a second presentation, and approval, HFV drafted full strategy proposals, including example best practices. 
+
+HFV developed 8 detailed policy/program recommendations. Elements of each solution include:
+
+1.  A high-level summary of how the strategy works and how it will address the city's housing priorities
+
+2.  A detailed description that explains the specific mechanics of the policy or program solution
+
+3.  A list of entities responsible for planning, implementing, and monitoring the solution
+
+4.  A timeframe for implementation and immediate next steps
+
+5.  Funding sources and opportunities (if required) 
+
+6.  Methods for tracking progress and measuring success
+
+7.  Successful examples and best practices from comparable communities
 
 <!-- {{< pagebreak >}} -->

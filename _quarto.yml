@@ -27,7 +27,14 @@ book:
     - preface.qmd
     - part: "Introduction"
       chapters:
+        - intro.qmd
         - data-methods-notes.qmd
+    - part: "Data findings"
+      chapters:
+        - hh-trends.qmd
+        - market.qmd
+        - affordability.qmd
+        - conclusions.qmd
     - part: "Solutions"
       chapters:
         - current-efforts.qmd
