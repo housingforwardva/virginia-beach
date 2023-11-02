@@ -6,6 +6,7 @@
 library(tidyverse)
 library(readxl)
 library(hdatools)
+library(ggtext)
 
 ```
 
@@ -25,7 +26,15 @@ ggplot(occ_rental,
            fill = type)) +
   geom_col() +
   coord_flip() +
-  theme_hfv()
+  theme_hfv() +
+  scale_fill_hfv() +
+  scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  theme(panel.grid.major.x = element_line(color = "#f5f5f5", size = 0.5),
+        panel.grid.major.y = element_blank()) +
+  labs(title = "Occupied Rental Units by Units in Structure",
+       caption = "**Source:** VCHR Tabulation of ACS 5-year 2021 PUMS Data") 
+  
 
 
 ```
@@ -38,6 +47,8 @@ While over half of Virginia Beach housing units are single-family detached, and 
 
 gross_rent <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "gross_rent")
 
+subtitle_text <- "In <span style = 'color:#40c0c0'><b>Real Gross Rent (2021 Dollars)</b></span> and <span style = 'color:#011E41'><b>Nominal Gross Rent</span>"
+
 ggplot(gross_rent,
        aes(x = year,
            y = value,
@@ -45,7 +56,14 @@ ggplot(gross_rent,
            linetype = rent)) +
   geom_line() +
   geom_point() +
-  theme_hfv()
+  theme_hfv() +
+  scale_color_hfv() +
+  scale_y_continuous(labels = dollar_format()) +
+  scale_x_continuous(limits = c(2014,2022), breaks = c(2014, 2016, 2018, 2020, 2022)) +
+  labs(title = "Gross Rent Compared to Inflation-Adjusted Gross Rent 2014-2021",
+       subtitle = subtitle_text,
+       caption = "**Source:** VCHR tabulation of 2021 ACS 5-year estimates, adjusted for inflation using Consumer Price Index (CPI) for rent of primary residence")
+  
 
 ```
 
@@ -68,7 +86,11 @@ ggplot(units_rent,
            y = units)) +
   geom_col(fill = "#40c0c0") +
   coord_flip() +
-  theme_hfv()
+  theme_hfv() +
+  scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
+  labs(title = "Units by Gross Rent",
+       caption = "**Source:** ACS Published Tables, 2021 5-year, DP04")
+  
 
 ```
 
@@ -100,7 +122,6 @@ The Virginia Beach homeownership market has attracted a healthy demand, followin
 
 med_sales <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "med_sales")
 
-
 ggplot(med_sales,
        aes(x = year,
            y = value,
@@ -108,7 +129,12 @@ ggplot(med_sales,
            group = 1)) +
   geom_line() +
   geom_point() +
-  theme_hfv()
+  theme_hfv() +
+  scale_color_gradientn(colours = c("#ADDCB1", "#46A88F", "#207A88", "#0F1A4E")) +
+  scale_y_continuous(limits = c(200000, 400000), labels = dollar_format()) +
+  ggrepel::geom_text_repel(data = subset(med_sales, year %in% c(2007, 2011, 2021, 2023)), aes(label = dollar_format()(value))) +
+  labs(title = "Annual Median Sale Price",
+       caption = "**Source:** VCHR Tabulation of Real Estate Information Network, Inc. Virginia Beach Sales Data")
 
 ```
 
@@ -125,7 +151,11 @@ ggplot(med_dom,
            y = dom,
            fill = dom)) +
   geom_col() +
-  theme_hfv()
+  theme_hfv()  +
+  scale_fill_gradientn(colours = c("#ADDCB1", "#46A88F", "#207A88", "#0F1A4E")) +
+  labs(title = "Annual Median Days on the Market (DOM)",
+       caption = "**Source:** VCHR Tabulation of Real Estate Information Network, Inc. Virginia Beach Sales Data")
+
 
 
 ```
@@ -179,6 +209,9 @@ ggplot(vacant_units,
   geom_col(fill = "#40c0c0") +
   coord_flip() +
   theme_hfv() +
-  scale_x_discrete(labels = function(labels) str_wrap(labels, width = 10))
+  scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  labs(title = "Vacant Units by Vacancy Status",
+       caption = "**Source:** ACS Published Tables, 2021 5-year Estimates")
 
 ```
