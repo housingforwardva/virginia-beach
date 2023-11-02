@@ -10,6 +10,7 @@ library(kableExtra)
 library(patchwork)
 library(scales)
 library(formattable)
+library(ggtext)
 
 ```
 
@@ -61,7 +62,7 @@ The median Virginia Beach householder age is 50 years old, and half of household
 
 ```{r}
 #| label: fig-age
-#| fig-cap: "Number of Households by Householder Age"
+#| fig-cap: "Households by Householder Age"
 
 # Source: VCHR Tabulation of ACS 5-year 2021 PUMS Data
 
@@ -81,7 +82,11 @@ ggplot(age,
   geom_col(position = "dodge", fill = "#40c0c0") +
   coord_flip() +
   theme_hfv() +
-  scale_y_continuous(labels = number_format(big.mark = ","))
+  scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
+  theme(panel.grid.major.x = element_line(color = "#f5f5f5", size = 0.5),
+        panel.grid.major.y = element_blank()) +
+  labs(title = "Households by Householder Age",
+       caption = "**Source:** VCHR Tabulation of ACS 5-year 2021 PUMS Data") 
 
 
 ```
@@ -125,7 +130,13 @@ ggplot(race,
   geom_col(position = "dodge") +
   coord_flip() +
   theme_hfv() +
-  scale_fill_hfv()
+  scale_fill_hfv() +
+  theme(panel.grid.major.x = element_line(color = "#f5f5f5", size = 0.5),
+        panel.grid.major.y = element_blank()) +
+  scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.15))) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  labs(title = "Households by Householder Race/Ethnicity",
+       caption = "**Source:** VCHR Tabulation of ACS 5-year 2021 PUMS Data") 
 
 
 ```
@@ -156,7 +167,10 @@ ggplot(size,
   geom_col(position = "dodge", fill = "#40c0c0") +
   coord_flip() +
   theme_hfv() +
-  scale_y_continuous(labels = percent_format())
+  scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.15))) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  labs(title = "Households by Household Size",
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
 
 
 
@@ -176,7 +190,10 @@ ggplot(br,
   geom_col(position = "dodge", fill = "#40c0c0") +
   coord_flip() +
   theme_hfv() +
-  scale_y_continuous(labels = percent_format())
+  scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.15))) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  labs(title = "Dwelling Units by Number of Bedrooms",
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
 
 ```
 
@@ -192,7 +209,12 @@ ggplot(hh1,
            y = count,
            fill = forcats::fct_rev(living_arrangement))) +
   geom_col(position = "stack") +
-  theme_hfv()
+  theme_hfv() +
+  scale_fill_hfv() +
+  scale_y_continuous(labels = number_format(big.mark = ",")) +
+  labs(title = "One-Person Households by Householder Age",
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
+  
 
 
 ```
@@ -209,12 +231,17 @@ hh_type <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hh_type")
 
 
 ggplot(hh_type,
-       aes(x = type,
+       aes(x = reorder(type, hh),
            y = hh,
            fill = family)) +
   geom_col(position = "dodge") +
   coord_flip() +
-  theme_hfv()
+  theme_hfv() +
+  scale_fill_hfv() +
+  scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  labs(title = "Household and Family Types",
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
 
 
 
@@ -233,16 +260,25 @@ Approximately 114,905 households in Virginia Beach are homeowners: 65% of all ho
 
 ```{r}
 #| label: fig-tenure
-#| fig-cap: "Number of Households by Tenure"
+#| fig-cap: "Households by Tenure"
 
 tenure <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "tenure")
+
+subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free & Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
+
 
 ggplot(tenure,
        aes(x = tenure,
            y = value,
            fill = detail)) +
   geom_col() + 
-  theme_hfv()
+  theme_hfv() +
+  scale_fill_hfv() +
+  scale_y_continuous(labels = number_format(big.mark = ",")) + 
+  labs(title = "Households by Tenure",
+       subtitle = subtitle_text,
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
+  
   
 
 
@@ -254,18 +290,26 @@ ggplot(tenure,
 
 gen <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "generation")
 
+subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free & Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
+
+
 ggplot(gen,
        aes(x = tenure,
            y = value,
-           fill = forcats::fct_rev(detail))) +
+           fill = detail)) +
   geom_col() +
   facet_wrap(~generation) +
-  theme_hfv()
+  theme_hfv() +
+  scale_fill_hfv() +
+  scale_y_continuous(labels = number_format(big.mark = ",")) + 
+  labs(title = "Household Tenure by Generational Cohort",
+       subtitle = subtitle_text,
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
 
 
 ```
 
-households own their homes. Only 1 in 5 boomers rent, compared to over half of millennials and over 90% of Gen Z households. Furthermore, among homeowner households, nearly one-third of boomers own their home without a mortgage or loan payments, compared to under one-tenth of millennial households.
+Household tenure varies considerably by generational cohort. Nearly 80% of baby boomer–headed households own their homes. Only 1 in 5 boomers rent, compared to over half of millennials and over 90% of Gen Z households. Furthermore, among homeowner households, nearly one-third of boomers own their home without a mortgage or loan payments, compared to under one-tenth of millennial households.
 
 Millennials face a tougher homeownership landscape than both preceding and succeeding generations.[^hh-trends-17][^hh-trends-18] They have lower homeownership rate than baby boomers at the same age. The disparity is attributed to economic challenges stemming from entering the workforce during the 2001 recession and the subsequent 2008 financial crisis. These factors curtailed earnings, wealth accumulation, and the ability to purchase homes for an extended period.[^hh-trends-19]
 
@@ -293,11 +337,17 @@ hh_ami$ami = factor(hh_ami$ami, levels = c("Under 30% AMI","30-50% AMI","50-80% 
 ggplot(hh_ami,
        aes(x = forcats::fct_rev(ami),
            y = value,
-           fill = ami)) +
+           fill = tenure)) +
   geom_col(position = "dodge") +
   facet_wrap(~tenure) +
   coord_flip() +
-  theme_hfv()
+  theme_hfv() +
+  scale_fill_hfv() +
+  scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  labs(title = "Household Tenure by AMI Level",
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
+  
   
 
 ```
@@ -342,13 +392,21 @@ det_ami <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "det_ami") |>
 det_ami$ami = factor(det_ami$ami, levels = c("Under 30% AMI","30-50% AMI","50-80% AMI",
                                            "80-100% AMI","100-120% AMI","Over 120% AMI"))
 
+subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free & Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
+
 ggplot(det_ami,
        aes(x = forcats::fct_rev(ami),
            y = pct,
            fill = tenure)) +
   geom_col() +
   coord_flip() +
-  theme_hfv()
+  theme_hfv() +
+  scale_fill_hfv() +
+  scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.02))) +
+  labs(title = "Detailed Household Tenure by AMI Level",
+       subtitle = subtitle_text,
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
+  
 
 
 
@@ -364,13 +422,20 @@ ten_race <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "tenure_race") |>
   group_by(race) |> 
   mutate(pct = value/sum(value))
 
+subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free & Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
+
 ggplot(ten_race,
        aes(x = race,
            y = pct,
            fill = tenure)) +
   geom_col() +
   coord_flip() +
-  theme_hfv()
+  theme_hfv() +
+  scale_fill_hfv() +
+  scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.02))) +
+  labs(title = "Household Tenure by Householder Race/Ethnicity",
+       subtitle = subtitle_text,
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
 
 ```
 
