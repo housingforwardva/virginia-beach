@@ -1,5 +1,16 @@
 # Housing Affordability
 
+```{r}
+#| label: setup
+
+library(tidyverse)
+library(readxl)
+library(hdatools)
+library(kableExtra)
+library(scales)
+
+```
+
 ## Cost-burden
 
 VCHR uses housing cost burden to measure the need for more affordable housing and to identify associated housing insecurity. When homeowners are cost-burdened, they may choose to defer maintenance or forgo upgrades in favor of necessities like food, childcare, and medical care. When renters are cost-burdened, they may make choices between housing and other necessities, and their limited ability to save makes them vulnerable to eviction or homelessness in the event of an unexpected expense. Furthermore, inability to save may effectively prevent households from investing in educational enrichment to advance their earnings and from building wealth and security through homeownership. Approximately 59,365 Virginia Beach households, over one-third, are cost-burdened, meaning their housing costs are at least 30% of household income. Among cost-burdened households, 41%, approximately 24,301 households, are severely cost-burdened, paying 50% or more of household income in housing costs.
@@ -8,7 +19,30 @@ VCHR uses housing cost burden to measure the need for more affordable housing an
 #| label: fig-cb-hh
 #| fig-cap: "Cost-burdened Households"
 
-cb_hh <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_hh")
+cb_hh <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_hh") |> 
+  group_by(cb) |> 
+  mutate(det_pct = value/sum(value)) |> 
+  ungroup() |> 
+  mutate(cb_pct = value/sum(value))
+
+general <- cb_hh |> 
+  group_by(cb) |> 
+  summarise(cb_pct = sum(cb_pct)) |> 
+  ggplot(aes(x = cb,
+           y = cb_pct,
+           fill = cb)) +
+  geom_col() + 
+  theme_hfv()
+
+detail <- cb_hh |> 
+  filter(cb != "Not Cost-burdened") |> 
+  ggplot(aes(x = detail,
+           y = det_pct)) +
+  geom_col() +
+  theme_hfv()
+
+
+general|detail
 
 ```
 
@@ -22,7 +56,17 @@ Cost burden has been trending down in Virginia Beach: cost burden among all hous
 #| label: fig-cb-tenure
 #| fig-cap: "Cost-burdened Households by Tenure"
 
-cb_tenure <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_tenure")
+cb_tenure <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_tenure") |> 
+  group_by(tenure) |> 
+  mutate(pct = value/sum(value))
+
+ggplot(cb_tenure,
+       aes(x = cb,
+           y = pct,
+           fill = detail)) +
+  geom_col() +
+  facet_wrap(~tenure) +
+  theme_hfv()
 
 ```
 
@@ -34,6 +78,17 @@ Housing cost burden is more common among renter households than owner households
 
 cb_ami <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_ami")
 
+cb_ami$ami <- fct_inorder(cb_ami$ami)
+
+ggplot(cb_ami,
+       aes(x = forcats::fct_rev(cb),
+           y = value,
+           fill = detail)) +
+  geom_col(position = "stack") + 
+  theme_hfv() +
+  facet_wrap(~ami)
+
+
 ```
 
 Households with lower incomes relative to AMI are cost-burdened at higher frequencies, and their cost burden is more likely to be severe. Large majorities of households under 80% of AMI are cost-burdened. Moderate-income and higher-income households are less impacted by housing cost burden. Approximately 45% of households between 80% and 100% of AMI, 23% of households between 100% and 120% of AMI, and 6% of households above 120% AMI are cost-burdened.
@@ -44,7 +99,19 @@ Cost-burdened households under 30% of AMI, and severely cost-burdened households
 #| label: fig-cb-race
 #| fig-cap: "Cost-burdened Households by Householder Race/Ethnicity"
 
-cb_race <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_race")
+cb_race <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_race") |> 
+  group_by(race) |> 
+  mutate(pct = value/sum(value))
+  
+cb_race$cb <- factor(cb_race$cb, levels = c("Not Cost-burdened", "Cost-burdened (30%-49% of Income)", "Severely Cost-burdened (50% of Income or more)"))
+
+ggplot(cb_race,
+       aes(x = race,
+           y = pct,
+           fill = cb)) +
+  geom_col() +
+  coord_flip() +
+  theme_hfv()
 
 ```
 
@@ -56,6 +123,16 @@ Levels of housing cost burden vary among householders by race and ethnicity. The
 
 cb_gen <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_gen")
 
+
+
+ggplot(cb_gen,
+       aes(x = reorder(cb, value),
+           y = value,
+           fill = detail)) +
+  geom_col(position = "stack") + 
+  theme_hfv() +
+  facet_wrap(~gen)
+
 ```
 
 The share of cost-burdened millennial households is slightly higher than that of boomer households: 34% and 31%, respectively. Among cost-burdened households, however, boomers are more likely to be severely cost-burdened: 43% of cost-burdened boomer households are severely cost-burdened, compared to 36% of cost-burdened millennial households.
@@ -66,6 +143,15 @@ The share of cost-burdened millennial households is slightly higher than that of
 
 cb_senior <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_senior")
 
+cb_senior$cb <- fct_inorder(cb_senior$cb)
+
+ggplot(cb_senior,
+       aes(x = age,
+           y = value,
+           fill = cb)) +
+  geom_col()
+
+
 ```
 
 ```{r}
@@ -73,6 +159,14 @@ cb_senior <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_senior")
 #| fig-cap: "Cost-burdened Senior-headed, Living Alone Households"
 
 cb_senior_alone <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_senior_alone")
+
+cb_senior_alone$cb <- fct_inorder(cb_senior_alone$cb)
+
+ggplot(cb_senior_alone,
+       aes(x = age,
+           y = value,
+           fill = cb)) +
+  geom_col()
 
 ```
 
@@ -88,7 +182,31 @@ Households with low incomes and high housing costs are at particular risk of hom
 #| label: fig-vulnerability
 #| fig-cap: "Vulnerability by Household Type"
 
-vulnerability <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "vulnerability")
+vulnerability <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "vulnerability") |> 
+  mutate(type = case_when(
+    hh == "Man alone" ~ "M",
+    hh == "Single father" ~ "M",
+    hh == "Woman alone" ~ "F",
+    hh == "Single mother" ~ "F",
+    hh == "Senior 62+ alone" ~ "S",
+    hh == "Senior 75+ alone" ~ "S",
+    TRUE ~ "FAM"
+  ))
+
+ggplot(vulnerability,
+       aes(x = reorder(hh, med_income),
+           y = med_income,
+           fill = type)) +
+  geom_col() +
+  geom_hline(yintercept = 57320, color = "orange") +
+  geom_text(aes(y = 57320, x = 0.7, label = "Rent"), size = 3, color = "orange") +
+  geom_hline(yintercept = 25960, color = "red") +
+  geom_text(aes(y = 25960, x = 1.2, label = "Owned Free & Clear"), size = 3, color = "red") +
+  geom_hline(yintercept = 75520, color = "red") +
+  geom_text(aes(y = 75520, x = 0.85, label = "Mortgage"), size = 3, color = "red") +
+  theme_hfv() +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
+
 ```
 
 \[Figure X\], above, shows median household income of common or notable household types in Virginia Beach. The red horizontal lines represent the annual income needed to afford the median housing unit by tenure. From highest to lowest, the lines illustrate owning with a mortgage or loan (\$75,520), renting (\$57,320), and owning free and clear (\$25,960).
@@ -107,7 +225,12 @@ Most households (81%) in Virginia Beach include at least one worker. Those house
 #| label: tbl-workers
 #| tbl-cap: "Households by Number of Workers"
 
-hh_workers <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hh_workers")
+hh_workers <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hh_workers") |> 
+  mutate(pct = percent(pct))
+
+hh_workers |> 
+  kbl(col.names = c("Number of workers", "Count", "Percent of Total"), align = "lcc") |> 
+  kable_styling(bootstrap_options = c("striped", "condensed"))
 
 ```
 

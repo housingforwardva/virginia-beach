@@ -46,17 +46,17 @@ VCHR collaborated with Virginia Beach staff to conduct public engagement. VCHR d
 
 Local experts such as builders, developers, REALTORS lenders, housing service providers, employers, business groups (i.e. resort area contingency and Town Center business), and school representatives are valuable resources in understanding housing-related challenges and opportunities. VCHR partnered with city staff to conduct eight focus groups with these experts. Themes from these focus groups are documented throughout the report and summarized in the report appendices.
 
-VCHR collaborated with HFV to conduct interviews of each Virginia Beach sitting councilmember. Interviews with councilmembers had a dual focus: (1) collecting information about housing challenges by district and perceptions regarding the role of housing in the broader well-being of the city, and (2) understanding perspectives on policy and programs to gauge councilmembers\' willingness/inclination to make policy or to dedicate funds and other resources. Questions focused on prior and current efforts to expand housing affordability, complementary initiatives in economic development and similar sectors, and aspirational goals for housing in the city.
+VCHR collaborated with HFV to conduct interviews of each Virginia Beach sitting councilmember. Interviews with councilmembers had a dual focus: (1) collecting information about housing challenges by district and perceptions regarding the role of housing in the broader well-being of the city, and (2) understanding perspectives on policy and programs to gauge councilmembers' willingness/inclination to make policy or to dedicate funds and other resources. Questions focused on prior and current efforts to expand housing affordability, complementary initiatives in economic development and similar sectors, and aspirational goals for housing in the city.
 
 ## Important Terms and References
 
 -   **Tenure**
 
-    -   The term \"tenure\" refers to the method by which a household possesses their home: renting, fully owned with no home loan, or owned with a mortgage or other home loan.
+    -   The term "tenure" refers to the method by which a household possesses their home: renting, fully owned with no home loan, or owned with a mortgage or other home loan.
 
 -   **Cost-burdened Households**
 
-    -   The U.S. Department of Housing and Urban Development (HUD) established the term \"cost-burdened\" to describe households who need more affordable housing. HUD defines cost-burdened households as \"families who pay more than 30% of their income for housing\... and may have difficulty affording necessities such as food, clothing, transportation, and medical care.\" Severely cost-burdened households pay 50% or more of their income for housing and are likely to be making tough choices between housing and other necessities.
+    -   The U.S. Department of Housing and Urban Development (HUD) established the term "cost-burdened" to describe households who need more affordable housing. HUD defines cost-burdened households as "families who pay more than 30% of their income for housing\... and may have difficulty affording necessities such as food, clothing, transportation, and medical care." Severely cost-burdened households pay 50% or more of their income for housing and are likely to be making tough choices between housing and other necessities.
 
 -   **Percent of Area Median Income (AMI)**
 
@@ -70,7 +70,7 @@ VCHR collaborated with HFV to conduct interviews of each Virginia Beach sitting 
 
         -   young workers who wish to become homeowners but cannot find a starter home with associated costs within their budget
 
-        -   established owners who cannot find an appropriate home to \"upgrade\" to as their families grow and they enter their professional prime
+        -   established owners who cannot find an appropriate home to "upgrade" to as their families grow and they enter their professional prime
 
         -   seniors who struggle to find affordable, accessible housing that meets their needs, including maintenance and modifications to make their existing homes suitable for aging
 
@@ -78,6 +78,6 @@ VCHR collaborated with HFV to conduct interviews of each Virginia Beach sitting 
 
 -   **Householder**
 
-    -   This report refers to \"householders\" when the available data pertains to the householder as defined by the U.S. Census: \"the householder refers to the person (or one of the people) in whose name the housing unit is owned or rented (maintained) or, if there is no such person, any adult member, excluding roomers, boarders, or paid employees. If the house is owned or rented jointly by a married couple, the householder may be either the husband or the wife. The person designated as the householder is the \'reference person\' to whom the relationship of all other household members, if any, is recorded.\"
+    -   This report refers to "householders" when the available data pertains to the householder as defined by the U.S. Census: "the householder refers to the person (or one of the people) in whose name the housing unit is owned or rented (maintained) or, if there is no such person, any adult member, excluding roomers, boarders, or paid employees. If the house is owned or rented jointly by a married couple, the householder may be either the husband or the wife. The person designated as the householder is the 'reference person' to whom the relationship of all other household members, if any, is recorded."
 
 <!-- {{< pagebreak >}} -->

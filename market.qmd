@@ -1,5 +1,14 @@
 # Market Dynamics
 
+```{r}
+#| label: setup
+
+library(tidyverse)
+library(readxl)
+library(hdatools)
+
+```
+
 ## Rental
 
 There are approximately 66,302 rental units in Virginia Beach: 62,048 are occupied, 957 are rented but not yet occupied, and 3,297 are vacant for rent. The rental market vacancy rate is 4.97%. Although rental vacancy rates suggest that this quantity of rental housing is adequate, most units have rents close to the median, which is unaffordable for many households and may neglect the preferences of higher-income renters. To promote market health and diversity, the City should add affordable units dedicated to lower-income households as well as units responding to the preferences for higher-end rental products.
@@ -10,6 +19,13 @@ There are approximately 66,302 rental units in Virginia Beach: 62,048 are occupi
 
 occ_rental <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "occ_rental")
 
+ggplot(occ_rental,
+       aes(x = reorder(type,count),
+           y = count,
+           fill = type)) +
+  geom_col() +
+  coord_flip() +
+  theme_hfv()
 
 
 ```
@@ -22,6 +38,15 @@ While over half of Virginia Beach housing units are single-family detached, and 
 
 gross_rent <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "gross_rent")
 
+ggplot(gross_rent,
+       aes(x = year,
+           y = value,
+           color = rent,
+           linetype = rent)) +
+  geom_line() +
+  geom_point() +
+  theme_hfv()
+
 ```
 
 Figure \[X\] above compares median gross rent to median gross rent adjusted for inflation (in 2021 dollars) from 2014-2021. Median nominal gross rent has grown steadily, from \$1,203 in 2014 to \$1,431 in 2021 --- an 18% increase over eight years; however, inflation-adjusted rent shows a 6% reduction. Both measures are important because they reflect different experiences in the economy. Households whose incomes keep up with inflation have stable purchasing power over time and may feel their position improving. Households whose wages are less responsive to inflation struggle to keep up with the rapidly increasing nominal rent. Lower-wage workers often do not receive cost-of-living adjustments or considerations as often as higher-wage earners for whom companies must compete. Focus group attendees cited rapidly increasing or severe rent hikes experienced by clients with low incomes. They interpreted these increases as efforts to effectively evict residents with low or fixed incomes in favor of households who can afford higher rents.
@@ -32,6 +57,18 @@ Figure \[X\] above compares median gross rent to median gross rent adjusted for 
 
 
 units_rent <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "units_rent")
+  
+units_rent$rent = factor(units_rent$rent, levels = c("Less than $500","$500 to $999",
+                                                     "$1,000 to $1,499","$1,500 to $1,999",
+                                                     "$2,000 to $2,499","$2,500 to $2,999",
+                                                     "$3,000 or more"))
+
+ggplot(units_rent,
+       aes(x = forcats::fct_rev(rent),
+           y = units)) +
+  geom_col(fill = "#40c0c0") +
+  coord_flip() +
+  theme_hfv()
 
 ```
 
@@ -64,6 +101,14 @@ The Virginia Beach homeownership market has attracted a healthy demand, followin
 med_sales <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "med_sales")
 
 
+ggplot(med_sales,
+       aes(x = year,
+           y = value,
+           color = value,
+           group = 1)) +
+  geom_line() +
+  geom_point() +
+  theme_hfv()
 
 ```
 
@@ -74,6 +119,14 @@ Median sale price grew 36% from 2015-2022, reflecting increased demand that has 
 #| fig-cap: "Annual Median Days on the Market (DOM)"
 
 med_dom <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "med_dom")
+
+ggplot(med_dom,
+       aes(x = year,
+           y = dom,
+           fill = dom)) +
+  geom_col() +
+  theme_hfv()
+
 
 ```
 
@@ -119,5 +172,13 @@ Estimates for \"other\" vacant units by detailed reason are not available at the
 #| fig-cap: "Vacant Units by Vacancy Status"
 
 vacant_units <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "vacant_units")
+
+ggplot(vacant_units,
+       aes(x = reorder(type, value),
+           y = value)) +
+  geom_col(fill = "#40c0c0") +
+  coord_flip() +
+  theme_hfv() +
+  scale_x_discrete(labels = function(labels) str_wrap(labels, width = 10))
 
 ```

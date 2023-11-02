@@ -7,6 +7,9 @@ library(tidyverse)
 library(readxl)
 library(hdatools)
 library(kableExtra)
+library(patchwork)
+library(scales)
+library(formattable)
 
 ```
 
@@ -73,11 +76,12 @@ age$age = factor(age$age, levels = c("Under 25","25 to 34","35 to 44",
   
 
 ggplot(age,
-       aes(x = age,
+       aes(x = forcats::fct_rev(age),
            y = count)) +
-  geom_col(position = "dodge") +
+  geom_col(position = "dodge", fill = "#40c0c0") +
   coord_flip() +
-  theme_hfv()
+  theme_hfv() +
+  scale_y_continuous(labels = number_format(big.mark = ","))
 
 
 ```
@@ -120,7 +124,8 @@ ggplot(race,
            fill = race)) +
   geom_col(position = "dodge") +
   coord_flip() +
-  theme_hfv()
+  theme_hfv() +
+  scale_fill_hfv()
 
 
 ```
@@ -146,11 +151,12 @@ size$size = factor(size$size, levels = c("One person","Two people",
                                          "Five or more people"))
 
 ggplot(size,
-       aes(x = size,
+       aes(x = forcats::fct_rev(size),
            y = pct)) +
-  geom_col(position = "dodge") +
+  geom_col(position = "dodge", fill = "#40c0c0") +
   coord_flip() +
-  theme_hfv()
+  theme_hfv() +
+  scale_y_continuous(labels = percent_format())
 
 
 
@@ -165,11 +171,12 @@ ggplot(size,
 br <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "bedrooms")
 
 ggplot(br,
-       aes(x = br,
+       aes(x = forcats::fct_rev(br),
            y = pct)) +
-  geom_col(position = "dodge") +
+  geom_col(position = "dodge", fill = "#40c0c0") +
   coord_flip() +
-  theme_hfv()
+  theme_hfv() +
+  scale_y_continuous(labels = percent_format())
 
 ```
 
@@ -201,6 +208,15 @@ Smaller households are particularly common among senior households, the age grou
 hh_type <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hh_type")
 
 
+ggplot(hh_type,
+       aes(x = type,
+           y = hh,
+           fill = family)) +
+  geom_col(position = "dodge") +
+  coord_flip() +
+  theme_hfv()
+
+
 
 
 ```
@@ -221,6 +237,14 @@ Approximately 114,905 households in Virginia Beach are homeowners: 65% of all ho
 
 tenure <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "tenure")
 
+ggplot(tenure,
+       aes(x = tenure,
+           y = value,
+           fill = detail)) +
+  geom_col() + 
+  theme_hfv()
+  
+
 
 ```
 
@@ -229,6 +253,15 @@ tenure <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "tenure")
 #| fig-cap: "Household Tenure by Generational Cohort"
 
 gen <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "generation")
+
+ggplot(gen,
+       aes(x = tenure,
+           y = value,
+           fill = forcats::fct_rev(detail))) +
+  geom_col() +
+  facet_wrap(~generation) +
+  theme_hfv()
+
 
 ```
 
@@ -254,6 +287,19 @@ While multiple factors influence homeownership among different cohorts, economic
 
 hh_ami <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hh_ami")
 
+hh_ami$ami = factor(hh_ami$ami, levels = c("Under 30% AMI","30-50% AMI","50-80% AMI",
+                                           "80-100% AMI","100-120% AMI","Over 120% AMI"))
+
+ggplot(hh_ami,
+       aes(x = forcats::fct_rev(ami),
+           y = value,
+           fill = ami)) +
+  geom_col(position = "dodge") +
+  facet_wrap(~tenure) +
+  coord_flip() +
+  theme_hfv()
+  
+
 ```
 
 Tenure also varies based on income. HUD definitions of income (figure X) are applied in this analysis because they constitute the basis for many of the programs addressing disparities in access to homeownership and other housing challenges. Although 2021 limits are used in the data analysis to align with the data’s vintage, VCHR has provided the most-recent income limits, which better reflect current incomes in Virginia Beach. 
@@ -264,13 +310,22 @@ Tenure also varies based on income. HUD definitions of income (figure X) are app
 
 hud_21 <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hud_21")
 
+hud_21 |> 
+  kbl(align = "lcccc") |> 
+  kable_styling(bootstrap_options = c("striped", "condensed"))
+
 ```
 
 ```{r}
 #| label: tbl-hud-inc-23
 #| tbl-cap: "HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2023"
 
-hud_23 <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hud_23")
+hud_23 <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hud_23") |> 
+  mutate_at(vars(2:5), ~ currency(., digits = 0))
+
+hud_23 |> 
+  kbl(align = "lcccc") |> 
+  kable_styling(bootstrap_options = c("striped", "condensed"))
 
 ```
 
@@ -280,7 +335,22 @@ Households with higher incomes relative to AMI are more likely to own their home
 #| label: fig-det-ami
 #| fig-cap: "Detailed Household Tenure by AMI Level"
 
-det_ami <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "det_ami")
+det_ami <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "det_ami") |> 
+  group_by(ami) |> 
+  mutate(pct = value/sum(value))
+
+det_ami$ami = factor(det_ami$ami, levels = c("Under 30% AMI","30-50% AMI","50-80% AMI",
+                                           "80-100% AMI","100-120% AMI","Over 120% AMI"))
+
+ggplot(det_ami,
+       aes(x = forcats::fct_rev(ami),
+           y = pct,
+           fill = tenure)) +
+  geom_col() +
+  coord_flip() +
+  theme_hfv()
+
+
 
 ```
 
@@ -290,7 +360,17 @@ Households at lower AMI levels are less likely to own their homes, but, as shown
 #| label: fig-ten-race
 #| fig-cap: "Household Tenure by Householder Race/Ethnicity"
 
-ten_race <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "tenure_race")
+ten_race <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "tenure_race") |> 
+  group_by(race) |> 
+  mutate(pct = value/sum(value))
+
+ggplot(ten_race,
+       aes(x = race,
+           y = pct,
+           fill = tenure)) +
+  geom_col() +
+  coord_flip() +
+  theme_hfv()
 
 ```
 
