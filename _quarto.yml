@@ -22,7 +22,7 @@ book:
   
   chapters:
     - index.qmd
-    - test.qmd
+    #- test.qmd
     - executive-summary.qmd
     - preface.qmd
     - part: "Introduction"
@@ -44,21 +44,21 @@ book:
         - sp-htf.qmd
         - sp-vbda.qmd
         - sp-education.qmd
-    - part: "Easy wins"
-      chapters:
-        - ew-haf.qmd
-        - ew-clt.qmd
-    - part: "Background work"
-      chapters:
-        - bw-mumi.qmd
-        - bw-permits.qmd
-        - bw-advisory.qmd
-    - references.qmd
+    #- part: "Easy wins"
+    #  chapters:
+    #    - ew-haf.qmd
+    #    - ew-clt.qmd
+    #- part: "Background work"
+    #  chapters:
+    #    - bw-mumi.qmd
+    #    - bw-permits.qmd
+    #    - bw-advisory.qmd
+    #- references.qmd
   
-  appendices: 
-    - a1-engagement.qmd
-    - a2-workforce.qmd
-    - a3-noah.qmd
+  #appendices: 
+  #  - a1-engagement.qmd
+  #  - a2-workforce.qmd
+  #  - a3-noah.qmd
 
 format:
 

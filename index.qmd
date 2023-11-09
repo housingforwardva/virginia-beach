@@ -1,55 +1,57 @@
 # About {.unnumbered}
 
-## Outline
+`ADD BRIEF INTRO`
 
-Current outline:
+<!-- ## Outline -->
 
-```
-Executive summary
+<!-- Current outline: -->
 
-Preface
-└── About VCHR and HFV
-└── Acknowledgements
-└── Scope of work and process
+<!-- ``` -->
+<!-- Executive summary -->
 
-Introduction
-└── Major changes since 2016
+<!-- Preface -->
+<!-- └── About VCHR and HFV -->
+<!-- └── Acknowledgements -->
+<!-- └── Scope of work and process -->
 
-Data and methodological notes
-└── Quantitative analysis
-└── Qualitative analysis
+<!-- Introduction -->
+<!-- └── Major changes since 2016 -->
 
-Important terms and references
+<!-- Data and methodological notes -->
+<!-- └── Quantitative analysis -->
+<!-- └── Qualitative analysis -->
 
-Household characteristics
-└── Household demographics
-└── Household composition and living arrangement
-└── Households by tenure
+<!-- Important terms and references -->
 
-Market dynamics
-└── Rental
-└── Homeownership
-└── Vacant housing
+<!-- Household characteristics -->
+<!-- └── Household demographics -->
+<!-- └── Household composition and living arrangement -->
+<!-- └── Households by tenure -->
 
-Housing affordability
-└── Workforce housing affordability
-└── Affordable housing
-└── Owned/for─sale gap analysis
-└── Naturally occurring affordable housing (NOAH)
+<!-- Market dynamics -->
+<!-- └── Rental -->
+<!-- └── Homeownership -->
+<!-- └── Vacant housing -->
 
-Conclusions
+<!-- Housing affordability -->
+<!-- └── Workforce housing affordability -->
+<!-- └── Affordable housing -->
+<!-- └── Owned/for─sale gap analysis -->
+<!-- └── Naturally occurring affordable housing (NOAH) -->
 
-Solutions
-└── Overview
-└── Strategic priorities
-└── Easy wins
-└── Background work
+<!-- Conclusions -->
 
-Appendices
-└── Appendix 1: Public and expert engagement
-└── Appendix 2: Workforce housing affordability analysis
-└── Appendix 3: Naturally occurring affordable housing analysis
-```
+<!-- Solutions -->
+<!-- └── Overview -->
+<!-- └── Strategic priorities -->
+<!-- └── Easy wins -->
+<!-- └── Background work -->
+
+<!-- Appendices -->
+<!-- └── Appendix 1: Public and expert engagement -->
+<!-- └── Appendix 2: Workforce housing affordability analysis -->
+<!-- └── Appendix 3: Naturally occurring affordable housing analysis -->
+<!-- ``` -->
 
 <!-- Revised outline? -->
 

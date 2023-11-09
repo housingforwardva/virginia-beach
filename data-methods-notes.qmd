@@ -14,10 +14,8 @@ VCHR's workforce housing affordability analysis compares maximum affordable hous
 
 Using May 2022 annual wage data of the Virginia Beach-Norfolk-Newport News MSA from the Bureau of Labor Statistics, VCHR calculated maximum affordable monthly housing costs (30% of monthly income) for each occupation using three scenarios:
 
--   A single earner with a median wage 
-
--   A single earner with a 90th percentile wage to represent highly skilled or experienced workers 
-
+-   A single earner with a median wage
+-   A single earner with a 90th percentile wage to represent highly skilled or experienced workers
 -   Two earners with a median wage for a single occupation to represent a dual-earner household
 
 VCHR used 2021 ACS survey data on median gross rent and median selected monthly owner costs with a mortgage to define housing costs. Full details regarding the workforce housing affordability analysis methodology can be found in \[Appendix X.\]
@@ -27,7 +25,6 @@ The concept of *Naturally Occurring Affordable Housing* (NOAH) has gained attent
 VCHR used FY 2022 Income Limits from the Department of Housing and Urban Development (HUD) to categorize affordability levels for 145,498 units in Virginia Beach assessment data. The NOAH analysis is driven by two primary objectives:
 
 1.  To realistically gauge the costs for low- to moderate-income households to own a home and to evaluate how many homes in the current market align with their affordability thresholds
-
 2.  To estimate the availability of affordable rental multifamily units in the market
 
 For homeownership, VCHR relies on assessment data, with supplemental datasets helping to estimate other associated costs (e.g., insurance, utilities, HOA and condo fees, interest rates), ultimately leading to the computation of the monthly payment. For rental, VCHR employs CoStar data, extracted in May 2023, to derive monthly housing costs for multifamily units. Full details regarding the NOAH analysis methodology can be found in \[Appendix X.\]
@@ -50,34 +47,31 @@ VCHR collaborated with HFV to conduct interviews of each Virginia Beach sitting 
 
 ## Important Terms and References
 
--   **Tenure**
+**Tenure**
 
-    -   The term "tenure" refers to the method by which a household possesses their home: renting, fully owned with no home loan, or owned with a mortgage or other home loan.
+The term "tenure" refers to the method by which a household possesses their home: renting, fully owned with no home loan, or owned with a mortgage or other home loan.
 
--   **Cost-burdened Households**
+**Cost-burdened Households**
 
-    -   The U.S. Department of Housing and Urban Development (HUD) established the term "cost-burdened" to describe households who need more affordable housing. HUD defines cost-burdened households as "families who pay more than 30% of their income for housing\... and may have difficulty affording necessities such as food, clothing, transportation, and medical care." Severely cost-burdened households pay 50% or more of their income for housing and are likely to be making tough choices between housing and other necessities.
+The U.S. Department of Housing and Urban Development (HUD) established the term "cost-burdened" to describe households who need more affordable housing. HUD defines cost-burdened households as "families who pay more than 30% of their income for housing\... and may have difficulty affording necessities such as food, clothing, transportation, and medical care." Severely cost-burdened households pay 50% or more of their income for housing and are likely to be making tough choices between housing and other necessities.
 
--   **Percent of Area Median Income (AMI)**
+**Percent of Area Median Income (AMI)**
 
-    -   HUD sets income limits by household size that determine eligibility for assisted housing programs. HUD develops these income limits based on Median Family Income estimates and Fair Market Rent (FMR) area definitions for each metropolitan area, parts of some metropolitan areas, and each non-metropolitan county. These income limits are useful tools for assessing housing needs because they standardize income-based household categories while considering household size. The 2021 and 2023 income limits for the Virginia Beach HUD Metro Fair Market Rent Area are provided for reference, and the appropriate annual income limits based on data vintage were applied in the analysis.
+HUD sets income limits by household size that determine eligibility for assisted housing programs. HUD develops these income limits based on Median Family Income estimates and Fair Market Rent (FMR) area definitions for each metropolitan area, parts of some metropolitan areas, and each non-metropolitan county. These income limits are useful tools for assessing housing needs because they standardize income-based household categories while considering household size. The 2021 and 2023 income limits for the Virginia Beach HUD Metro Fair Market Rent Area are provided for reference, and the appropriate annual income limits based on data vintage were applied in the analysis.
 
--   **Housing Affordability**
+**Housing Affordability**
 
-    -   Housing affordability is a broad term used to discuss the degree to which housing units in a market or submarket meet the income-based needs of households in that market. Researchers and practitioners generally consider housing affordability for income groups that may face challenges related to affording housing, including (but not limited to) the following:
+Housing affordability is a broad term used to discuss the degree to which housing units in a market or submarket meet the income-based needs of households in that market. Researchers and practitioners generally consider housing affordability for income groups that may face challenges related to affording housing, including (but not limited to) the following:
 
-        -   extremely low-income households who do not make enough money to obtain decent housing
+-   extremely low-income households who do not make enough money to obtain decent hous
+-   young workers who wish to become homeowners but cannot find a starter home with associated costs within their bud
+-   established owners who cannot find an appropriate home to "upgrade" to as their families grow and they enter their professional pr
+-   seniors who struggle to find affordable, accessible housing that meets their needs, including maintenance and modifications to make their existing homes suitable for aging
 
-        -   young workers who wish to become homeowners but cannot find a starter home with associated costs within their budget
+Housing affordability is not usually a concern for higher-income households who can obtain their desired housing without sacrificing other household needs such as safety, transportation, medical care, food, education, and childcare. However, a shortage of housing for households at any income level may affect businesses expanding in the market or economic development efforts for attracting new businesses.
 
-        -   established owners who cannot find an appropriate home to "upgrade" to as their families grow and they enter their professional prime
+**Householder**
 
-        -   seniors who struggle to find affordable, accessible housing that meets their needs, including maintenance and modifications to make their existing homes suitable for aging
-
-    -   Housing affordability is not usually a concern for higher-income households who can obtain their desired housing without sacrificing other household needs such as safety, transportation, medical care, food, education, and childcare. However, a shortage of housing for households at any income level may affect businesses expanding in the market or economic development efforts for attracting new businesses.
-
--   **Householder**
-
-    -   This report refers to "householders" when the available data pertains to the householder as defined by the U.S. Census: "the householder refers to the person (or one of the people) in whose name the housing unit is owned or rented (maintained) or, if there is no such person, any adult member, excluding roomers, boarders, or paid employees. If the house is owned or rented jointly by a married couple, the householder may be either the husband or the wife. The person designated as the householder is the 'reference person' to whom the relationship of all other household members, if any, is recorded."
+This report refers to "householders" when the available data pertains to the householder as defined by the U.S. Census: "the householder refers to the person (or one of the people) in whose name the housing unit is owned or rented (maintained) or, if there is no such person, any adult member, excluding roomers, boarders, or paid employees. If the house is owned or rented jointly by a married couple, the householder may be either the husband or the wife. The person designated as the householder is the 'reference person' to whom the relationship of all other household members, if any, is recorded."
 
 <!-- {{< pagebreak >}} -->

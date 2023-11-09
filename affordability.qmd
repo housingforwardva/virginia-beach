@@ -2,21 +2,30 @@
 
 ```{r}
 #| label: setup
+#| echo: false
+#| message: false
+#| warning: false
 
-library(tidyverse)
+source("_common.R")
+
 library(readxl)
-library(hdatools)
 library(kableExtra)
+library(patchwork)
 library(scales)
+library(formattable)
+library(ggtext)
 
 ```
 
-## Cost-burden
+## Cost burden
 
 VCHR uses housing cost burden to measure the need for more affordable housing and to identify associated housing insecurity. When homeowners are cost-burdened, they may choose to defer maintenance or forgo upgrades in favor of necessities like food, childcare, and medical care. When renters are cost-burdened, they may make choices between housing and other necessities, and their limited ability to save makes them vulnerable to eviction or homelessness in the event of an unexpected expense. Furthermore, inability to save may effectively prevent households from investing in educational enrichment to advance their earnings and from building wealth and security through homeownership. Approximately 59,365 Virginia Beach households, over one-third, are cost-burdened, meaning their housing costs are at least 30% of household income. Among cost-burdened households, 41%, approximately 24,301 households, are severely cost-burdened, paying 50% or more of household income in housing costs.
 
+`ADD FIGURE: Cost-burdened Households`
+
 ```{r}
 #| label: fig-cb-hh
+#| eval: false
 #| fig-cap: "Cost-burdened Households"
 
 cb_hh <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_hh") |> 
@@ -66,6 +75,8 @@ ggplot(cb_tenure,
            fill = detail)) +
   geom_col() +
   facet_wrap(~tenure) +
+  scale_fill_hfv() +
+  scale_y_continuous(labels = label_percent()) +
   theme_hfv()
 
 ```
@@ -76,7 +87,13 @@ Housing cost burden is more common among renter households than owner households
 #| label: fig-cb-ami
 #| fig-cap: "Cost-burdened Households by AMI Level"
 
-cb_ami <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_ami")
+cb_ami <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_ami") |> 
+  mutate(detail = case_match(
+    detail,
+    "Severely Cost-burdened (50% of Income or more)" ~ "Severly cost-burdened",
+    "Cost-burdened (30%-49% of Income)" ~ "Cost-burdened",
+    "Not Cost-burdened" ~ "Not Cost-burdened"
+  ))
 
 cb_ami$ami <- fct_inorder(cb_ami$ami)
 
@@ -86,7 +103,12 @@ ggplot(cb_ami,
            fill = detail)) +
   geom_col(position = "stack") + 
   theme_hfv() +
-  facet_wrap(~ami)
+  scale_fill_hfv() +
+  facet_wrap(~ami) +
+  theme(
+    legend.position = "top",
+    axis.text.x = element_blank()
+    )
 
 
 ```
@@ -101,17 +123,26 @@ Cost-burdened households under 30% of AMI, and severely cost-burdened households
 
 cb_race <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_race") |> 
   group_by(race) |> 
-  mutate(pct = value/sum(value))
+  mutate(pct = value/sum(value)) |> 
+  mutate(cb = case_match(
+    cb,
+    "Severely Cost-burdened (50% of Income or more)" ~ "Severly cost-burdened",
+    "Cost-burdened (30%-49% of Income)" ~ "Cost-burdened",
+    "Not Cost-burdened" ~ "Not Cost-burdened"
+  ))
   
-cb_race$cb <- factor(cb_race$cb, levels = c("Not Cost-burdened", "Cost-burdened (30%-49% of Income)", "Severely Cost-burdened (50% of Income or more)"))
+#cb_race$cb <- factor(cb_race$cb, levels = c("Not Cost-burdened", "Cost-burdened (30%-49% of Income)", "Severely Cost-burdened (50% of Income or more)"))
 
 ggplot(cb_race,
-       aes(x = race,
-           y = pct,
+       aes(x = pct,
+           y = race,
            fill = cb)) +
   geom_col() +
-  coord_flip() +
-  theme_hfv()
+  scale_fill_hfv() +
+  scale_x_continuous(labels = label_percent()) +
+  theme_hfv() +
+  flip_gridlines() +
+  theme(legend.position = "top")
 
 ```
 
@@ -121,9 +152,13 @@ Levels of housing cost burden vary among householders by race and ethnicity. The
 #| label: fig-cb-gen
 #| fig-cap: "Cost-burdened Households by Generational Cohort"
 
-cb_gen <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_gen")
-
-
+cb_gen <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_gen") |> 
+  mutate(detail = case_match(
+    detail,
+    "Severely Cost-burdened (50% of Income or more)" ~ "Severly cost-burdened",
+    "Cost-burdened (30%-49% of Income)" ~ "Cost-burdened",
+    "Not Cost-burdened" ~ "Not Cost-burdened"
+  ))
 
 ggplot(cb_gen,
        aes(x = reorder(cb, value),
@@ -131,7 +166,12 @@ ggplot(cb_gen,
            fill = detail)) +
   geom_col(position = "stack") + 
   theme_hfv() +
-  facet_wrap(~gen)
+  facet_wrap(~gen) +
+  scale_fill_hfv() +
+  theme(
+    legend.position = "top",
+    axis.text.x = element_blank()
+    )
 
 ```
 
@@ -141,7 +181,13 @@ The share of cost-burdened millennial households is slightly higher than that of
 #| label: fig-cb-senior
 #| fig-cap: "Cost-burdened Senior-headed Households"
 
-cb_senior <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_senior")
+cb_senior <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_senior") |> 
+  mutate(cb = case_match(
+    cb,
+    "Severely Cost-burdened (50% of Income or more)" ~ "Severly cost-burdened",
+    "Cost-burdened (30%-49% of Income)" ~ "Cost-burdened",
+    "Not Cost-burdened" ~ "Not Cost-burdened"
+  ))
 
 cb_senior$cb <- fct_inorder(cb_senior$cb)
 
@@ -149,7 +195,10 @@ ggplot(cb_senior,
        aes(x = age,
            y = value,
            fill = cb)) +
-  geom_col()
+  geom_col() +
+  scale_fill_hfv() +
+  theme_hfv() +
+  theme(legend.position = "top")
 
 
 ```
@@ -158,7 +207,13 @@ ggplot(cb_senior,
 #| label: fig-cb-senior-alone
 #| fig-cap: "Cost-burdened Senior-headed, Living Alone Households"
 
-cb_senior_alone <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_senior_alone")
+cb_senior_alone <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_senior_alone") |> 
+  mutate(cb = case_match(
+    cb,
+    "Severely Cost-burdened (50% of Income or more)" ~ "Severly cost-burdened",
+    "Cost-burdened (30%-49% of Income)" ~ "Cost-burdened",
+    "Not Cost-burdened" ~ "Not Cost-burdened"
+  ))
 
 cb_senior_alone$cb <- fct_inorder(cb_senior_alone$cb)
 
@@ -166,7 +221,10 @@ ggplot(cb_senior_alone,
        aes(x = age,
            y = value,
            fill = cb)) +
-  geom_col()
+  geom_col() +
+  scale_fill_hfv() +
+  theme_hfv() +
+  theme(legend.position = "top")
 
 ```
 
@@ -178,8 +236,11 @@ Survey responses noted a lack of affordable housing options for seniors, especia
 
 Households with low incomes and high housing costs are at particular risk of homelessness in the event of sudden income loss or emergency expenses. Approximately 18,847 households in Virginia Beach are at risk of homelessness. That's over 10% of all Virginia Beach households. Approximately 10,953 households have incomes below 30% AMI and have housing costs of at least 30% of household income. Another 7,894 households have incomes between 30% and 50% of AMI and pay at least 50% of household income in housing costs.
 
+`ADD FIGURE: Vulnerability by Household Type`
+
 ```{r}
 #| label: fig-vulnerability
+#| eval: false
 #| fig-cap: "Vulnerability by Household Type"
 
 vulnerability <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "vulnerability") |> 
@@ -221,9 +282,13 @@ City staff, councilmembers, employers, and citizens all expressed concerns about
 
 Most households (81%) in Virginia Beach include at least one worker. Those households who are not working (19%) are likely to be retired, although a minority of households may have disabilities or family circumstances that prevent them from working. Twenty-three percent of households are headed by someone 65 and older, and 28% of households receive retirement income. Approximately 3% of households receive Supplemental Security Income (SSI), a good proxy for households that include at least one person with disabilities or an older adult who has little to no income or resources.
 
+`ADD TABLE: Households by Number of Workers`
+
 ```{r}
 #| label: tbl-workers
-#| tbl-cap: "Households by Number of Workers"
+#| eval: false
+
+# tbl-cap: "Households by Number of Workers"
 
 hh_workers <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hh_workers") |> 
   mutate(pct = percent(pct))
@@ -239,8 +304,11 @@ hh_workers |>
 
 Nearly 75,900 workers, roughly half (47%) of Virginia Beach's workforce, commute into the city for their primary job. In-commuters are disproportionately aged 29 or younger, earning \$1,250-\$3,333 per month (low-income for a single-earner household or a dual-earner household supporting a dependent), and working in the trade, transportation, and utilities industries. Meanwhile, resident workers are disproportionately 55 and older and earning more than \$3,333 per month. Lower-income workers earning less than \$1,250 per month make up 24% of the workforce and 24% of in-commuters, indicating they're not excluded from the city even though they're likely to endure housing cost burden and associated hardship. (As discussed earlier in the report, 76% of low-income households experience housing cost burden.)
 
+`ADD FIGURE: In-commuting, Resident Workers, and Out-commuting for Primary Jobs`
+
 ```{r}
 #| label: fig-otm
+#| eval: false
 #| fig-cap: "In-commuting, Resident Workers, and Out-commuting for Primary Jobs"
 
 # Insert image
@@ -256,6 +324,8 @@ Housing affordability remains a significant concern in the city of Virginia Beac
 Further tabulations and analysis are included in \[Appendix X\].
 :::
 
+{{< pagebreak >}}
+
 ::: callout-note
 ## Military Households
 
@@ -266,9 +336,9 @@ Around 50% of military households own their homes, and 49% rent. The vast majori
 The median household income of military households is approximately \$87,140, around 6% higher than the citywide median. Nearly 60% of military households have a household income above 100% AMI. Around 25% of military households earn below 80% AMI. Approximately 5,891 military households are housing cost-burdened: over two-thirds of military households. More than 25% of homeowners and nearly 50% of renters are cost-burdened. Indeed, studies suggest that military households experience similar affordability challenges despite receiving a Basic Allowance for Housing (BAH) intended to cover 95% of the average housing costs for an off-base housing unit and utilities.[^affordability-4]
 :::
 
-[^affordability-3]:  The number of military households who own free and clear is too small to generate a reliable estimate.
+[^affordability-3]: The number of military households who own free and clear is too small to generate a reliable estimate.
 
-[^affordability-4]:  Torres 2023, accessed October 2023, https://bipartisanpolicy.org/blog/faqs-housing-military-families/#:\~:text=Service%20members%20living%20in%20government,rents%20above%20the%20BAH%20rate.
+[^affordability-4]: Torres 2023, accessed October 2023, https://bipartisanpolicy.org/blog/faqs-housing-military-families/#:\~:text=Service%20members%20living%20in%20government,rents%20above%20the%20BAH%20rate.
 
 ## Affordable Housing
 
@@ -284,8 +354,11 @@ More than half (60%) of rental stock in Virginia Beach has rent affordable to ho
 
 Building units on either end of the 50%-80% income category would help relieve competition to access these units. Some higher-income renters may choose to “upgrade” to a unit with more space, amenities, nicer features, and/or a better location if the unit were available and still affordable to them. Renters who are currently enduring a housing cost burden would likely welcome a unit that is affordable and meets their needs. Some renters may also choose to become homeowners if a unit that is affordable and meets their needs were available. Availability of homeownership opportunities is discussed more in the following sections.
 
+`ADD FIGURE: Virginia Beach Rented/For-rent Housing Gap`
+
 ```{r}
 #| label: fig-renter-gap
+#| eval: false
 #| fig-cap: "Virginia Beach Rented/For-rent Housing Gap"
 
 ```
@@ -298,8 +371,11 @@ Housing cost burdens shown in the lefthand column of each pair are far more comm
 
 Quantity and occupancy of the housing stock across income affordability levels, shown in the righthand columns, also provide important insights. Most owners have higher incomes than they need to comfortably afford their unit, which though anticipated based on relatively fixed housing costs and expected increases in income, also represents the potential for upgrade. Over time, as households’ size and income grow, many owners will seek to move to new homes that better accommodate new needs. However, there is not enough housing stock to accommodate households with incomes above 120%  AMI. This gap in housing for higher-income households may limit options to upgrade and require higher-income households to stay in their starter home longer, restricting supply housing that is affordable for first-time homebuyers and to lower- and moderate-income households and also potentially inflating the price of that stock. 
 
+`ADD FIGURE: Virginia Beach Owned/For-sale Housing Gap`
+
 ```{r}
 #| label: fig-owner-gap
+#| eval: false
 #| fig-cap: "Virginia Beach Owned/For-sale Housing Gap"
 
 ```
@@ -314,11 +390,12 @@ Of 145,498 units from the Virginia Beach assessment data, using a 5% down paymen
 
 The disparity in affordable units across city council districts further emphasizes the uneven distribution of affordable housing options. For instance, City Council District 4 exhibited a significantly higher proportion of affordable units compared to City Council District 2, which had a notably lower percentage.
 
+`ADD FIGURE: Share of Affordable Units to 4.5-person household with below 80% AMI`
+
 ```{r}
-#| label: fig-aff-4.5
+#| label: fig-aff-4-5
+#| eval: false
 #| fig-cap: "Share of Affordable Units to 4.5-person household with below 80% AMI"
-
-
 
 
 ```

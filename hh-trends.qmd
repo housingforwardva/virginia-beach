@@ -2,10 +2,13 @@
 
 ```{r}
 #| label: setup
+#| echo: false
+#| message: false
+#| warning: false
 
-library(tidyverse)
+source("_common.R")
+
 library(readxl)
-library(hdatools)
 library(kableExtra)
 library(patchwork)
 library(scales)
@@ -74,7 +77,6 @@ age <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "age_dist")
 age$age = factor(age$age, levels = c("Under 25","25 to 34","35 to 44",
                                      "45 to 54","55 to 64","65 to 74",
                                      "75 to 84","85+"))
-  
 
 ggplot(age,
        aes(x = forcats::fct_rev(age),
@@ -92,6 +94,8 @@ ggplot(age,
 ```
 
 Approximately 53,429 householders are baby boomers, aged between 57 and 75 in 2021; 52,131 are millennials, aged between 25 and 40 in 2021; and 6,976 are Gen Z or Zoomers, of whom the oldest are 24 years old.
+
+{{< pagebreak >}}
 
 ::: callout-note
 ## Housing Preferences by Age
@@ -114,6 +118,8 @@ Both renters and owners are gravitating toward single-family homes, and preferen
 [^hh-trends-14]: National Association of REALTORS® Research Group. (2023). 2023 Home Buyers and Sellers Generational Trends Report. Retrieved October 27, 2023, from https://www.nar.realtor/sites/default/files/documents/2023-home-buyers-and-sellers-generational-trends-report-03-28-2023.pdf
 
 [^hh-trends-15]: *Ibid.*
+
+{{< pagebreak >}}
 
 ```{r}
 #| label: fig-race
@@ -169,6 +175,7 @@ ggplot(size,
   theme_hfv() +
   scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.15))) +
   scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  flip_gridlines() +
   labs(title = "Households by Household Size",
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
 
@@ -192,6 +199,7 @@ ggplot(br,
   theme_hfv() +
   scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.15))) +
   scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  flip_gridlines() +
   labs(title = "Dwelling Units by Number of Bedrooms",
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
 
@@ -205,15 +213,17 @@ ggplot(br,
 hh1 <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "one_hh")
 
 ggplot(hh1,
-       aes(x = age,
-           y = count,
+       aes(x = count,
+           y = age,
            fill = forcats::fct_rev(living_arrangement))) +
   geom_col(position = "stack") +
   theme_hfv() +
   scale_fill_hfv() +
-  scale_y_continuous(labels = number_format(big.mark = ",")) +
+  scale_x_continuous(labels = number_format(big.mark = ",")) +
+  flip_gridlines() +
   labs(title = "One-Person Households by Householder Age",
-       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data") +
+  theme(legend.position = "top")
   
 
 
@@ -229,7 +239,6 @@ Smaller households are particularly common among senior households, the age grou
 
 hh_type <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hh_type")
 
-
 ggplot(hh_type,
        aes(x = reorder(type, hh),
            y = hh,
@@ -239,12 +248,11 @@ ggplot(hh_type,
   theme_hfv() +
   scale_fill_hfv() +
   scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
-  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  flip_gridlines() +
   labs(title = "Household and Family Types",
-       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
-
-
-
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data") +
+  theme(legend.position = "top")
 
 ```
 
@@ -264,7 +272,7 @@ Approximately 114,905 households in Virginia Beach are homeowners: 65% of all ho
 
 tenure <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "tenure")
 
-subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free & Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
+subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free and Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
 
 
 ggplot(tenure,
@@ -290,7 +298,7 @@ ggplot(tenure,
 
 gen <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "generation")
 
-subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free & Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
+subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free and Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
 
 
 ggplot(gen,
@@ -345,6 +353,7 @@ ggplot(hh_ami,
   scale_fill_hfv() +
   scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
   scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  flip_gridlines() +
   labs(title = "Household Tenure by AMI Level",
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
   
@@ -354,34 +363,42 @@ ggplot(hh_ami,
 
 Tenure also varies based on income. HUD definitions of income (figure X) are applied in this analysis because they constitute the basis for many of the programs addressing disparities in access to homeownership and other housing challenges. Although 2021 limits are used in the data analysis to align with the data’s vintage, VCHR has provided the most-recent income limits, which better reflect current incomes in Virginia Beach. 
 
+`ADD TABLE: HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2021`
+
 ```{r}
 #| label: tbl-hud-inc-21
-#| tbl-cap: "HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2021"
+#| eval: false
+
+# tbl-cap: "HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2021"
 
 hud_21 <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hud_21")
 
 hud_21 |> 
-  kbl(align = "lcccc") |> 
+  kbl(align = "lcccc") 
   kable_styling(bootstrap_options = c("striped", "condensed"))
 
 ```
 
+`ADD TABLE: HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2023`
+
 ```{r}
 #| label: tbl-hud-inc-23
-#| tbl-cap: "HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2023"
+#| eval: false
+
+# tbl-cap: "HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2023"
 
 hud_23 <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hud_23") |> 
   mutate_at(vars(2:5), ~ currency(., digits = 0))
 
 hud_23 |> 
-  kbl(align = "lcccc") |> 
+  kbl(align = "lcccc")
   kable_styling(bootstrap_options = c("striped", "condensed"))
 
 ```
 
 Households with higher incomes relative to AMI are more likely to own their homes. Nearly 60% of homeowners have household incomes above 120% of AMI, while over 60% of renters have household incomes below 100% of AMI. Nearly 80% of households above 120% AMI are owners, while only 22% are renters. Among extremely low-income households — those at 30% AMI or less — 60% are renters and 40% are owners.
 
-````{r}
+```{r}
 #| label: fig-det-ami
 #| fig-cap: "Detailed Household Tenure by AMI Level"
 
@@ -392,7 +409,7 @@ det_ami <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "det_ami") |>
 det_ami$ami = factor(det_ami$ami, levels = c("Under 30% AMI","30-50% AMI","50-80% AMI",
                                            "80-100% AMI","100-120% AMI","Over 120% AMI"))
 
-subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free & Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
+subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free and Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
 
 ggplot(det_ami,
        aes(x = forcats::fct_rev(ami),
@@ -403,6 +420,7 @@ ggplot(det_ami,
   theme_hfv() +
   scale_fill_hfv() +
   scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.02))) +
+  flip_gridlines() +
   labs(title = "Detailed Household Tenure by AMI Level",
        subtitle = subtitle_text,
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
@@ -414,7 +432,7 @@ ggplot(det_ami,
 
 Households at lower AMI levels are less likely to own their homes, but, as shown in Figure X, lower-income households who do own their homes are more likely to own free and clear. For example, among households below 30% AMI, 40% are homeowners but nearly 60% of homeowners own free and clear. In contrast, among households above 120% AMI, nearly 80% are homeowners, but under 20% of homeowners own free and clear. Given the high cost of homeownership with a mortgage, homeowner households at lower AMI levels are likely to be older households living in a home they have already paid off.
 
-````{r}
+```{r}
 #| label: fig-ten-race
 #| fig-cap: "Household Tenure by Householder Race/Ethnicity"
 
@@ -422,7 +440,7 @@ ten_race <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "tenure_race") |>
   group_by(race) |> 
   mutate(pct = value/sum(value))
 
-subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free & Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
+subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free and Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
 
 ggplot(ten_race,
        aes(x = race,
@@ -433,6 +451,7 @@ ggplot(ten_race,
   theme_hfv() +
   scale_fill_hfv() +
   scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.02))) +
+  flip_gridlines() +
   labs(title = "Household Tenure by Householder Race/Ethnicity",
        subtitle = subtitle_text,
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
@@ -441,4 +460,4 @@ ggplot(ten_race,
 
 Finally, household tenure and form of ownership vary by householder race and ethnicity. White and Asian households are twice as likely to own than to rent. A narrow majority of Hispanic households own their homes, while 55% of Black households rent. Among homeowners, a higher share of white and Asian households (over one-quarter) own their homes free and clear, compared to 1 in 5 Hispanic and 1 in 7 Black homeowner households.
 
-Tenure plays a crucial role in housing affordability, with renters more vulnerable to increasing housing costs than homeowners, and a higher rate of housing cost burden among renters than among owners. By definition, cost-burdened households spend more than 30% of their income on housing costs, which can make it difficult to afford other necessities like food, healthcare, and transportation. While homeowners generally have fixed mortgage payments that change little from year to year, renters often face increased housing costs annually. In competitive markets, they may also be subject to turnover in unit ownership, which is often associated with higher rent increases. Housing affordability is discussed in more depth in the [“Housing Affordability” section].
+Tenure plays a crucial role in housing affordability, with renters more vulnerable to increasing housing costs than homeowners, and a higher rate of housing cost burden among renters than among owners. By definition, cost-burdened households spend more than 30% of their income on housing costs, which can make it difficult to afford other necessities like food, healthcare, and transportation. While homeowners generally have fixed mortgage payments that change little from year to year, renters often face increased housing costs annually. In competitive markets, they may also be subject to turnover in unit ownership, which is often associated with higher rent increases. Housing affordability is discussed in more depth in the “Housing Affordability” chapter.

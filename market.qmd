@@ -2,10 +2,17 @@
 
 ```{r}
 #| label: setup
+#| echo: false
+#| message: false
+#| warning: false
 
-library(tidyverse)
+source("_common.R")
+
 library(readxl)
-library(hdatools)
+library(kableExtra)
+library(patchwork)
+library(scales)
+library(formattable)
 library(ggtext)
 
 ```
@@ -29,9 +36,10 @@ ggplot(occ_rental,
   theme_hfv() +
   scale_fill_hfv() +
   scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
-  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 18)) +
   theme(panel.grid.major.x = element_line(color = "#f5f5f5", size = 0.5),
         panel.grid.major.y = element_blank()) +
+  flip_gridlines() +
   labs(title = "Occupied Rental Units by Units in Structure",
        caption = "**Source:** VCHR Tabulation of ACS 5-year 2021 PUMS Data") 
   
@@ -88,6 +96,7 @@ ggplot(units_rent,
   coord_flip() +
   theme_hfv() +
   scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
+  flip_gridlines() +
   labs(title = "Units by Gross Rent",
        caption = "**Source:** ACS Published Tables, 2021 5-year, DP04")
   
@@ -102,8 +111,11 @@ Housing markets have been theorized as segmented markets, meaning a region's hou
 
 Construction of new apartments has been steadily decreasing since 2018, and although market vacancy does not recommend a substantial reversal of this trend, focus group participants discussed how the competitive rental market increasingly excludes certain households. Higher-income households are often advantaged in the market. Focus group participants recounted practices that prioritize higher-income households and exclude lower-income households, such as requiring three months' rent as a deposit and refusing voucher holders or other types of housing assistance. In addition to exposing possible illegal discrimination, these examples are evidence of a tightening market where renters must compete for units rather than landlords competing for renters. Since focus group participants observed the exclusion of families, seniors, and households with low incomes, prioritizing the development of units for these groups could promote market health in addition to addressing a housing gap. More information on rental housing gaps is provided in the \["Affordable Housing" section\].
 
+`ADD FIGURE: New Apartment Construction`
+
 ```{r}
 #| label: fig-new-apts
+#| eval: false
 #| fig-cap: "New Apartment Construction"
 
 
@@ -120,7 +132,8 @@ The Virginia Beach homeownership market has attracted a healthy demand, followin
 #| label: fig-med-sales
 #| fig-cap: "Annual Median Sale Price"
 
-med_sales <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "med_sales")
+med_sales <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "med_sales") |> 
+  mutate(year = as.numeric(year))
 
 ggplot(med_sales,
        aes(x = year,
@@ -131,7 +144,8 @@ ggplot(med_sales,
   geom_point() +
   theme_hfv() +
   scale_color_gradientn(colours = c("#ADDCB1", "#46A88F", "#207A88", "#0F1A4E")) +
-  scale_y_continuous(limits = c(200000, 400000), labels = dollar_format()) +
+  scale_x_continuous(breaks = seq(2005, 2023, 2)) +
+  scale_y_continuous(limits = c(200000, 355000), labels = dollar_format()) +
   ggrepel::geom_text_repel(data = subset(med_sales, year %in% c(2007, 2011, 2021, 2023)), aes(label = dollar_format()(value))) +
   labs(title = "Annual Median Sale Price",
        caption = "**Source:** VCHR Tabulation of Real Estate Information Network, Inc. Virginia Beach Sales Data")
@@ -152,6 +166,7 @@ ggplot(med_dom,
            fill = dom)) +
   geom_col() +
   theme_hfv()  +
+  scale_x_continuous(breaks = seq(2005, 2023, 2)) +
   scale_fill_gradientn(colours = c("#ADDCB1", "#46A88F", "#207A88", "#0F1A4E")) +
   labs(title = "Annual Median Days on the Market (DOM)",
        caption = "**Source:** VCHR Tabulation of Real Estate Information Network, Inc. Virginia Beach Sales Data")
@@ -164,8 +179,11 @@ Despite DOM indicating market health, focus group participants recounted evidenc
 
 Virginia Beach will need to continue to add new housing units to meet demand and keep the market balanced. Production of single-family and condo units has largely slowed year-over-year since 2016, which likely supported home appreciation and balancing of supply and demand. Though the City must continue adding units to maintain market health, adding too many units could reverse positive market trends. Market health and moderate levels of demand create an opportunity for the City to set housing goals and prioritize housing needs of existing residents and workers, which are discussed further in the following sections. Furthermore, creating housing that meets the needs of those who are being excluded from the for-sale market has the potential to relieve hardship related to intense competition in the middle and low end of the market without negatively impacting needed home appreciation.
 
+`ADD FIGURE: New Single Family and Condo Units Constructed Annually`
+
 ```{r}
 #| label: fig-new-sf
+#| eval: false
 #| fig-cap: "New Single Family and Condo Units Constructed Annually"
 
 
@@ -178,19 +196,12 @@ There are approximately 12,141 vacant housing units in Virginia Beach. Approxima
 Vacant units in the \"other\" category --- generally interpreted as long-term vacancy --- are unoccupied for one of the following reasons:
 
 -   Unit is foreclosed or held as part of a legal proceeding or dispute such as divorce or estate settlement
-
 -   Unit is undergoing, or in need of, repair or renovation
-
 -   Unit is being prepared for rent or sale but not yet on the market
-
 -   Unit is uninhabited for personal or family reasons, such as staying with family members or relocation to a nursing facility
-
 -   Unit is uninhabited due to the occupant\'s extended absence, such as a work assignment, military deployment, or incarceration
-
 -   Unit is presently unoccupied and designated as specific use housing, such as worker or student dormitories, model units, and church-owned units
-
 -   Unit is abandoned (does not include units that are dilapidated or uninhabitable)
-
 -   Unit is vacant for a reason unknown by the survey respondent or field representative.[^market-2]
 
 [^market-2]: See https://www.census.gov/housing/hvs/definitions.pdf
@@ -210,7 +221,8 @@ ggplot(vacant_units,
   coord_flip() +
   theme_hfv() +
   scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
-  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 25)) +
+  flip_gridlines() +
   labs(title = "Vacant Units by Vacancy Status",
        caption = "**Source:** ACS Published Tables, 2021 5-year Estimates")
 

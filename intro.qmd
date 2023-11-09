@@ -8,9 +8,14 @@ However, since 2016, demand for housing in Virginia Beach has continued to recov
 
 Housing cost burden -- when housing costs consume 30% or more of a household's income -- fell 11% between 2014 and 2021. While 2014 data reflected the lingering impact of the Great Recession, when unemployment and wage growth had not yet returned to pre-Crash levels, 2021 data reflects the mixed impact of the COVID-19 pandemic on the housing market. On one hand, the pandemic triggered a serious economic shock heavily impacting the tourism and hospitality sectors central to Virginia Beach's economy. On the other hand, the shock was met with an unprecedented expansion of unemployment benefits, direct economic stimulus, business support, and rental assistance providing meaningful relief to many struggling households. Relief such as the Child Tax Credit and emergency rental assistance was still active and therefore reflected in the 2021 data. However, it's likely that as these assistance programs expired, lower-income households have will increasingly struggled with affordability in a way that is only just being reflected in the 2022 national data as this report is being finalized.
 
+`ADD TABLE: Changes to Major Housing/Household Measure 2014-2021`
+
 ```{r}
 #| label: tbl-change
-#| tbl-cap: "Changes to Major Housing/Household Measure 2014-2021"
+#| eval: false
+#| echo: false
+
+# tbl-cap: "Changes to Major Housing/Household Measure 2014-2021"
 
 library(tidyverse)
 library(kableExtra)
@@ -18,6 +23,8 @@ library(kableExtra)
 changes <- read_csv("data/vb_intro.csv")
 
 ```
+
+{{< pagebreak >}}
 
 ::: callout-note
 ## Millennials and Boomers

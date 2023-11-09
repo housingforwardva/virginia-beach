@@ -1,3 +1,192 @@
-# Expand VBDA role
+# Expand VBDA's housing role
 
-...
+### STRATEGIC PRIORITY 2 {.unnumbered .unlisted}
+
+### Use City of Virginia Beach Development Authority to fund new large-scale, mixed-use development projects {.unnumbered .unlisted}
+
+Economic development authorities (EDAs) are subordinate agencies created and supported by local governments in Virginia. EDAs have a wide range of powers to support the creation of new economic opportunities within their respective localities. These powers include the ability to finance major projects, acquire property for development by other entities, and promote the community to prospective businesses.
+
+::: callout-note
+#### IDAs and EDAs
+
+[Virginia state code](https://law.lis.virginia.gov/vacode/title15.2/chapter49/) uses the term “industrial development authorities” (IDAs). However, many localities choose to replace “industrial” with “economic” to reflect the greater range of activities supported by the authorities. This text uses the latter due to its higher familiarity among policymakers and the public.
+:::
+
+Traditionally, EDAs focus on attracting private investments that significantly increase the number of jobs—and commercial tax base—in a community. Because housing markets with limited affordable and available options can seriously hamper job creation, numerous EDAs across Virginia also support affordable housing in a variety of ways.
+
+Recognizing the growing importance of housing to economic development, the General Assembly [expanded the powers of EDAs](https://lis.virginia.gov/cgi-bin/legp604.exe?221+sum+HB1194) in 2022 to include grant-making associated with the construction of affordable housing. More specifically, this change impacted only localities with a housing authority; prior code already permitted this power for EDAs in jurisdictions without housing authorities (such as Virginia Beach).
+
+While VBDA may not necessarily have “new” powers, this new legislation is important to note, as it has contributed to increasing interest about affordable housing among EDAs. As a result, the array of best practices is growing, and should be followed with significant interest.
+
+VBDA continues to be an important engine powering greater business diversity and strong event and tourism industries in the city. By strategically expanding its activities to also support housing, particularly through new mixed-use, mixed-income developments, VBDA can help ensure that its economic investments are not stymied by limited housing choices for workers and their families.
+
+## HOW IT WORKS
+
+The City of Virginia Beach Economic Development Plan (September 2021) highlights the tight housing market and resulting affordability challenges as the second-most important trend influencing economic growth in the community. Should the status quo remain unchanged, or get worse, population stagnation in the city will continue to reduce the workforce. However, the plan makes just one recommendation related to this issue: Strategy 1.4.2 calls for social entrepreneurship and reverse-pitch competitions to spur innovation among localities and businesses. 
+
+Below are activities VBDA might undertake should it look to expand its work to address housing affordability and secure economic vitality throughout the city. To align with the City’s objective of a higher ratio of nonresidential to residential real estate assessments, these strategies should prioritize mixed-use projects that also spur new commercial, institutional, industrial, and other nonresidential activities.
+
+**Financial support**
+
+EDAs now have a wide range of tools available to make affordable housing projects more financially feasible. These investments can occur within the context of major mixed-use development projects but can also be offered to one-off projects that might strategically benefit VBDA’s broader objectives.
+
+*Revenue bonds*
+
+EDAs can issue tax-exempt bonds that provide large, low-cost funding to create transformative capital projects. As referenced earlier, VBDA has used multifamily revenue bonds to help boost the construction or rehabilitation of affordable housing in Virginia Beach. These bonds are guaranteed by the future income (“revenue”) of the project and are commonly used for affordable housing throughout the commonwealth because of their low interest rates. Neither VBDA nor the City loans money; the arrangement provides developers with access to capital markets at attractive rates. In fact, VBDA earns income via fees collected from the bond recipient.
+
+::: callout-tip
+#### Prior VBDA housing bonds
+
+VBDA already uses its bonding authority to occasionally issue revenue bonds for residential projects, including affordable housing. According to [MSRB records](https://emma.msrb.org/IssueView/Details/EP349121), VBDA issued 29 multifamily revenue bonds between 1987 and 2011.
+
+For example, the \$6,000,000 bond for New Sands Apartments (“[The Sands](https://www.preservationmanagement.com/property/the-sands/)”) in 2011 helped finance the acquisition and rehabilitation of a 120-unit affordable rental property for seniors. It was used in conjunction with Low-Income Housing Tax Credits (LIHTC) and an existing Section 8 contract.
+
+More recently, VBDA approved \$33,000,000 in bonds to help renovate the Atlantis Apartments complex in 2021. On Oct. 17, 2023, VBDA approved \$525,000,000 in revenue bonds to Westminster-Canterbury. This will allow the organization to build more than 200 new independent living units and related amenities. 
+:::
+
+*Real estate tax abatements*
+
+EDAs can facilitate tax abatements to affordable housing projects in the form of rebates granted by the locality. These require a city ordinance to authorize, for example, annual rebates equal to the incremental increase in property taxes following project completion. In exchange for providing affordable housing, the developer/owner will pay taxes only on the original value of the property, which helps reduce long-term operating costs — which in turn can secure better financing.
+
+::: callout-tip
+#### Richmond EDA tax grants
+
+The City of Richmond is about to approve the second and third examples of this [tax rebate arrangement](https://richmondva.legistar.com/LegislationDetail.aspx?ID=6378283&GUID=D05F08E8-5EC9-417D-AA69-AD307797C46F) for affordable rental projects. These “performance grants” are structured contracts between the City, its EDA, and the developers. The annual grant payments will run for 30 years and total the incremental real estate tax revenues generated by the developments. The projects must provide units affordable at 60% AMI in accordance with the Low-Income Housing Tax Credits they are also receiving. Furthermore, the City requires the developers to award at least 30% of construction costs to minority business enterprises (MBEs).
+:::
+
+*Grants*
+
+One common function of EDAs is to provide grants to businesses and other entities to foster innovation, workforce development, and other activities that support the community’s economic growth objectives. While these grants are usually not targeted to housing-specific uses, VBDA may want to explore options to use its discretionary funds for strategic housing activities in the private sector.
+
+VBDA currently awards cash grants under the Economic Development Investment Program (EDIP). These incentives are provided to companies that meet specific performance criteria, including number of jobs created, salary levels, and capital investments. For FY 2022-2023, [VBDA awarded](https://www.yesvirginiabeach.com/_assets/Documents/AboutUs/VBDA/Reports-Audits/VBDA-FY22-23-to-City-Council-Annual-Report.pdf) over \$4,000,000 in EDIP grants to 12 recipients.
+
+As one potential strategy, VBDA could proactively advertise and seek EDIP application from firms involved in the production of lower-cost housing, or who can strengthen the construction workforce, especially through innovative methods.
+
+**Land support**
+
+VBDA can pursue acquiring, consolidating, and leasing various parcels of land that are strategically located for mixed-use development. Having land readily available reduces a significant barrier for developers, expedites the development process, and allows for long-term control over land use. It also gives Virginia Beach a proactive way to encourage development in areas targeted for growth.
+
+*Land banking*
+
+EDAs can purchase and hold onto land until suitable development partners are selected, utilities are planned, and financing terms established. This does not necessarily mean that VBDA needs to become a formal land bank in accordance with the Virginia Land Bank Entities Act.
+
+*Land swaps*
+
+Along with market acquisitions, EDAs can organize and execute property swaps to strategically trade land with private owners or other public entities.
+
+*Discounted sales*
+
+When selling off land for mixed-use development, EDAs can discount acquisition costs in exchange for certain terms, such as the inclusion of below-market rate residential units, or donation of a section of the property to a separate affordable housing developer.
+
+*Long-term ground leasing*
+
+EDAs have the option to retain ownership of the land and create a ground lease agreement with the developer for the improvements. The property is leased at a nominal cost, and the developer is exempt from paying real estate taxes on the value of the land. This arrangement gives the public a formal stake in the development and provides an EDA with more permanent oversight to ensure compliance with any performance incentives.
+
+**Public-private partnerships**
+
+Public-private partnerships (PPP) are collaborative agreements between public entities and private developers. Numerous EDAs in Virginia, including VBDA, have established PPPs to execute specific development projects.
+
+::: callout-tip
+#### Current PPPs in Virginia Beach
+
+VBDA’s [25th Street Mixed-Use and Parking Development](https://www.cvillepedia.org/images/20130808-Virginia-Beach-Strategic-Growth.pdf) PPP with Breeden Co. is one of the few, if not the only one, that includes a residential component. Here, the redevelopment of a City-owned parking complex led to a brand-new parking garage with almost 600 spaces, nearly 150 new apartments, and additional commercial space. After selling the property to Breeden Co., the City purchased and generated revenue from the new parking garage.
+:::
+
+VBDA can continue its successful PPP track record by intentionally seeking out collaborations with developers experienced in affordable housing. Sharing the financial risk and benefit can make large-scale projects more feasible and can ensure the inclusion of housing available to low- and moderate-income households.
+
+**Planning and technical assistance**
+
+Working with community, regional, and state partners, VBDA and the Department of Economic Development can position themselves as an important resource for planning, executing, and managing mixed-use, mixed-income projects. Building this capacity would help local developers—especially those with less experience—increase their confidence with affordable housing and related community development programs.
+
+*Planning grants*
+
+EDAs are increasingly serving as an intermediary for applying to state planning grants to help study development options for specific sites and properties. Sources include Virginia Housing, the Department of Housing and Community Development (DHCD), and the Virginia Economic Development Partnership (VEDP). VBDA can provide this service to help investigate mixed-use opportunities on City-owned properties, or to assist private owners with assessing options for certain properties whose development would be a strategic win for the city.
+
+::: callout-tip
+#### EDA planning activity in Virginia
+
+The [Paige County EDA](https://www.pagecounty.virginia.gov/AgendaCenter/ViewFile/Minutes/_09252023-864) recently secured a Virginia Housing grant to assess the potential for residential development on land it owns. 
+The [Henrico County EDA](https://henrico-eda-site-assets.s3.amazonaws.com/meeting-minutes/june+23+minutes+signed.pdf) is pursuing a $50,000 brownfields grant from the Virginia Economic Development Partnership to help a property owner determine remediation needs on a parcel formerly used as an unregulated landfill but potentially suitable for mixed-use development, including residential. If successful, the EDA will assist the owner with applying for funds to cover actual remediation.
+:::
+
+*Knowledge sharing*
+
+VBDA can explore hosting open houses or symposiums to encourage networking between affordable housing practitioners and developers of residential/commercial properties.
+
+::: callout-tip
+#### EDA-organized housing summits
+
+For the past two years, the City of Danville and Pittsylvania County Offices of Economic Development have organized the [Southern Virginia Regional Housing Summit](https://www.discoverdanville.com/southern-virginia-regional-housing-summit/). The event is a chance for officials to promote residential and mixed-use development opportunities in their communities.
+:::
+
+## HOW TO DO IT
+
+**Within 6 months:**
+
+* Convene stakeholders from the Department of Economic Development, VBDA board, and other important partners to discuss shared goals and opportunities related to affordable housing.
+* Develop preliminary housing-related objectives for the VBDA and seek adoption by the board and the City Council. Use these as guidance to prioritize future housing investments by VBDA.
+
+**Within 1 year:**
+
+* Identify affordable housing projects in the predevelopment stage in Virginia Beach that could benefit from VBDA support. Meet with these developers to understand their needs and to determine what types of financial support would be most beneficial.
+* Identify opportunities for property assemblage or acquisition to support large-scale, mixed-use development.
+* Identify City-owned or privately owned properties that could benefit from intentional planning activities.
+* Reach out to relevant state agencies to pursue funding opportunities that would facilitate site planning, feasibility studies, and/or environmental remediation work.
+
+**Within 2 years:**
+
+* Develop a competitive bid process that requires affordable housing as a component of a mixed-use development.
+* Develop a transparent process that offers grants and other resources to affordable housing projects through VBDA.
+
+## WHO DOES WHAT
+
+**VBDA board:** Work with staff and partners to set major goals and objectives. Evaluate and approve bond issues and other financial agreements. Liaison with the City Council.
+
+**Department of Economic Development staff:** Support VBDA board with decision making. Gather information on best practices from economic development colleagues elsewhere in Virginia. Draft policies, procedures, and contracts related to programmatic activities.
+
+**Department of Housing and Neighborhood Preservation:** Assist Department of Economic Development and VBDA board with housing-related programs. Connect affordable housing developers with VBDA.
+
+**Private and nonprofit developer partners:** Seek out VBDA partnerships and demonstrate specific ways for the City to provide support.
+
+## FUNDING SCOPE
+
+**Administrative costs:** Meaningful progress is likely difficult unless VBDA or Department of Economic Development staff increases by one FTE position. Salary for this hire can be estimated using the average compensation for all current department staff.
+
+**Revenue bonds:** Revenue bonds issued by VBDA for any mixed-use or residential project will be backed by the development’s future income. The city does not guarantee any debt and has no expenses other than staff time dedicated to preparing and executing the issuance. Fees received by the applicant may cover that cost.
+
+**Real estate tax abatement:** Grants that rely on reimbursement of future real estate tax income are revenue neutral. However, the City may want to consider certain payment-in-lieu fees to at least cover the projected need for additional public services.
+
+## POTENTIAL FUNDING SOURCES
+
+* Increased administrative costs can be funded by additional support for personnel in the Department of Economic Development and VBDA budgets.
+* Revenue from the sale or long-term lease of properties could be another source to cover operational costs, and/or housing-related grant-making.
+* Planning grants are available from multiple state agencies and depend on specific scenarios and objectives:
+  + Virginia Housing (several)
+  + Department of Housing and Community Development (several)
+  + VEDP Virginia Brownfields Fund
+
+## METRICS TO EVALUATE SUCCESS
+
+* Number of new affordable housing units created in mixed-use, large-scale developments 
+* Number of new affordable housing units supported with VBDA funding
+* Demographics and income levels served within new affordable housing
+* Amount of additional funding leveraged for every dollar of VBDA investment
+* Increase in assessed values (and real estate tax revenue) from new development
+* Scope of new jobs created (e.g., number, average wages)
+
+## IMPORTANT CONSIDERATIONS
+
+* EDAs will need guidance from affordable housing developers and practitioners on how to evaluate projects that include affordable housing, as this is not their expertise.
+* In the context of a new, large-scale mixed-use development negotiation, VBDA may need support to evaluate the affordable housing aspect of the proposal to ensure it’s feasible and sufficiently affordable.
+* Legal eligibility requirements on certain types of funds can restrict usage or eligible applicants (some require nonprofit 501(c)(3) developer status) or create added reporting and coordination demands.
+
+## EXAMPLES
+
+[Loudoun County: EDA Housing Initiatives](https://biz.loudoun.gov/economic-development-authority/housing/)
+
+* EDA is partnering with nonprofit and for-profit developers to provide low-interest financing, including tax-exempt revenue bonds, to build hundreds of below-market-rate housing for Loudoun’s workforce that earn below the county’s average wage.
+
+[City of Atlanta: Invest Atlanta, Westside TAD](https://www.investatlanta.com/developers/opportunities-incentives/tax-allocation-district-financing/westside)
+
+* The EDA, now known as Invest Atlanta, is a key player in the redevelopment of the Westside Tax-Allocation District (TAD), including neighborhoods of historically disinvested single-family communities struggling with population decline over the past several decades.
+* The project aims to utilize existing tax increment to provide gap financing for redevelopment and capital projects in the Westside TAD, including a requirement to include housing designed for a mix of income levels.

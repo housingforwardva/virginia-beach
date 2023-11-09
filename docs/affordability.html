@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Virginia Beach Housing Study Update - 5&nbsp; Housing Affordability</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./conclusions.html" rel="next">
+<link href="./market.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hh-trends.html">Data findings</a></li><li class="breadcrumb-item"><a href="./affordability.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Housing Affordability</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Virginia Beach Housing Study Update</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/housingforwardva/virginia-beach" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./virginia-beach-housing-study-update.docx" rel="" title="Download Docx" class="quarto-navigation-tool px-1" aria-label="Download Docx"><i class="bi bi-file-word"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./executive-summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Executive summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data-methods-notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data and methodological notes</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Data findings</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hh-trends.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Household Trends</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./market.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Market Dynamics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./affordability.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Housing Affordability</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conclusions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Solutions</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./current-efforts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Current housing efforts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./solutions-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Strategic priorities</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sp-htf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Develop a City-managed Housing Trust Fund</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sp-vbda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Expand VBDA’s housing role</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sp-education.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Design housing education campaign</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cost-burden" id="toc-cost-burden" class="nav-link active" data-scroll-target="#cost-burden"><span class="header-section-number">5.1</span> Cost burden</a></li>
+  <li><a href="#workforce-housing-affordability" id="toc-workforce-housing-affordability" class="nav-link" data-scroll-target="#workforce-housing-affordability"><span class="header-section-number">5.2</span> Workforce Housing Affordability</a></li>
+  <li><a href="#affordable-housing" id="toc-affordable-housing" class="nav-link" data-scroll-target="#affordable-housing"><span class="header-section-number">5.3</span> Affordable Housing</a>
+  <ul class="collapse">
+  <li><a href="#rental-housing-gap-analysis" id="toc-rental-housing-gap-analysis" class="nav-link" data-scroll-target="#rental-housing-gap-analysis"><span class="header-section-number">5.3.1</span> Rental Housing Gap Analysis</a></li>
+  </ul></li>
+  <li><a href="#ownedfor-sale-gap-analysis" id="toc-ownedfor-sale-gap-analysis" class="nav-link" data-scroll-target="#ownedfor-sale-gap-analysis"><span class="header-section-number">5.4</span> Owned/For-Sale Gap Analysis</a></li>
+  <li><a href="#naturally-occurring-affordable-housing-noah" id="toc-naturally-occurring-affordable-housing-noah" class="nav-link" data-scroll-target="#naturally-occurring-affordable-housing-noah"><span class="header-section-number">5.5</span> Naturally Occurring Affordable Housing (NOAH)</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Housing Affordability</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="cost-burden" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="cost-burden"><span class="header-section-number">5.1</span> Cost burden</h2>
+<p>VCHR uses housing cost burden to measure the need for more affordable housing and to identify associated housing insecurity. When homeowners are cost-burdened, they may choose to defer maintenance or forgo upgrades in favor of necessities like food, childcare, and medical care. When renters are cost-burdened, they may make choices between housing and other necessities, and their limited ability to save makes them vulnerable to eviction or homelessness in the event of an unexpected expense. Furthermore, inability to save may effectively prevent households from investing in educational enrichment to advance their earnings and from building wealth and security through homeownership. Approximately 59,365 Virginia Beach households, over one-third, are cost-burdened, meaning their housing costs are at least 30% of household income. Among cost-burdened households, 41%, approximately 24,301 households, are severely cost-burdened, paying 50% or more of household income in housing costs.</p>
+<p><code>ADD FIGURE: Cost-burdened Households</code></p>
+<p>Cost burden has been trending down in Virginia Beach: cost burden among all households fell from 40% in 2014 to 33% in 2021, according to ACS five-year estimates. However, some improvements likely resulted from temporary pandemic-related programs in 2020-2021, including the Child Tax Credit and moratoria on evictions and rent increases. The COVID-19 pandemic had a mixed effect on housing insecurity. The pandemic initiated an economic shock disproportionately impacting lower-income, Black, and Hispanic households, but the policy response saw an unprecedented expansion of eviction moratoria, renter assistance funding, and unemployment insurance payments surpassing 100% wage replacement for some low-income workers. Implementation varied widely by jurisdictional boundaries, however, and not all households in need were able to receive assistance.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> As lower-income households face more competitive housing markets without this added support, gains in affordability may begin to erode. Indeed, cost burdens have increased post-pandemic, among all income levels and racial/ethnic groups, and the increase is driven mostly by renter households.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div id="fig-cb-tenure" class="quarto-figure quarto-figure-left anchored">
+<figure class="figure">
+<p><img src="affordability_files/figure-html/fig-cb-tenure-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.1: Cost-burdened Households by Tenure</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Housing cost burden is more common among renter households than owner households. Nearly half of renter households are cost-burdened (29,825 households), compared to just over one-quarter of owner households (29,540). Among cost-burdened households, a higher share of renters is severely cost-burdened: 44% of cost-burdened renters compared to 38% of cost-burdened owners.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div id="fig-cb-ami" class="quarto-figure quarto-figure-left anchored">
+<figure class="figure">
+<p><img src="affordability_files/figure-html/fig-cb-ami-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.2: Cost-burdened Households by AMI Level</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Households with lower incomes relative to AMI are cost-burdened at higher frequencies, and their cost burden is more likely to be severe. Large majorities of households under 80% of AMI are cost-burdened. Moderate-income and higher-income households are less impacted by housing cost burden. Approximately 45% of households between 80% and 100% of AMI, 23% of households between 100% and 120% of AMI, and 6% of households above 120% AMI are cost-burdened.</p>
+<p>Cost-burdened households under 30% of AMI, and severely cost-burdened households between 30% and 50% of AMI, are at risk of homelessness due to housing unaffordability. Survey responses show particular concern for the lack of dedicated affordable housing or Section 8 vouchers available to these very low-income households.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div id="fig-cb-race" class="quarto-figure quarto-figure-left anchored">
+<figure class="figure">
+<p><img src="affordability_files/figure-html/fig-cb-race-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.3: Cost-burdened Households by Householder Race/Ethnicity</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Levels of housing cost burden vary among householders by race and ethnicity. The share of cost-burdened households among Black- and Hispanic-led households is around 40% — 10% higher than white- and Asian-led households. Nearly half of cost-burdened Black-led households are severely cost-burdened, compared to 36% of Asian-led, 37% of white-led, and 44% of Hispanic-led cost-burdened households.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div id="fig-cb-gen" class="quarto-figure quarto-figure-left anchored">
+<figure class="figure">
+<p><img src="affordability_files/figure-html/fig-cb-gen-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.4: Cost-burdened Households by Generational Cohort</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The share of cost-burdened millennial households is slightly higher than that of boomer households: 34% and 31%, respectively. Among cost-burdened households, however, boomers are more likely to be severely cost-burdened: 43% of cost-burdened boomer households are severely cost-burdened, compared to 36% of cost-burdened millennial households.</p>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div id="fig-cb-senior" class="quarto-figure quarto-figure-left anchored">
+<figure class="figure">
+<p><img src="affordability_files/figure-html/fig-cb-senior-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.5: Cost-burdened Senior-headed Households</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="left">
+<div class="cell-output-display">
+<div id="fig-cb-senior-alone" class="quarto-figure quarto-figure-left anchored">
+<figure class="figure">
+<p><img src="affordability_files/figure-html/fig-cb-senior-alone-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;5.6: Cost-burdened Senior-headed, Living Alone Households</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Senior-headed households have high rates of cost burden and severe cost burden, particularly for seniors 75 and older. Nearly 40% of householders aged 75 and older are cost-burdened, and among these, over half are severely cost-burdened.</p>
+<p>Seniors are more likely than other age groups to live alone, and housing cost burden is most acute among senior-headed, one-person households. A majority of these households are cost-burdened, and a majority of those are severely cost-burdened.</p>
+<p>Survey responses noted a lack of affordable housing options for seniors, especially middle-income retirees receiving both Social Security income and a private pension. According to PUMS data, the median income of a person receiving Social Security is $32,745, while the median income of a person receiving both Social Security and retirement income is $46,972. These households may have incomes too high to qualify for housing assistance but too low to purchase housing on the open market. Should these seniors wish to vacate a long-owned home for a smaller or more accessible dwelling, affordability may prevent such a transition.</p>
+<p>Households with low incomes and high housing costs are at particular risk of homelessness in the event of sudden income loss or emergency expenses. Approximately 18,847 households in Virginia Beach are at risk of homelessness. That’s over 10% of all Virginia Beach households. Approximately 10,953 households have incomes below 30% AMI and have housing costs of at least 30% of household income. Another 7,894 households have incomes between 30% and 50% of AMI and pay at least 50% of household income in housing costs.</p>
+<p><code>ADD FIGURE: Vulnerability by Household Type</code></p>
+<p>[Figure X], above, shows median household income of common or notable household types in Virginia Beach. The red horizontal lines represent the annual income needed to afford the median housing unit by tenure. From highest to lowest, the lines illustrate owning with a mortgage or loan ($75,520), renting ($57,320), and owning free and clear ($25,960).</p>
+<p>Family households, shown in green, tend to have incomes enabling them to afford the median housing unit for any form of tenure. Single-earner households are shown in blue when male-led and in pink when female-led. Both male- and female-led one-person households have median incomes below the amount needed to afford the median rental unit. Among single-parent households, the median single father household has an income high enough to afford the median owned unit with a mortgage, while the median single mother household is just above the level needed to afford the median rental unit.</p>
+<p>Among senior-led, one-person households (shown in yellow), only the median cost of owning free and clear is affordable to the median household. This means that long-term owners can afford to stay in their homes but may be unable to relocate to smaller or more accessible dwellings. The lack of other affordable options can keep seniors in homes unsuitable for aging in place. It can also prevent those homes from being vacated and becoming available to younger families facing a shortage of starter homes, as many survey respondents noted.</p>
+</section>
+<section id="workforce-housing-affordability" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="workforce-housing-affordability"><span class="header-section-number">5.2</span> Workforce Housing Affordability</h2>
+<p>City staff, councilmembers, employers, and citizens all expressed concerns about workforce housing affordability in the study’s engagement process. Employers discussed instances of employees having difficulty securing housing and even turning down contracts because they couldn’t find housing. Working citizens recounted difficulties finding affordable housing that meets their needs and promotes their financial goals. Indeed, many resident workers in Virginia Beach do not earn enough to comfortably afford rent, and even more do not earn enough to access homeownership opportunities.&nbsp;</p>
+<p>Most households (81%) in Virginia Beach include at least one worker. Those households who are not working (19%) are likely to be retired, although a minority of households may have disabilities or family circumstances that prevent them from working. Twenty-three percent of households are headed by someone 65 and older, and 28% of households receive retirement income. Approximately 3% of households receive Supplemental Security Income (SSI), a good proxy for households that include at least one person with disabilities or an older adult who has little to no income or resources.</p>
+<p><code>ADD TABLE: Households by Number of Workers</code></p>
+<div id="tbl-workers" class="cell tbl-parent quarto-layout-panel anchored">
+
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Commuting Patterns
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nearly 75,900 workers, roughly half (47%) of Virginia Beach’s workforce, commute into the city for their primary job. In-commuters are disproportionately aged 29 or younger, earning $1,250-$3,333 per month (low-income for a single-earner household or a dual-earner household supporting a dependent), and working in the trade, transportation, and utilities industries. Meanwhile, resident workers are disproportionately 55 and older and earning more than $3,333 per month. Lower-income workers earning less than $1,250 per month make up 24% of the workforce and 24% of in-commuters, indicating they’re not excluded from the city even though they’re likely to endure housing cost burden and associated hardship. (As discussed earlier in the report, 76% of low-income households experience housing cost burden.)</p>
+<p><code>ADD FIGURE: In-commuting, Resident Workers, and Out-commuting for Primary Jobs</code></p>
+<p>The majority of workers in the top 10 occupations by employment, primarily service sector roles with typically lower wages, face challenges in securing affordable housing. Eight out of these 10 occupations can’t afford the lower quartile rent when they’re single earners. For the majority (7/10), even earning in the 90th percentile doesn’t allow them to affordably rent or own in the city as single earners. Housing affordability improves in a dual-earner household scenario (both at median wage), but workers in three roles (fast food and counter workers, cashiers, and home health and personal care aides) still find the median rent unaffordable. Only the general and operations manager role can afford homeownership as a single earner, with registered nurses also being able to manage homeownership costs under specific conditions.</p>
+<p>VCHR also identified disparities in housing affordability among selected state and local government sector and mandatory service occupations. Home health and personal care aides and childcare workers face severe housing affordability challenges. Neither can afford the lower quartile rent as a single earner, even when earning at the 90th percentile. In dual-earning scenarios, they can’t manage the median rent. Firefighters and postal service mail carriers are better positioned. They can afford the median rent at the 90th percentile and homeownership when their earnings are combined with that of another earner. Other occupations like teachers (spanning from kindergarten to secondary) and registered nurses can afford the median rent as single earners. When their earnings are at the 90th percentile or combined, they can also manage homeownership costs.</p>
+<p>Housing affordability remains a significant concern in the city of Virginia Beach, particularly for those in service-sector roles and mandatory service positions. Although workers in some occupations manage to find affordable housing, a significant share of the workforce is either cost-burdened or unable to access suitable housing altogether. This analysis highlights an urgent need for policy and strategic interventions to bridge the affordability gap for these essential roles.</p>
+<p>Further tabulations and analysis are included in [Appendix X].</p>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Military Households
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There are approximately 15,893 Virginia Beach households with at least one member in active-duty military service (“military households”), around 11% of all households in the city. Families account for 77% of military households, while non-family living arrangements, mostly people living alone, make up 23% of military households.</p>
+<p>Around 50% of military households own their homes, and 49% rent. The vast majority of homeowner households have a mortgage or loan.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>The median household income of military households is approximately $87,140, around 6% higher than the citywide median. Nearly 60% of military households have a household income above 100% AMI. Around 25% of military households earn below 80% AMI. Approximately 5,891 military households are housing cost-burdened: over two-thirds of military households. More than 25% of homeowners and nearly 50% of renters are cost-burdened. Indeed, studies suggest that military households experience similar affordability challenges despite receiving a Basic Allowance for Housing (BAH) intended to cover 95% of the average housing costs for an off-base housing unit and utilities.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+</div>
+</div>
+</section>
+<section id="affordable-housing" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="affordable-housing"><span class="header-section-number">5.3</span> Affordable Housing</h2>
+<p>VCHR conducted an affordable housing gap analysis and estimated the extent to which affordable housing occurs “naturally” in the market to evaluate whether available affordable housing can meet the needs of current and future Virginia Beach residents.</p>
+<section id="rental-housing-gap-analysis" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="rental-housing-gap-analysis"><span class="header-section-number">5.3.1</span> Rental Housing Gap Analysis</h3>
+<p>Each pair of columns in figure X compares the number of households in each income group to the number of housing units affordable to that group. Each column provides additional information: cost burden in the “households” column and information about the income of the unit occupants in the other column.</p>
+<p>There aren’t enough housing units in Virginia Beach to serve extremely low (less than 30% of AMI) and very low (30%-50% of AMI) income renters living in Virginia Beach. As a result, most of these households struggle with housing cost burdens and may consume housing more affordable to households with incomes in the 50%-80% of AMI range. Housing that is affordable to and occupied by households with extremely low incomes (51% of the units in this category) is likely to be committed affordable units. This housing is reserved for households with low incomes through incentive or subsidy programs such as the Low-Income Housing Tax Credit or HUD’s project-based vouchers. However, 46% of units affordable to extremely low- and very low-income households are occupied by households in higher-income groups.</p>
+<p>More than half (60%) of rental stock in Virginia Beach has rent affordable to households with low incomes between 50% and 80% of AMI. Because there’s not enough stock to serve households on either end of this category, both lower-income households and higher-income households compete for these units. Though there’s an adequate total amount of rental housing in Virginia Beach, the concentration of rental units in a single income category disadvantages low-income households and results in hardships for households not able to compete for an affordable unit. There are 4,600 rental units reserved for households with low incomes, and they are likely to be the residences of about 70% of the low-income renters who are not cost-burdened.</p>
+<p>Building units on either end of the 50%-80% income category would help relieve competition to access these units. Some higher-income renters may choose to “upgrade” to a unit with more space, amenities, nicer features, and/or a better location if the unit were available and still affordable to them. Renters who are currently enduring a housing cost burden would likely welcome a unit that is affordable and meets their needs. Some renters may also choose to become homeowners if a unit that is affordable and meets their needs were available. Availability of homeownership opportunities is discussed more in the following sections.</p>
+<p><code>ADD FIGURE: Virginia Beach Rented/For-rent Housing Gap</code></p>
+</section>
+</section>
+<section id="ownedfor-sale-gap-analysis" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="ownedfor-sale-gap-analysis"><span class="header-section-number">5.4</span> Owned/For-Sale Gap Analysis</h2>
+<p>Affordability concerns and gap analysis for owners differ substantially from the gap analysis for renters. The mortgage finance system generally prevents homeowners from being cost-burdened when they buy their home, and often homeowners’ income increases over the life of their mortgage. Homeowners also face relatively little change in housing costs compared to renters. When homeowners do become cost-burdened, it’s often due to economic hardship such as job loss, death of a family member, or fixed incomes that do not keep up with rising costs of taxes, utilities, and insurance. Because many homeowners had the opportunity to reduce their housing costs by refinancing their mortgages during the 2014-2021 period, decreased rates of cost burden among owners with a mortgage are expected. However, inflation and associated increasing interest rates since 2021 have decreased access to homeownership among low- and moderate-income buyers.</p>
+<p>Housing cost burdens shown in the lefthand column of each pair are far more common among homeowners with low and very-low incomes. Like the rental scenario, these households may have to make choices between housing and other necessities. However, these owners may own their home free and clear or, when they have a mortgage, be able to work with their mortgage lender on a payment plan that keeps them from becoming delinquent. To avoid foreclosure and potential homelessness, they may defer home maintenance, forgo needed upgrades and modifications, and/or forgo utilities to pay for other necessities like food, medicine, or childcare. These sacrifices represent a clear threat to the household, but also represent a risk for the locality. While households come and go, housing units stay with a community for generations. Allowing the housing stock to deteriorate can decrease the competitiveness of the market overall and require substantial investments in rehabilitation or in demolition and infill development. Ensuring that owners who represent two-thirds of residents can maintain their homes is part of the stewardship responsibility of local governments and communities.</p>
+<p>Quantity and occupancy of the housing stock across income affordability levels, shown in the righthand columns, also provide important insights. Most owners have higher incomes than they need to comfortably afford their unit, which though anticipated based on relatively fixed housing costs and expected increases in income, also represents the potential for upgrade. Over time, as households’ size and income grow, many owners will seek to move to new homes that better accommodate new needs. However, there is not enough housing stock to accommodate households with incomes above 120% AMI. This gap in housing for higher-income households may limit options to upgrade and require higher-income households to stay in their starter home longer, restricting supply housing that is affordable for first-time homebuyers and to lower- and moderate-income households and also potentially inflating the price of that stock.</p>
+<p><code>ADD FIGURE: Virginia Beach Owned/For-sale Housing Gap</code></p>
+</section>
+<section id="naturally-occurring-affordable-housing-noah" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="naturally-occurring-affordable-housing-noah"><span class="header-section-number">5.5</span> Naturally Occurring Affordable Housing (NOAH)</h2>
+<p>VCHR used HUD FY 2022 Income Limits to categorize affordability levels for 145,498 units in Virginia Beach real estate assessment data. The categorization is based on income limits for two household sizes (1.5-person and 4.5-person) intended to proxy the position of first-time homebuyers and more-established households who benefit from longer careers and existing home equity. VCHR adjusted the tax-assessed values based on differences observed in close prices in the Virginia Beach sale data for 2022, providing a more realistic estimate of market prices. Using Freddie Mac’s 30-year fixed rate from December 2022 and standard mortgage formulae, VCHR estimated mortgage payments for each unit.</p>
+<p>This analysis considers two down-payment scenarios: 5% and 10%. The monthly mortgage was combined with average insurance payment, median utility costs, estimated real estate taxes, and estimated HOA and condo fees to determine the total housing expenditure.</p>
+<p>Of 145,498 units from the Virginia Beach assessment data, using a 5% down payment as a criterion, about 8,123 properties were found to be affordable to first-time homebuyers (households with income up to the 1.5-person limit) with an income in the 80%-100% range. When considering the same down payment, roughly 9,213 units were within reach for those earning $70,150 or less, while around 45,091 units were accessible for more-established households (households with income up to the 4.5-person limit) earning $97,250 or less. However, while these units are theoretically affordable, many are occupied by households with incomes that exceed the designated affordability brackets. This means that even though a property might be affordable on paper, it isn’t necessarily available in the market for lower-income families. The analysis also indicated a scarcity of affordable housing options, with only 35% of the overall housing market deemed affordable to households with income less than 100% AMI when considering a 10% down payment. Potential additional costs for maintenance and renovation due to age are also a concern since 98% of these affordable units were constructed before 2000.</p>
+<p>The disparity in affordable units across city council districts further emphasizes the uneven distribution of affordable housing options. For instance, City Council District 4 exhibited a significantly higher proportion of affordable units compared to City Council District 2, which had a notably lower percentage.</p>
+<p><code>ADD FIGURE: Share of Affordable Units to 4.5-person household with below 80% AMI</code></p>
+<p>Using HUD Income Limits and specific rules for occupancy and associated housing affordability (see Appendix X for details), VCHR also categorized the affordability levels of 42,021 units, representing about 81% of the estimated multifamily rentals in Virginia Beach. Within the analyzed properties, 230 properties encompassing 36,367 units are entirely at market rate, with no subsidies or affordability restrictions. As such, the data reflects the present state of the multifamily rental market in Virginia Beach.</p>
+<p>A notable observation from the data is how unit types are distributed based on affordability. Over half the affordable units are 2-bedroom units, followed by 29% being 1-bedroom units. The remaining distribution comprises 16% of 3+ bedroom units, with studios representing a mere 2%. While a large proportion of units (nearly 90%) are affordable for households with incomes ranging from 50%-100% of AMI, there’s a lack of units affordable to those with incomes below 50% of AMI. While a substantial portion of units are accessible to mid-income households, there remains a need for more affordable housing options for extremely low- and very low-income households.</p>
+<p>Further tabulations and analysis are included in [Appendix X].</p>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Benfer, E. A., Koehler, R., Mark, A., Nazzaro, V., Alexander, A. K., Hepburn, P., ... &amp; Desmond, M. (2022). COVID-19 housing policy: State and federal eviction moratoria and supportive measures in the United States during the pandemic. Housing Policy Debate, 1-25.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Airgood-Obrycki, W., &amp; Hermann, A. (2022, July 20). “Affordability gaps widened for renters in the first year of the pandemic.” Joint Center for Housing Studies. https://www.jchs.harvard.edu/blog/affordability-gaps-widened-renters-first-year-pandemic<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The number of military households who own free and clear is too small to generate a reliable estimate.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Torres 2023, accessed October 2023, https://bipartisanpolicy.org/blog/faqs-housing-military-families/#:~:text=Service%20members%20living%20in%20government,rents%20above%20the%20BAH%20rate.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./market.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Market Dynamics</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./conclusions.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusions</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
