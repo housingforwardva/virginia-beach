@@ -1,3 +1,188 @@
 # Explore zoning advisory board
 
-...
+### BACKGROUND WORK 3 {.unnumbered .unlisted}
+
+### Consider an advisory board to guide new zoning ordinance changes and to redesign the Workforce Housing Program for greater impact {.unnumbered .unlisted}
+
+After finalizing a comprehensive plan in 2024, Virginia Beach will start revising its zoning ordinance to align with new land use goals. Gathering input from those most impacted by the ordinance will help alleviate past challenges and establish rules that bolster the City's housing objectives.
+
+An affordable housing advisory board consisting of renters, homeowners, developers, engineers, architects, land use attorneys, and other important stakeholders can provide valuable input on how to optimize zoning and better address the city’s needs.
+
+Furthermore, this process can incorporate a specific evaluation of the current Workforce Housing Program (WHP), which has been used to deliver new affordable homes only twice in more than a decade. Finding ways to improve the program in concert with a broader rethinking of residential development regulations can prime the WHP for success.
+
+## HOW IT WORKS 
+
+An informed and diverse advisory board combines experience and expertise to make recommendations for transforming the comprehensive plan guidance into new zoning policies that advance the City’s housing goals. The board could also dedicate itself to ongoing public outreach and interviews to evaluate existing obstacles in zoning and land use within the larger community.
+
+**Creation and recruitment**
+
+The Department of Planning and Community Development, with guidance from the Planning Commission, the City Council, and other partners, should propose how the advisory board will be chartered, and what representation to prioritize.
+
+Important governance considerations include:
+
+* How many board members are desired and how board leadership will work
+* Who has authority to appoint board members
+* Whether the board is a temporary ad hoc committee with a sole purpose, or if it will continue to meet after its initial objectives are complete
+* How meetings will be scheduled, conducted, and available for public input
+
+The advisory board’s makeup should reflect the diversity of backgrounds, expertise, and perspectives necessary to find strong, lasting consensus on zoning reforms. The exact breakdown of preferred representation is up to staff and city leadership, but could include:
+
+* A member of the City Council
+* A member of the Planning Commission
+* A member of the Board of Zoning Appeals
+* A member of the Housing Advisory Board
+* An architect with expertise in residential and mixed-use development
+* A multifamily/mixed-use developer
+* A single-family developer
+* A land use attorney
+* An affordable housing and/or homelessness services practitioner
+* Community representative(s), both homeowner(s) and renter(s)
+
+**Scope of work**
+
+Staff should work with the new board to finalize a work plan with clear objectives. A basic scope might include the following tasks:
+
+* Examine the final comprehensive plan and identify specific housing and community development strategies where zoning regulations play a role
+* Prioritize those issues based on level of impact, importance to the community, and difficulty to implement
+* Investigate best practices from across the state and country to find successful solutions
+* Collaborate with staff, city leaders, practitioners, and the public to draft and develop a series of specific recommendations for changes to the city’s zoning ordinance
+* Develop explanatory presentations and fact sheets about the proposals to help educate residents and interested parties
+* Deliver final recommendations to the Planning Commission and the City Council for their review and approval
+
+**Recommendations**
+
+Most importantly, there should be clear expectations about the process for adopting recommendations and for what occurs once those are delivered to the Planning Commission and the City Council.
+
+Because the advisory board is not a formal rule-making entity, its report will be nonbinding. It will, however, reflect a significant amount of research and collaboration that ideally leads to a swift legislative review and approval.
+
+The two main recommendation process options are, therefore:
+
+1. A plain-language report that includes a list of prioritized policy changes, and preferred options for those reforms, or
+2. A summary report alongside a package of actual drafts for new zoning ordinances.
+
+If the first option is chosen, city leadership can endorse the proposed recommendations, but actual ordinances will still need to be drafted and brought back for formal review and adoption. This would likely be a longer process.
+
+The second option, on the other hand, may extend the advisory board’s total workload and timeframe but will generate ordinances for consideration. This gives the board greater agency and influence, and would likely expedite the overall process of completing the comprehensive plan and starting real policy changes to implement its strategies.
+
+**Evaluating the Workforce Housing Program**
+
+While the advisory board’s primary mission should be to promote affordability throughout the full range of residential zoning changes, the City has an important opportunity to explore the future of its current Workforce Housing Program. Designed to reward developers who set aside a share of new affordable units in their projects with a density bonus, the program has been used only two times since its inception in 2007.
+
+The advisory board, a subgroup of its members, or another duly appointed body should evaluate the WHP using a framework similar to the outline below.
+
+* **Program outcomes:** How many total homes were produced, and how many of those were affordable? What income levels were served? Are the affordable units in compliance?
+* **Administrative requirements:** Were internal policies and procedures adequate? Did the planning and housing departments collaborate effectively? Does the Housing Advisory Board contribute appropriately and productively?
+* **Stakeholder feedback:** Do developers find the program beneficial? What changes would be needed to scale up? Does the greater public understand the program’s objectives?
+* **Context:** How has the existing zoning ordinance and other land development regulations affected program effectiveness? Are proposals using LIHTC and other dedicated affordable housing programs easily able to participate?
+
+Following that analysis, the group should examine options to overhaul the WHP. Program design elements can include the following:
+
+*Enabling authority*
+
+Virginia Beach does not have broader “inclusionary zoning” powers under Va. Code Ann. § 15.2-2304; most successful “inclusionary zoning” programs in Virginia are localities included in this statute, which allows jurisdiction to apply affordability requirements to a wider range of development proposals.
+
+The current WHP is based on Va. Code Ann. § 15.2-2305, which limits density bonuses and affordability requirements to 30% and 17%, respectively. However, the newer Va. Code Ann. § 15.2-2305.1 statute provides a greater range of options and should be evaluated.
+
+*Applicability*
+
+Both applicable statutes allow Virginia Beach to apply the WHP to developments with densities greater than one home per acre in an “approved sewer area.” Furthermore, proposals must be subject to a rezoning, special exception, site plan, or subdivision plat.
+
+The City should determine whether to exempt developments with fewer than a certain number of units, with densities above the statutory limit, or with other characteristics. These exemptions would reduce the burden on smaller proposals where the WHP may be financially infeasible.
+
+*Density bonus and affordability ratios*
+
+While Va. Code Ann. § 15.2-2305 has simple but hard limits on the percentages permitted for added density and affordable units, Va. Code Ann. § 15.2-2305.1 has a much larger scope. It is also very prescriptive. Density bonuses and affordability ratios are enumerated in two tables, depending on whether the incomes served are 80% AMI or 50% AMI. Greater densities are afforded to developments that serve lower incomes.
+
+*Additional incentives*
+
+Reduced or waived parking minimums, reduced or waived fees, expedited permit review, and other meaningful incentives should be evaluated and considered, especially in response to specific developer feedback regarding costs and project feasibility. However, any exemptions or waivers should not diverge from comprehensive plan guidelines.
+
+*Other program elements*
+
+Along with the core ratios, other important aspects of a successful WHP include developer education and outreach, efficiency of application review and approval, and monitoring and compliance of affordable units.
+
+**Fostering civic engagement**
+
+During and following the zoning rewrite process, advisory board members can serve as advocates within the community to help explain and promote recommended revisions. They can help spread information and address common concerns related to development changes.
+
+## HOW TO DO IT
+
+**Within 6 months:**
+
+* Determine whether this board will be a new and distinct entity, a special committee derived from existing boards, or another arrangement.
+* Determine whether this board has the option to continue beyond the zoning rewrite process, or if it will be dissolved after reaching that milestone.
+* Identify an appropriate name for the group to reflect its mission, powers, and role relative to other working bodies established by the City.
+* Establish core governance principles, including minimum qualifications, term limits, and officer designations.
+* Recruit diverse board members who represent the various industries and stakeholders that regularly interact with the zoning process.
+
+**Within 1 year:**
+
+* Finalize board selection through a transparent and inclusive process.
+* Convene the board and establish regular meeting dates and times.
+* Define the board’s objectives, mission, and scope of work, including the specific areas of affordable housing it will seek to address.
+* Develop accessible materials that explain zoning and how it impacts housing.
+* Create concise presentations on the most recent developments in land use planning and zoning to share with the board, including specific case studies from Virginia Beach and other relevant communities.
+* Implement a community engagement plan to further solicit input and inform the board’s priorities.
+
+**Within 2 years:**
+
+* Develop actionable strategies for successful zoning changes.
+* Draft preliminary report with recommendations for stakeholders, public, and city leaders to review and provide input.
+* Revise recommendations as needed into a final report, including suggestions for priority reforms. Seek formal approval from the Planning Commission and the City Council.
+* Collaborate with staff to formally begin drafting new ordinances in accordance with consensus recommendations and priorities.
+
+## WHO DOES WHAT
+
+* **Department of Planning and Community Development:** Provide support and help guide the advisory board on overall zoning rewrite.
+* **Department of Housing and Neighborhood Preservation and Housing Advisory Board:** Provide support and help guide the advisory board (or related group, as designated) on evaluating and updating the WHP.
+* **Zoning advisory board:** Collaborate with staff to develop recommendations, serve as liaison with the Planning Commission and the City Council, and conduct public meetings to gather feedback from stakeholders and community members.
+* **Planning Commission and City Council:** Establish and set initial guidance for new board, appoint board members, periodically review and provide input, and evaluate final recommendations.
+* **Consultant:** If hired, assist staff and advisory board throughout the process, conduct additional research, help draft and implement new ordinances.
+
+## FUNDING SCOPE
+
+Generally, local advisory board members are volunteers not reimbursed for their time. However, the City may want to consider offering a stipend to demonstrate appreciation for members’ time and contributions.
+
+Coordinating and maintaining the advisory board can require significant staff time and resources. Likewise, while a potential consultant would provide additional personnel, bring outside expertise, and keep the process moving, his or her costs could easily exceed the equivalent annual compensation for the average full-time employee in either department.
+
+## POTENTIAL FUNDING SOURCES
+
+* **City budget:** Virginia Beach should proactively budget funding to support staff (and potential consultant) time for this work, as it did for the comprehensive plan update.
+* **Other public funds:** The Virginia Department of Housing and Community Development (DHCD) provides planning grants under the CDBG program to enhance the likelihood of project impact and success. In coordination with citizen participation, these grants support the creation of well-defined strategies to address the most pressing community development needs in a given area. Virginia Housing also provides funding through its grants to support up to $50,000 in community engagement planning.
+
+## METRICS TO EVALUATE SUCCESS
+
+* **Diversity of board:** Identifying types of stakeholders, number of organizations, and neighborhoods represented on the advisory board.
+* **Number of actionable recommendations:** Quantifying how input from the advisory board leads to zoning changes that positively impact affordable housing.
+* **Increased public awareness and support:** Measuring reduced opposition to proposed changes or the number of public residents engaged through the process. Number of engagement materials consumed/shared is another indicator of public awareness. 
+
+## EXAMPLES
+
+Examples of zoning advisory boards:
+
+[Arlington County, Zoning Ordinance Committee](https://www.arlingtonva.us/Government/Commissions-and-Advisory-Groups/Planning-Commission/Zoning-Committee)
+
+* Advises the County Board on proposed changes to the county's zoning ordinance.
+* Members are publicly elected planning commissioners from various sectors, including real estate, development, and community organizations.
+
+[Prince William County DORAC](https://www.pwcva.gov/department/land-development-division/dorac)
+
+* DORAC stands for Design and Construction Standards Manual (DCSM) and Zoning Ordinance Advisory Committee.
+* Independent 26-member advisory group reviews zoning text amendments and other related short- or long-term reforms.
+
+[City of Harrisonburg Ordinance Advisory Committee](https://www.harrisonburgva.gov/zoning-oac)
+
+* 14-member advisory group to work with staff and consultant on rewrite of zoning ordinance following comprehensive plan update.
+
+Examples of alternative zoning analysis and programs relevant to the board: 
+
+[City of Charlottesville Bonus Height/Affordable Housing Financial Analysis](https://www.charlottesville.gov/DocumentCenter/View/1524/Affordable-Housing-Financial-Analysis-PDF) (PDF)
+
+* Financial analysis study to determine possible opportunities for Charlottesville to incentivize affordable units in new residential development via density bonuses.
+
+Operational and productive inclusionary zoning programs in Virginia:
+
+* [Fairfax County](https://www.fairfaxcounty.gov/housing/adu-wdu-developer-resources) Affordable Dwelling Unit (ADU) and Workforce Dwelling Unit (WDU) programs
+* [Loudoun County](https://www.loudoun.gov/1813/Affordable-Dwelling-Unit-Program) ADU Program
+* [Arlington County](https://www.arlingtonva.us/Government/Programs/Housing/Get-Help/Home-Ownership/Affordable-Dwelling-Units) ADU Program
+* [City of Falls Church](https://www.fallschurchva.gov/687/Affordable-Dwelling-Unit-Program) ADU Program

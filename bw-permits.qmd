@@ -1,3 +1,165 @@
 # Streamline permitting
 
-...
+### BACKGROUND WORK 2 {.unnumbered .unlisted}
+
+### Research opportunities to simplify and streamline the permitting and review processes {.unnumbered .unlisted}
+
+Local governments are the primary entities responsible for reviewing and approving new developments to ensure they are well-sited, adequately designed, and safely built. However, with this authority comes great responsibility: administrative delays and inefficiencies can lead to additional costs and complexities for builders. At best, these expenses get factored into higher home prices. At worst, developers choose another locality to build or give up entirely.
+
+Within existing planning and permitting programs, local governments have ways to streamline components of the new project review process. Virginia Beach should explore three different approaches: improving existing processes, offering expedited “fast track” pathways, and creating a “green tape” program with even more incentives.
+
+The second two options can be specifically designed to apply only to residential or mixed-use proposals that meet certain criteria in line with City objectives, such as including affordable units or establishing environmental sustainability measures. Overall, these strategies help orient the City’s core, day-to-day planning tasks toward achieving its long-term housing and economic growth goals.
+
+## HOW IT WORKS
+
+**Assessment of current processes**
+
+By cutting down on procedural barriers, developers get to construction faster. Achieving this efficiency requires coordinating various departments within a local planning office and assisting applicants through pre-design consultation and assessments.
+
+::: callout-note
+### The Virginia Beach Development Services Center
+
+The Department of Planning and Community Development already has a Development Liaison team within the Development Services Center (DSC). This team guides and coordinates development proposals for applicants, for a range of project types and sizes.
+
+In FY 2022-23, DSC reviewed nearly 2,800 plans. Its FY 2023-24 budget is about $3.1 million, which funds 28 FTE positions. This reflects no change from the previous year.
+:::
+
+While Virginia Beach has made intentional efforts to improve its development review process—and notably performs higher than some comparable cities in Virginia—feedback received from stakeholders for this study emphasized a need to reduce wait times and identify opportunities to reduce regulatory burdens.
+
+A comprehensive assessment of current systems would best identify specific challenges and opportunities, although the review would not need to be a formal audit to achieve results. Some areas to consider during the investigation include:
+
+* Staff workloads and backlogs
+* Common repetitive requests that occupy staff time
+* Average time required to review different applications and permits
+* Office workflow and technology inefficiencies
+* DSC review and feedback procedures (and coordination with other departments)
+
+The assessment can also align with two ongoing upgrades for the department.
+
+* **Revised stormwater management regulations:** Staff are currently implementing changes to these regulations approved by the City Council in early 2022, with a focus on streamlining development plan reviews. Recent changes include simplifying stormwater assessments by using Excel spreadsheet calculations rather than more complex modeling software. Similar improvements should be explored in other processes.
+* **Accela software improvements:** The planning department is currently working with the Information Technology Department to address functionality gaps and issues in the Accela software platform, which connects citizens with planning and permitting services.
+
+The City should evaluate the benefits and drawbacks of whether this assessment is conducted internally or by an external third party. This decision should be made collaboratively between staff and the City Council, perhaps via the Process Improvement Steering Committee.
+
+::: callout-tip
+### Richmond permit office audit
+
+Significant backlogs and poor service led the City of Richmond’s auditor to investigate the Permits and Inspections office in early 2020. The internal report found insufficient recordkeeping, incomplete billing, and inefficient workflows compared to neighboring jurisdictions. Since then, investments in staff levels and reformed procedures have demonstrated major improvements. Building permits originally took longer than a month to approve; as of November 2022, average turnaround time was just five business days.
+:::
+
+**“Fast track” permitting process**
+
+Virginia Beach should explore “fast track” permitting options for certain proposals that reduce both  application burdens and wait times. This approach has the dual benefit of reducing costs for developers and streamlining workflows for department staff. While more proactive “green tape” incentives for dedicated affordable housing are described further below, Virginia Beach could develop these simpler “fast tracks” for certain development types that contribute to the City’s overall housing goals.
+
+The eligibility criteria, as well as the suite of options for lowering barriers, should reflect the results from two important documents:
+
+1. **Permitting assessment:** Opportunities to improve certain elements of the application, feedback, and approval processes can set the groundwork for expedited pathways in a “fast track” scenario. These upgrades would be most likely to result in meaningful reductions in costs and wait times.
+2. **2040 Comprehensive Plan:** Particular housing styles that might be encouraged in the upcoming plan should be the first development types prioritized for “fast tracks.” These could be lower-impact—but still lower-cost—buildings such as accessory dwelling units (ADUs) and duplexes. 
+
+For example, a “fast track” for ADUs might include:
+
+* A fully administrative approval process with no public hearings required (“by right”)
+* Pre-defined review steps across departments with simple checklists
+* Simplified application forms that are legible and accessible to homeowners and first-time developers
+* Reviews completed within two or three business days
+* A series of pre-approved designs and floor plans
+
+To ensure smart development, the City could set specific criteria for benefitting from the “fast track,” such as requiring the property to be in a designated growth zone. Aligning the “fast track” with the future residential use recommendations in the new comprehensive plan is also critical. For a “fast track” to be effective, it should likely only apply to developments that are a permitted use in the property’s base zoning. Public hearings to approve a conditional or special use would introduce significantly higher costs and timelines.
+
+Streamlining certain projects may raise equity concerns, especially if they benefit specific developers or types of housing. Therefore, the City should be transparent about what applications are eligible and why those particular projects align with pre-established growth objectives in the 2040 Comprehensive Plan and other guiding policies.
+
+**“Green tape” incentives for new affordable housing**
+
+Larger multifamily and mixed-use projects that include affordable housing are generally more difficult to finance and often face additional opposition from a vocal minority of residents. Unexpected costs and delays that a market rate proposal could absorb can much more easily sink its affordable counterpart.
+
+To mitigate these challenges, local governments can leverage their development approval powers to proactively help affordable housing projects succeed. This approach is sometimes referred to as a “green tape” program. Whereas “fast track” programs look to simplify the process, “green tape” programs offer much more substantial incentives, and are generally designed for larger projects.
+
+These incentives could include:
+
+* Fully expedited reviews of site plans and other submissions
+* Dedicated staff liaison(s) for the full process
+* Reduced or waived fees for permits and utility hookups
+
+Other meaningful incentives that would need to be incorporated into the zoning ordinance include:
+
+* Density bonuses (i.e., Workforce Housing Program)
+* Reduced parking requirements
+* More flexible setback and height allowances
+
+In exchange for these incentives, the program should be eligible for proposals that meet a set of standards, such as:
+
+* Minimum number and/or percentage of affordable units
+* Income levels served by affordable units
+* Length of affordability terms
+* Identical design and quality for market-rate and affordable units
+* Proximity to transit
+* Location in designated growth area
+* Current site control
+
+Virginia Beach should consider other minimum criteria but should avoid artificially restricting eligibility with unworkable requirements.
+
+## HOW TO DO IT
+
+**Within 6 months:**
+
+* Outline methods and objectives for a needs assessment to identify specific areas of the permitting and * approval process that most need streamlining or that cause the biggest barriers for developers.
+* Determine whether assessment can be conducted internally or if an external consultant would be more * appropriate. Draft and prepare RFP if outside firm is desired.
+* Based on historical trends, set desired timelines for permit issuance.
+
+**Within 1 year: **
+
+* Begin and complete needs assessment, either via internal review process or external audit.
+* Compare performance with peer localities for valuable benchmarking data to assess the competitiveness and effectiveness of the current processes.
+* Identify preliminary residential uses and development types desired in the updated comprehensive plan. Begin evaluating specific ways for approval processes to ensure that these projects receive swift approvals when conditions are met.
+* Redesign the permitting and approval process based on findings from the needs assessment and stakeholder engagement.
+* Outline standardized procedures and requirements for “fast track” pathways.
+* Determine need for additional positions and training to ensure that staff can effectively execute proposed changes.
+* Begin designing a pilot “green tape” program that aligns with the comprehensive plan and gather feedback from applicants and stakeholders.
+
+**Within 2 years:**
+
+* Establish policies and procedures for a “green tape” program. Begin advertising incentives with affordable housing developers.
+* Expand the “fast track” program to cover a wider range of projects; make adjustments as necessary.
+* Perform legal and policy review of the approval processes to ensure that quality and compliance are not compromised.
+* Establish and track key performance indicators to measure ongoing program performance (including average permit issuance time, applicant satisfaction, and number of affordable units developed).
+
+## WHO DOES WHAT
+
+* **Department of Planning and Community Development:** Lead effort to assess internal operations, consult with stakeholders and consultants as necessary, determine and request additional capacity needed to achieve objectives, design and roll out incentive programs.
+* **Department of Housing and Neighborhood Preservation:** Advise planning department on specific challenges and needs faced by affordable housing development, assist with design of incentive program guidelines and criteria.
+* **Process Improvement Steering Committee:** Help guide and oversee operational changes to improve efficiency, serve as liaison between departments and the City Council.
+* **Planning Commission and City Council:** Review, advise, adopt, and oversee any administrative changes and any new or updated policies.
+
+## FUNDING SCOPE 
+
+Dedicated funding for the assessment is necessary, and depends on the scope of work desired. A basic internal review could be incorporated into the staffing budget and workplan for the applicable department(s), while a more extensive review by a third party might require a specific allocation by the City Council.
+
+Although a long-term outcome for these possible reforms includes greater real estate tax revenue from new developments, any substantial fee waivers could have short-term consequences on income to cover operational expenses.
+
+## POTENTIAL FUNDING SOURCES
+
+* **Virginia Housing:** Pursuing additional planning grants from Virginia Housing could help cover costs for determining how the current permitting process impacts affordable housing development, as well as drafting new policies to reduce barriers. Staff should have proactive conversations with Virginia Housing representatives to explore options.
+* **Competitive public grants:** Virginia Beach should monitor federal and state grant opportunities that support work to cut red tape for affordable housing and design better approaches. For example, HUD’s recent Pathways to Removing Obstacles to Housing (PRO Housing) grant was a special CDBG allocation designed to help local governments identify and resolve regulatory and administrative roadblocks for affordable housing.
+* **Private funds:** Grants from philanthropic foundations that support community development and civic innovation could also be explored.
+
+## METRICS TO EVALUATE SUCCESS
+
+* **Volume:** Measuring increase in approved permits for affordable housing developments and other residential projects that contribute to the City’s housing goals.
+* **Processing times:** Quantifying shorter timeframes between application submittal and approval compared to regular process.
+* **Applicant satisfaction:** Collecting feedback from stakeholder developers and analyzing cost savings for applicants due to expedited processing.
+* **Diversity of projects:** Identifying the mix of developments, incomes served, and types of housing produced.
+
+## EXAMPLES
+
+[City of Charlottesville Affordable Housing Expedited Review](https://library.municode.com/va/charlottesville/codes/code_of_ordinances?nodeId=CO_CH34ZO_ARTIAD_DIV1GEPR_S34-12AFDWUN)
+
+* Expedited process enabled through §34-12(f) in local code prioritizes affordable housing projects that align with the City's goals to have their review complete within a month
+
+[Montgomery County, Maryland Green Tape Process](http://www.montgomeryplanning.org/community/housing/documents/greentape.pdf) (PDF)
+
+* Expedited permitting and review process for projects that designate at least 20% of the total units to affordable housing.
+
+[City of Richmond Third-Party Program](https://www.rva.gov/planning-development-review/third-party-program)
+
+* Applicants can contract directly with a third-party service for permit review as an alternative to in-house process. Available for certain scenarios and not all cases.
+* Created in response to significant ongoing delays and problems with the permit office, many of which were highlighted in a 2020 internal audit of the permit office.
