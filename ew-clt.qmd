@@ -1,3 +1,130 @@
 # Leverage VSCLT
 
-...
+### EASY WIN 1 {.unnumbered .unlisted}
+
+### Leverage Virginia Statewide Community Land Trust to create permanent affordable homeownership opportunities  {.unnumbered .unlisted}
+
+Community land trusts (CLTs) allow low- and moderate-income individuals and families to access homeownership in markets where homeownership is out of reach. They stand apart from other varieties of affordable development in how they preserve investments into single-family homes and offer stability against gentrification and escalating housing costs.
+
+While some may balk at the idea of limited equity, CLTs can establish a crucial step between renting and fee-simple homeownership. The majority of CLT homeowners who sell their homes gain enough equity to purchase a market rate (AKA, fee-simple) home and effectively move up the ladder of wealth generation. 
+
+Virginia Beach has an important opportunity to tap into a growing statewide CLT program that can deliver this model without the need to design and stand up new programs. Today, the Virginia Statewide Community Land Trust (VSCLT) can be an important partner to bring permanently affordable homeownership to the city.
+
+::: callout-tip
+### CLT homebuyer outcomes
+
+CLT homeowners are typically first-time buyers and stay in their homes for extended periods of time: 87% of the 9,650 “shared-equity” households in the United States are first-time homebuyers.[^1] Furthermore, the average annual move rate for CLT homeowners is only 2.6%, compared with the 14% average American households that move annually.[^2]
+
+Overall, 74% of CLT homeowners stay in their CLT home for at least six years. When they do move, the majority of CLT sellers purchase a new home on the open market, accessing a median $14,000 in equity for their next purchase.[^3]
+
+[^1]: This data comes from 104 organizations that offer “shared-equity” housing programming in the United States. See [The 2022 Census of Community Land Trusts and Shared Equity Entities in the United States: Prevalence, Practice and Impact](https://go.lincolninst.edu/Wang_WP23RW1.pdf). (PDF)
+
+[^2]: See [Tracking Growth and Evaluating Performance of Shared Equity Homeownership Programs During Housing Market Fluctuations](https://www.lincolninst.edu/publications/working-papers/tracking-growth-evaluating-performance-shared-equity-homeownership).
+
+[^3]: The equity gained is the difference in the sales value of the home from the mortgage owed, plus the value of the principal payments made over time.
+:::
+
+## HOW IT WORKS
+
+The CLT model has proved effective in creating permanently affordable housing across the nation. While the homeowner owns the improvements on the land, the CLT retains ownership of the land itself and limits the equity gained at the home’s resale, effectively keeping the cost of the home below market.
+
+This arrangement is made possible through the use of a ground lease between the homeowner and the CLT that outlines the initial purchase price, as well as the resale formula that tracks value increases over time. Unlike traditional forms of affordable housing, homes remain affordable in perpetuity through the CLT; ground lease terms are 99 years and are renewed at each sale.
+
+**Defining shared equity **
+
+Establishing a resale formula tailored to the specific housing market is crucial for a CLT to effectively fulfill its mission. The formula should consider local real estate conditions, such as property appreciation rates and income levels, to ensure that homes remain affordable over time. By adapting the resale formula to the market, the CLT can strike a balance between providing homeowners with a fair return on their investment and preserving affordability for future buyers.
+
+CLTs deploy a [range of formulas nationwide](https://groundedsolutions.org/tools-for-success/resource-library/affordable-pricing-and-resale-formulas), with the most common three models being:
+
+* **Fixed-rate:** The CLT sets a specific, unchanging percentage amount by which the home’s resale price will appreciate over time. Rates set at 1%-3% above the initial purchase price each year are most typical. 
+* **Index-based:** The CLT ties the appreciation of a home to a certain economic indicator, such as the median income in the area. The resale price adjusts based on changes in the chosen index, reflecting broader economic conditions of the market. 
+* **Appraisal-based:** Through a standard real estate appraisal, the homeowner is entitled to a set fraction of the appraised value, while the CLT retains the remaining portion. 
+
+Each of these formulas offers a different approach to maintaining affordability in CLT homes, with varying levels of predictability and adaptability to market fluctuations. Thanks to the way CLTs preserve a one-time subsidy to lower the initial purchase price of the home, one CLT home may serve ten or more low- and moderate-income households during its life cycle as compared with traditional models of affordable homeownership. 
+
+**Joining an existing CLT**
+
+[The Virginia Statewide Community Land Trust](https://www.vsclt.org/) (VSCLT) is an operational CLT that already serves the commonwealth and can be readily implemented in your community. Joining an existing CLT bypasses the time and resources needed to establish a new organization, and uses established channels to facilitate new home sales and development immediately. 
+
+::: callout-tip
+### VSCLT accomplishments so far
+
+Since 2021, VSCLT has completed eight new homes, all developed through Habitat for Humanity affiliates. These include one homeowner in Fauquier County, three homeowners in Warrenton, one in Loudoun County, and three in Alexandria.
+
+Two more homeowners in Leesburg and two more in Warrenton are in the pipeline for FY 2024, and VSCLT is actively working to expand its work to other localities.
+:::
+
+While some communities in Virginia have already established local or regional CLTs, Virginia Beach can benefit from VSCLT’s existing presence. The existing statewide model can immediately administer new CLT homes closings in Virginia Beach alongside the local Habitat for Humanity or other affordable developers. Furthermore, VSCLT actively supports homeowners throughout the pre- and post-closing process, and devotes time to guiding communities, municipalities, developers, and homeowners through the CLT process.
+
+Virginia Beach can help bring VSCLT to the city via both financial incentives and non-financial assistance.
+
+**Financial incentives**
+
+* **Federal funding:** The City can orient a share of its CDBG and HOME funds to homes supported by VSCLT. HUD has steadily embraced the CLT model and does not have major barriers preventing the use of federal housing and community development dollars for CLT homes.
+* **City funding:** Locally generated funds for housing—potentially within a new Housing Trust Fund—can be prioritized for CLT homeownership. Dollars can be used to cover land acquisition and construction or to contribute to homebuyer assistance. These funds should be used to strategically supplement any federal dollars.
+* **Fee waivers:** The City can explore waiving or reducing development fees (e.g., utility hookups, permit application fees) to lower development costs and streamline the construction of CLT homes.
+
+**Non-financial assistance**
+
+* **Land donation:** The City can examine its real estate holdings to determine whether it owns any lots suitable for single-family development. If appropriate, these parcels can be donated (or provided at discounted prices) to lower the overall development costs.
+* **Property assessment:** Assessors are generally unfamiliar with a split land/improvement arrangement, and require some guidance. Virginia law (§ 58.1-3295.2) requires assessors to consider restrictions on the fair market value of a CLT home; they cannot assign value above the affordable price enumerated in the ground lease. The City can proactively develop an implementation plan to ensure that its real estate assessment system can incorporate CLT arrangements.
+* **Securing lender partnerships:** While the number of banks and credit unions lending to CLT homebuyers is expanding, some lenders remain unfamiliar with the model. The City can help VSCLT conduct outreach and education with local lenders, especially those already actively serving first-time buyers, to ensure that favorable mortgage products are reliably available.
+
+## HOW TO DO IT 
+
+**Within 6 months:**
+
+* Housing staff can have initial conversations with VSCLT on opportunities to serve the City of Virginia Beach, addressing city funding capacity, operational capacity of VSCLT, and models of collaboration.
+* Explore a scenario wherein VSCLT can be designated as the city’s land bank to streamline the transfer of City-owned land.
+* Identify ideal partners engaged in affordable housing efforts that could easily partner with VSCLT to bring more homes into existence in the area.
+* Develop plan for incorporating CLT model into proposed priorities for CDBG and HOME funds during the next Annual Action Plan (AAP) and Consolidated Strategy and Plan (CSP) updates.
+
+**Within 1 year: **
+
+* Start conversations with major corporate, institutional, and philanthropic funders about seed funds for operations and acquisition; include VSCLT in those conversations.
+* Engage mortgage lenders in the region, especially community banks and credit unions, about loan products for CLT homebuyers.
+* Recommend that developers utilize VSCLT to secure benefits of the Workforce Housing Program. 
+
+**Within 2 years:**
+
+* Work with the Real Estate Assessor's Office and VSCLT to establish guidelines for the “decoupling” of land and improvements for CLT properties.
+* Begin educating the community about CLTs to cultivate homebuyers. Leverage connections with trusted institutions, such as congregations, civic associations, and employers.
+* Depending on acquisition funding, identify viable city surplus land for single-family use,  vacant parcels for new construction, or for-sale homes for purchase and rehab. Explore opportunities for CLT neighborhoods as well as infill development. 
+
+## WHO DOES WHAT
+
+* **Department of Housing and Neighborhood Preservation:** Engage with VSCLT and coordinate conversations between VSCLT and other potential supporters in the community (e.g. funders, lenders). Assist VSCLT with tax assessments (with Real Estate Assessor’s Office), provide local funding, and ensure that CLT is eligible for federal housing fund support, including HOME and CDBG.
+* **VSCLT:** Work with City staff to identify barriers and opportunities, participate in conversations with community members and partners, assist local developers with creation of CLT homes, and steward buyers and their homes throughout purchase and ownership.
+* **Nonprofit developers (e.g., Habitat for Humanity):** Partner to build CLT homes, incubate and ready homebuyers, and pass on stewardship and ownership of properties to VSCLT. 
+* **Lenders:** Create or modify lending products available for CLT homebuyers, provide grants and other assistance as available, and advertise the CLT model to their pipeline of applicants.
+
+## FUNDING SCOPE
+
+Average costs per VSCLT home depend on the type of development and local market dynamics, but the approximate difference between the actual sales price and the market sales price has ranged from \$40,000 to \$60,000. This can be a proxy for the per-home subsidy required.
+
+As a relatively new organization, VSCLT needs operational funding to support its growth. Dedicated funding from the City would show the commitment to permanently affordable housing options and allow VSCLT to pursue more opportunities in the region.
+
+## POTENTIAL FUNDING SOURCES
+
+* **Public funds:** As described above, Virginia Beach can use both federal funds (CDBG, HOME) and city-generated funds. Successfully deploying federal grants requires additional diligence and planning due to the unique equity-sharing model, mainly via updates to plans submitted to HUD.
+* **Private funds:** CLTs in Virginia and nationwide have been successful in securing funding from philanthropic organizations interested in homeownership and community development. Major employers and institutions should also be solicited.
+
+## METRICS TO EVALUATE SUCCESS
+
+* Operational and acquisition funding received from multiple sources.
+* Properties identified and selected for CLT acquisition.
+* Homebuyers cultivated, educated, and placed in homes.
+* Homeownership rate, especially for low- and moderate-income families, increases in target neighborhoods.
+* Household wealth created over time by appreciation in CLT home values.
+
+## EXAMPLES
+
+[Maggie Walker Community Land Trust](https://maggiewalkerclt.org/infographic/) (Greater Richmond region)
+
+* MWCLT has averaged about 17 new homes each year since 2017, with sales prices 54% lower than metro Richmond average. Nearly 100 homes completed in total, including a mixed-income subdivision.
+* The average income of buyers has been 49% lower than the region's average, with 45% of all buyers coming from minority and marginalized communities in the city.
+
+[Thistle Community Housing](https://www.thistlecommunityhousing.org/) (Boulder, CO) and [Champlain Housing Trust](https://www.getahome.org/) (Burlington, VT)
+
+* Both are examples of CLTs using local inclusionary zoning programs to increase their portfolios.
+* Programs demonstrate the effectiveness of leveraging locality-led programs with private nonprofit initiatives.

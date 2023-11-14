@@ -1,3 +1,117 @@
-# Create housing fund for workers
+# Create worker housing fund
 
-...
+### EASY WIN 1 {.unnumbered .unlisted}
+
+### Create a Housing Assistance Fund for workers {.unnumbered .unlisted}
+
+Rising housing costs and limited options in the city are forcing a high number of essential workers to live elsewhere in the region. Increasing commutes are contributing to more and more traffic congestion, as well as a decreasing sense of belonging in the community these workers serve. These challenges affect local government staff, hospitality workers, members of the military transitioning to the private sector, and many other important members of the workforce.
+
+Providing down-payment or rental assistance can help ensure that these workers live in the same community where they dedicate their labor. These types of incentives can help attract and retain talent across many different occupations. Assistance can come in many forms, including grants and loans, and can be targeted to workers whose wages cannot easily cover average housing prices.
+
+## HOW IT WORKS
+
+**Forms of assistance**
+
+Virginia Beach can structure awards from a Housing Assistance Fund in a number of ways to best meet workers’ needs. At this time, the following three options seem most appropriate. However, the City may want to consider selecting only one of these approaches to begin as a pilot program to demonstrate success.
+
+* **Down payment assistance** (DPA) to help with the purchase of a home. DPA could be offered as “soft second” mortgages to ensure that funds are used effectively. This involves structuring the DPA as a loan subordinate to the first mortgage, provided at zero (or very low) interest and with deferred payments. The DPA can be forgiven if the borrower lives in the home for a certain amount of time, or it could be repaid from sale proceeds.
+* **Short-term rental assistance** to cover temporary financial challenges faced by current workers. Funds can be distributed based on documented needs, be used only for certain eligible expenses, and have specific dollar and/or time limits. This approach would effectively serve as an eviction prevention program to proactively keep workers and their families in a stable home.
+* **Relocation assistance** to help fill critical positions with skilled workers from outside the city. Grants can help pay for moving expenses, security deposits, and other one-time costs associated with relocation. 
+
+**Eligibility and prioritization**
+
+To deploy these funds successfully, Virginia Beach can design specific eligibility criteria. However, these standards should not be overly restrictive. In this way, the City can prioritize outreach and awareness among certain groups to encourage participation — without artificially limiting opportunities for others.
+
+* **Income limits** will help ensure that assistance doesn’t go to workers otherwise able to comfortably afford their homes. If the City uses only its own funding for the program, it can establish income limits at will. However, staff should explore aligning criteria with existing housing assistance programs to expedite income certification.
+* **Purchase criteria** for DPA could include maximum home prices, completed home inspection, or designation as a first-time home buyer.
+* **Location criteria** for relocation assistance could be limited to workers moving from outside the immediate region or from outside the state.
+* **Occupation priorities** can include certain high-demand jobs that the City or private companies are having trouble filling. Rather than restricting eligibility to these positions, the City can strongly promote the program to hiring managers and any applicable professional associations.
+
+**Administration**
+
+The City should strive to design a Housing Assistance Fund with as little additional overhead as possible. Avoiding redundancies and administrative burdens will keep the program efficient and allow staff to dedicate more time to strategic challenges.
+
+* **Low-barrier applications** involve short, brief forms, and focus eligibility only on the most important criteria. Electronic versions should be available and favored to avoid transcription from paper forms.
+* **Program alignment** includes proactively designing these awards alongside existing forms of assistance, such as Housing Choice Vouchers and the one-time relocation funds offered to residents displaced by hazardous living conditions. Staff should evaluate opportunities to replicate successful processes and avoid past mistakes.
+* **Streamlined reporting** is achieved by establishing clear metrics during program design, rather than as an afterthought. Suggested metrics are described further below. Collecting initial data should be done within the application form, and post-award data should be collected alongside pre-existing communication channels (for example, a short survey sent to DPA recipients in their real estate assessment notices).
+
+## HOW TO DO IT
+
+**Within 6 months:**
+
+* Engage with community organizations, local employers, and other stakeholders to solicit input and determine priorities.
+* Decide which form of assistance to pilot first, based on assessment of needs and administrative capacity.
+* Develop initial projections for the number of workers who can be assisted at a range of funding levels.
+* Determine staffing and administrative needs to effectively operate the program.
+
+**Within 1 year:**
+
+* Secure general revenue funds in the city budget to implement the pilot program.
+* Establish partnerships with local employers and nonprofits to broaden reach and effectiveness.
+* Roll out additional forms of assistance based on the success of the pilot.
+
+**Within 2 years:**
+
+* Secure a stable funding mechanism for ongoing program costs.
+* Continuously monitor, review, and refine the assistance programs to ensure they achieve goals.
+* Produce a detailed report outlining the program’s success, challenges, and recommendations for the future.
+
+## WHO DOES WHAT
+
+* **Department of Housing and Neighborhood Preservation:** Design and administer the program, set criteria and guidelines, process applications, determine eligibility, disburse financial assistance, and monitor program successes. 
+* **Public and private sector employers:** Help identify critical roles that need to be filled, promote the program to current and prospective employees, and potentially match funds.
+* **Local banks and lenders:** Help facilitate DPA funds and pair with other attractive financial products, and provide financial literacy education.
+* **Community organizations:** Provide outreach, education, and support to potential applicants, and assist the City with fine-tuning the program as needed.
+
+## FUNDING SCOPE
+
+Funding level is dependent upon the type(s) and depth of assistance provided. Most meaningful DPA programs generally offer \$10,000 or more to each buyer, but some are as much as $25,000. Short-term rental assistance and relocation assistance would likely be lower per recipient. For example, three months of the average rent payment in Virginia Beach would be around \$4,500.
+
+Administrative costs should be factored into the cost of the program. Staff should provide a more specific estimate during program design, but for initial planning purposes, this share should be at least 10%.
+
+::: callout-tip
+### Potential DPA funding scenario
+A hypothetical DPA program for workers could provide assistance up to \$16,750 per eligible buyer, which is roughly 5% of the median sales price in 2022. Assuming 10% overhead costs, a general revenue allocation of \$1,000,000 would serve approximately 53 households.
+:::
+
+## POTENTIAL FUNDING SOURCES
+
+* Virginia Beach can pilot a Housing Assistance Fund most quickly by allocating a portion of the city’s general revenue. This does not obligate the City to dedicate money to the fund in future years.
+* The City should pursue partial (or full) matching funds from major employers to demonstrate a joint public-private investment in workforce development and retention.
+* In the long term, the City should secure an ongoing, dedicated source of revenue for this program. If desired, this can be done within the recommended Housing Trust Fund solution described earlier. The Housing Assistance Fund could be a special reserve account within the HTF that is funded generally by the same mechanism(s) as the whole HTF; or it could have a specific dedicated revenue source not shared among other uses of HTF dollars.
+
+::: callout-note
+### Dedicated revenue options
+See the Housing Trust Fund solution for examples of dedicated revenue options for funding housing investments in Virginia Beach.
+:::
+
+**METRICS TO EVALUATE SUCCESS**
+
+* Number and demographics of workers (households) served
+* Salaries and wages of workers served
+* Number of open positions filled
+* Increased employee retention
+* Years of professional experience across workers
+
+**IMPORTANT CONSIDERATIONS**
+
+Many examples, like in Fairfax and Loudoun, pair assistance with affordable dwelling unit (ADU) programs to simultaneously achieve smart growth goals in desirable areas. Virginia Beach should explore a similar path if its existing Workforce Housing Program is reevaluated and strengthened.
+
+**EXAMPLES**
+
+[Henrico County Home Purchase Assistance Program](https://henrico.us/revit/henricos-home-purchase-assistance-program/)
+
+Additional information: [Boosting Affordable Housing Through Employer Housing Assistance Programs](https://planrva.org/boosting-affordable-housing-through-employer-housing-assistance-programs/) (PlanRVA, August 2023)
+
+* Up to $20,000 in home purchase assistance to full-time county employees who are first-time homebuyers. Home must be located in Henrico.
+* Income eligibility set by Virginia Housing’s limits. Employees must match DPA with at least $1,000 of their own dollars, complete a homebuyer education course, obtain home inspection, and occupy their home for at least five years.
+
+[Fairfax County First-Time Homebuyers Program](https://www.fairfaxcounty.gov/housing/homeownership/firsttimehomebuyers)
+
+* Provides down-payment and closing-cost assistance to eligible buyers. This program aims to make homeownership more accessible to low- and moderate-income workers in the county.
+* Helps place homeowners in for-sale Affordable Dwelling Units (ADUs) created in new privately developed projects via an ADU program.
+
+[Loudoun County Public Employee Homeownership Grant Program (PEG)](https://www.loudoun.gov/homeloanprograms)
+
+* Provides down-payment and closing-cost assistance to employees of the Loudoun County government, Loudoun County Public Schools, and Loudoun Water who are first-time homebuyers in the county.
+* Administered alongside the county’s Down Payment / Closing Cost Assistance Program (DPCC), which both serve annual household incomes within 30% to 70% AMI.
