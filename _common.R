@@ -28,6 +28,10 @@ if (knitr::is_html_output()) {
   )
 
   } else {
+    
+    knitr::opts_chunk$set(
+      dpi = 150
+    )
   
     ggplot2::theme_set(
       hdatools::theme_hfv(base_size = 9)

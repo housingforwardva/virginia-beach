@@ -16,13 +16,14 @@ Virginia Beach has an important opportunity to tap into a growing statewide CLT 
 CLT homeowners are typically first-time buyers and stay in their homes for extended periods of time: 87% of the 9,650 “shared-equity” households in the United States are first-time homebuyers.[^1] Furthermore, the average annual move rate for CLT homeowners is only 2.6%, compared with the 14% average American households that move annually.[^2]
 
 Overall, 74% of CLT homeowners stay in their CLT home for at least six years. When they do move, the majority of CLT sellers purchase a new home on the open market, accessing a median $14,000 in equity for their next purchase.[^3]
+:::
 
 [^1]: This data comes from 104 organizations that offer “shared-equity” housing programming in the United States. See [The 2022 Census of Community Land Trusts and Shared Equity Entities in the United States: Prevalence, Practice and Impact](https://go.lincolninst.edu/Wang_WP23RW1.pdf). (PDF)
 
 [^2]: See [Tracking Growth and Evaluating Performance of Shared Equity Homeownership Programs During Housing Market Fluctuations](https://www.lincolninst.edu/publications/working-papers/tracking-growth-evaluating-performance-shared-equity-homeownership).
 
 [^3]: The equity gained is the difference in the sales value of the home from the mortgage owed, plus the value of the principal payments made over time.
-:::
+
 
 ## HOW IT WORKS
 
@@ -93,10 +94,13 @@ Virginia Beach can help bring VSCLT to the city via both financial incentives an
 
 ## WHO DOES WHAT
 
-* **Department of Housing and Neighborhood Preservation:** Engage with VSCLT and coordinate conversations between VSCLT and other potential supporters in the community (e.g. funders, lenders). Assist VSCLT with tax assessments (with Real Estate Assessor’s Office), provide local funding, and ensure that CLT is eligible for federal housing fund support, including HOME and CDBG.
-* **VSCLT:** Work with City staff to identify barriers and opportunities, participate in conversations with community members and partners, assist local developers with creation of CLT homes, and steward buyers and their homes throughout purchase and ownership.
-* **Nonprofit developers (e.g., Habitat for Humanity):** Partner to build CLT homes, incubate and ready homebuyers, and pass on stewardship and ownership of properties to VSCLT. 
-* **Lenders:** Create or modify lending products available for CLT homebuyers, provide grants and other assistance as available, and advertise the CLT model to their pipeline of applicants.
+**Department of Housing and Neighborhood Preservation:** Engage with VSCLT and coordinate conversations between VSCLT and other potential supporters in the community (e.g. funders, lenders). Assist VSCLT with tax assessments (with Real Estate Assessor’s Office), provide local funding, and ensure that CLT is eligible for federal housing fund support, including HOME and CDBG.
+
+**VSCLT:** Work with City staff to identify barriers and opportunities, participate in conversations with community members and partners, assist local developers with creation of CLT homes, and steward buyers and their homes throughout purchase and ownership.
+
+**Nonprofit developers (e.g., Habitat for Humanity):** Partner to build CLT homes, incubate and ready homebuyers, and pass on stewardship and ownership of properties to VSCLT. 
+
+**Lenders:** Create or modify lending products available for CLT homebuyers, provide grants and other assistance as available, and advertise the CLT model to their pipeline of applicants.
 
 ## FUNDING SCOPE
 
@@ -106,8 +110,9 @@ As a relatively new organization, VSCLT needs operational funding to support its
 
 ## POTENTIAL FUNDING SOURCES
 
-* **Public funds:** As described above, Virginia Beach can use both federal funds (CDBG, HOME) and city-generated funds. Successfully deploying federal grants requires additional diligence and planning due to the unique equity-sharing model, mainly via updates to plans submitted to HUD.
-* **Private funds:** CLTs in Virginia and nationwide have been successful in securing funding from philanthropic organizations interested in homeownership and community development. Major employers and institutions should also be solicited.
+**Public funds:** As described above, Virginia Beach can use both federal funds (CDBG, HOME) and city-generated funds. Successfully deploying federal grants requires additional diligence and planning due to the unique equity-sharing model, mainly via updates to plans submitted to HUD.
+
+**Private funds:** CLTs in Virginia and nationwide have been successful in securing funding from philanthropic organizations interested in homeownership and community development. Major employers and institutions should also be solicited.
 
 ## METRICS TO EVALUATE SUCCESS
 

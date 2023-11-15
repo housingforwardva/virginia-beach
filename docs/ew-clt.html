@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.502">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Virginia Beach Housing Study Update - 13&nbsp; Leverage VSCLT</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./bw-mumi.html" rel="next">
+<link href="./ew-haf.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ew-haf.html">Easy wins</a></li><li class="breadcrumb-item"><a href="./ew-clt.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Leverage VSCLT</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Virginia Beach Housing Study Update</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/housingforwardva/virginia-beach" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./virginia-beach-housing-study-update.docx" title="Download Docx" class="quarto-navigation-tool px-1" aria-label="Download Docx"><i class="bi bi-file-word"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About this study</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./executive-summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Executive summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data-methods-notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Data and methodological notes</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Data findings</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hh-trends.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Household trends</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./market.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Market dynamics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./affordability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Housing affordability</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conclusions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Solutions</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./current-efforts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Current housing efforts</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./solutions-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Solutions overview</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Strategic priorities</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sp-htf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Develop a City-managed Housing Trust Fund</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sp-vbda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Expand VBDA’s housing role</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sp-education.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Design housing education campaign</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">Easy wins</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ew-haf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Create worker housing fund</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ew-clt.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Leverage VSCLT</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">Background work</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bw-mumi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Pursue innovative development models</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bw-permits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Streamline permitting</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bw-advisory.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Explore zoning advisory board</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./a1-engagement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Public and expert engagement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./a2-workforce.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Workforce housing affordability analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./a3-noah.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Naturally occurring affordable housing analysis</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link active" data-scroll-target="#how-it-works"><span class="header-section-number">13.1</span> HOW IT WORKS</a></li>
+  <li><a href="#how-to-do-it" id="toc-how-to-do-it" class="nav-link" data-scroll-target="#how-to-do-it"><span class="header-section-number">13.2</span> HOW TO DO IT</a></li>
+  <li><a href="#who-does-what" id="toc-who-does-what" class="nav-link" data-scroll-target="#who-does-what"><span class="header-section-number">13.3</span> WHO DOES WHAT</a></li>
+  <li><a href="#funding-scope" id="toc-funding-scope" class="nav-link" data-scroll-target="#funding-scope"><span class="header-section-number">13.4</span> FUNDING SCOPE</a></li>
+  <li><a href="#potential-funding-sources" id="toc-potential-funding-sources" class="nav-link" data-scroll-target="#potential-funding-sources"><span class="header-section-number">13.5</span> POTENTIAL FUNDING SOURCES</a></li>
+  <li><a href="#metrics-to-evaluate-success" id="toc-metrics-to-evaluate-success" class="nav-link" data-scroll-target="#metrics-to-evaluate-success"><span class="header-section-number">13.6</span> METRICS TO EVALUATE SUCCESS</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">13.7</span> EXAMPLES</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ew-haf.html">Easy wins</a></li><li class="breadcrumb-item"><a href="./ew-clt.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Leverage VSCLT</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Leverage VSCLT</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="easy-win-2" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="easy-win-2">EASY WIN 2</h3>
+</section>
+<section id="leverage-virginia-statewide-community-land-trust-to-create-permanent-affordable-homeownership-opportunities" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="leverage-virginia-statewide-community-land-trust-to-create-permanent-affordable-homeownership-opportunities">Leverage Virginia Statewide Community Land Trust to create permanent affordable homeownership opportunities</h3>
+<p>Community land trusts (CLTs) allow low- and moderate-income individuals and families to access homeownership in markets where homeownership is out of reach. They stand apart from other varieties of affordable development in how they preserve investments into single-family homes and offer stability against gentrification and escalating housing costs.</p>
+<p>While some may balk at the idea of limited equity, CLTs can establish a crucial step between renting and fee-simple homeownership. The majority of CLT homeowners who sell their homes gain enough equity to purchase a market rate (AKA, fee-simple) home and effectively move up the ladder of wealth generation.</p>
+<p>Virginia Beach has an important opportunity to tap into a growing statewide CLT program that can deliver this model without the need to design and stand up new programs. Today, the Virginia Statewide Community Land Trust (VSCLT) can be an important partner to bring permanently affordable homeownership to the city.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+CLT homebuyer outcomes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>CLT homeowners are typically first-time buyers and stay in their homes for extended periods of time: 87% of the 9,650 “shared-equity” households in the United States are first-time homebuyers.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Furthermore, the average annual move rate for CLT homeowners is only 2.6%, compared with the 14% average American households that move annually.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>Overall, 74% of CLT homeowners stay in their CLT home for at least six years. When they do move, the majority of CLT sellers purchase a new home on the open market, accessing a median $14,000 in equity for their next purchase.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+</div>
+</div>
+</section>
+<section id="how-it-works" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="how-it-works"><span class="header-section-number">13.1</span> HOW IT WORKS</h2>
+<p>The CLT model has proved effective in creating permanently affordable housing across the nation. While the homeowner owns the improvements on the land, the CLT retains ownership of the land itself and limits the equity gained at the home’s resale, effectively keeping the cost of the home below market.</p>
+<p>This arrangement is made possible through the use of a ground lease between the homeowner and the CLT that outlines the initial purchase price, as well as the resale formula that tracks value increases over time. Unlike traditional forms of affordable housing, homes remain affordable in perpetuity through the CLT; ground lease terms are 99 years and are renewed at each sale.</p>
+<p><strong>Defining shared equity </strong></p>
+<p>Establishing a resale formula tailored to the specific housing market is crucial for a CLT to effectively fulfill its mission. The formula should consider local real estate conditions, such as property appreciation rates and income levels, to ensure that homes remain affordable over time. By adapting the resale formula to the market, the CLT can strike a balance between providing homeowners with a fair return on their investment and preserving affordability for future buyers.</p>
+<p>CLTs deploy a <a href="https://groundedsolutions.org/tools-for-success/resource-library/affordable-pricing-and-resale-formulas">range of formulas nationwide</a>, with the most common three models being:</p>
+<ul>
+<li><strong>Fixed-rate:</strong> The CLT sets a specific, unchanging percentage amount by which the home’s resale price will appreciate over time. Rates set at 1%-3% above the initial purchase price each year are most typical.</li>
+<li><strong>Index-based:</strong> The CLT ties the appreciation of a home to a certain economic indicator, such as the median income in the area. The resale price adjusts based on changes in the chosen index, reflecting broader economic conditions of the market.</li>
+<li><strong>Appraisal-based:</strong> Through a standard real estate appraisal, the homeowner is entitled to a set fraction of the appraised value, while the CLT retains the remaining portion.</li>
+</ul>
+<p>Each of these formulas offers a different approach to maintaining affordability in CLT homes, with varying levels of predictability and adaptability to market fluctuations. Thanks to the way CLTs preserve a one-time subsidy to lower the initial purchase price of the home, one CLT home may serve ten or more low- and moderate-income households during its life cycle as compared with traditional models of affordable homeownership.</p>
+<p><strong>Joining an existing CLT</strong></p>
+<p><a href="https://www.vsclt.org/">The Virginia Statewide Community Land Trust</a> (VSCLT) is an operational CLT that already serves the commonwealth and can be readily implemented in your community. Joining an existing CLT bypasses the time and resources needed to establish a new organization, and uses established channels to facilitate new home sales and development immediately.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+VSCLT accomplishments so far
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Since 2021, VSCLT has completed eight new homes, all developed through Habitat for Humanity affiliates. These include one homeowner in Fauquier County, three homeowners in Warrenton, one in Loudoun County, and three in Alexandria.</p>
+<p>Two more homeowners in Leesburg and two more in Warrenton are in the pipeline for FY 2024, and VSCLT is actively working to expand its work to other localities.</p>
+</div>
+</div>
+<p>While some communities in Virginia have already established local or regional CLTs, Virginia Beach can benefit from VSCLT’s existing presence. The existing statewide model can immediately administer new CLT homes closings in Virginia Beach alongside the local Habitat for Humanity or other affordable developers. Furthermore, VSCLT actively supports homeowners throughout the pre- and post-closing process, and devotes time to guiding communities, municipalities, developers, and homeowners through the CLT process.</p>
+<p>Virginia Beach can help bring VSCLT to the city via both financial incentives and non-financial assistance.</p>
+<p><strong>Financial incentives</strong></p>
+<ul>
+<li><strong>Federal funding:</strong> The City can orient a share of its CDBG and HOME funds to homes supported by VSCLT. HUD has steadily embraced the CLT model and does not have major barriers preventing the use of federal housing and community development dollars for CLT homes.</li>
+<li><strong>City funding:</strong> Locally generated funds for housing—potentially within a new Housing Trust Fund—can be prioritized for CLT homeownership. Dollars can be used to cover land acquisition and construction or to contribute to homebuyer assistance. These funds should be used to strategically supplement any federal dollars.</li>
+<li><strong>Fee waivers:</strong> The City can explore waiving or reducing development fees (e.g., utility hookups, permit application fees) to lower development costs and streamline the construction of CLT homes.</li>
+</ul>
+<p><strong>Non-financial assistance</strong></p>
+<ul>
+<li><strong>Land donation:</strong> The City can examine its real estate holdings to determine whether it owns any lots suitable for single-family development. If appropriate, these parcels can be donated (or provided at discounted prices) to lower the overall development costs.</li>
+<li><strong>Property assessment:</strong> Assessors are generally unfamiliar with a split land/improvement arrangement, and require some guidance. Virginia law (§ 58.1-3295.2) requires assessors to consider restrictions on the fair market value of a CLT home; they cannot assign value above the affordable price enumerated in the ground lease. The City can proactively develop an implementation plan to ensure that its real estate assessment system can incorporate CLT arrangements.</li>
+<li><strong>Securing lender partnerships:</strong> While the number of banks and credit unions lending to CLT homebuyers is expanding, some lenders remain unfamiliar with the model. The City can help VSCLT conduct outreach and education with local lenders, especially those already actively serving first-time buyers, to ensure that favorable mortgage products are reliably available.</li>
+</ul>
+</section>
+<section id="how-to-do-it" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="how-to-do-it"><span class="header-section-number">13.2</span> HOW TO DO IT</h2>
+<p><strong>Within 6 months:</strong></p>
+<ul>
+<li>Housing staff can have initial conversations with VSCLT on opportunities to serve the City of Virginia Beach, addressing city funding capacity, operational capacity of VSCLT, and models of collaboration.</li>
+<li>Explore a scenario wherein VSCLT can be designated as the city’s land bank to streamline the transfer of City-owned land.</li>
+<li>Identify ideal partners engaged in affordable housing efforts that could easily partner with VSCLT to bring more homes into existence in the area.</li>
+<li>Develop plan for incorporating CLT model into proposed priorities for CDBG and HOME funds during the next Annual Action Plan (AAP) and Consolidated Strategy and Plan (CSP) updates.</li>
+</ul>
+<p><strong>Within 1 year: </strong></p>
+<ul>
+<li>Start conversations with major corporate, institutional, and philanthropic funders about seed funds for operations and acquisition; include VSCLT in those conversations.</li>
+<li>Engage mortgage lenders in the region, especially community banks and credit unions, about loan products for CLT homebuyers.</li>
+<li>Recommend that developers utilize VSCLT to secure benefits of the Workforce Housing Program.</li>
+</ul>
+<p><strong>Within 2 years:</strong></p>
+<ul>
+<li>Work with the Real Estate Assessor’s Office and VSCLT to establish guidelines for the “decoupling” of land and improvements for CLT properties.</li>
+<li>Begin educating the community about CLTs to cultivate homebuyers. Leverage connections with trusted institutions, such as congregations, civic associations, and employers.</li>
+<li>Depending on acquisition funding, identify viable city surplus land for single-family use, vacant parcels for new construction, or for-sale homes for purchase and rehab. Explore opportunities for CLT neighborhoods as well as infill development.</li>
+</ul>
+</section>
+<section id="who-does-what" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="who-does-what"><span class="header-section-number">13.3</span> WHO DOES WHAT</h2>
+<p><strong>Department of Housing and Neighborhood Preservation:</strong> Engage with VSCLT and coordinate conversations between VSCLT and other potential supporters in the community (e.g.&nbsp;funders, lenders). Assist VSCLT with tax assessments (with Real Estate Assessor’s Office), provide local funding, and ensure that CLT is eligible for federal housing fund support, including HOME and CDBG.</p>
+<p><strong>VSCLT:</strong> Work with City staff to identify barriers and opportunities, participate in conversations with community members and partners, assist local developers with creation of CLT homes, and steward buyers and their homes throughout purchase and ownership.</p>
+<p><strong>Nonprofit developers (e.g., Habitat for Humanity):</strong> Partner to build CLT homes, incubate and ready homebuyers, and pass on stewardship and ownership of properties to VSCLT.</p>
+<p><strong>Lenders:</strong> Create or modify lending products available for CLT homebuyers, provide grants and other assistance as available, and advertise the CLT model to their pipeline of applicants.</p>
+</section>
+<section id="funding-scope" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="funding-scope"><span class="header-section-number">13.4</span> FUNDING SCOPE</h2>
+<p>Average costs per VSCLT home depend on the type of development and local market dynamics, but the approximate difference between the actual sales price and the market sales price has ranged from $40,000 to $60,000. This can be a proxy for the per-home subsidy required.</p>
+<p>As a relatively new organization, VSCLT needs operational funding to support its growth. Dedicated funding from the City would show the commitment to permanently affordable housing options and allow VSCLT to pursue more opportunities in the region.</p>
+</section>
+<section id="potential-funding-sources" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="potential-funding-sources"><span class="header-section-number">13.5</span> POTENTIAL FUNDING SOURCES</h2>
+<p><strong>Public funds:</strong> As described above, Virginia Beach can use both federal funds (CDBG, HOME) and city-generated funds. Successfully deploying federal grants requires additional diligence and planning due to the unique equity-sharing model, mainly via updates to plans submitted to HUD.</p>
+<p><strong>Private funds:</strong> CLTs in Virginia and nationwide have been successful in securing funding from philanthropic organizations interested in homeownership and community development. Major employers and institutions should also be solicited.</p>
+</section>
+<section id="metrics-to-evaluate-success" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="metrics-to-evaluate-success"><span class="header-section-number">13.6</span> METRICS TO EVALUATE SUCCESS</h2>
+<ul>
+<li>Operational and acquisition funding received from multiple sources.</li>
+<li>Properties identified and selected for CLT acquisition.</li>
+<li>Homebuyers cultivated, educated, and placed in homes.</li>
+<li>Homeownership rate, especially for low- and moderate-income families, increases in target neighborhoods.</li>
+<li>Household wealth created over time by appreciation in CLT home values.</li>
+</ul>
+</section>
+<section id="examples" class="level2" data-number="13.7">
+<h2 data-number="13.7" class="anchored" data-anchor-id="examples"><span class="header-section-number">13.7</span> EXAMPLES</h2>
+<p><a href="https://maggiewalkerclt.org/infographic/">Maggie Walker Community Land Trust</a> (Greater Richmond region)</p>
+<ul>
+<li>MWCLT has averaged about 17 new homes each year since 2017, with sales prices 54% lower than metro Richmond average. Nearly 100 homes completed in total, including a mixed-income subdivision.</li>
+<li>The average income of buyers has been 49% lower than the region’s average, with 45% of all buyers coming from minority and marginalized communities in the city.</li>
+</ul>
+<p><a href="https://www.thistlecommunityhousing.org/">Thistle Community Housing</a> (Boulder, CO) and <a href="https://www.getahome.org/">Champlain Housing Trust</a> (Burlington, VT)</p>
+<ul>
+<li>Both are examples of CLTs using local inclusionary zoning programs to increase their portfolios.</li>
+<li>Programs demonstrate the effectiveness of leveraging locality-led programs with private nonprofit initiatives.</li>
+</ul>
+
+
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>This data comes from 104 organizations that offer “shared-equity” housing programming in the United States. See <a href="https://go.lincolninst.edu/Wang_WP23RW1.pdf">The 2022 Census of Community Land Trusts and Shared Equity Entities in the United States: Prevalence, Practice and Impact</a>. (PDF)<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>See <a href="https://www.lincolninst.edu/publications/working-papers/tracking-growth-evaluating-performance-shared-equity-homeownership">Tracking Growth and Evaluating Performance of Shared Equity Homeownership Programs During Housing Market Fluctuations</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The equity gained is the difference in the sales value of the home from the mortgage owed, plus the value of the principal payments made over time.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./ew-haf.html" class="pagination-link  aria-label=" &lt;span="" worker="" housing="" fund&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Create worker housing fund</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./bw-mumi.html" class="pagination-link" aria-label="<span class='chapter-number'>14</span>&nbsp; <span class='chapter-title'>Pursue innovative development models</span>">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Pursue innovative development models</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

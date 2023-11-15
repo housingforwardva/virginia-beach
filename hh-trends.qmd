@@ -1,4 +1,4 @@
-# Household Trends
+# Household trends
 
 ```{r}
 #| label: setup
@@ -17,7 +17,7 @@ library(ggtext)
 
 ```
 
-The City of Virginia Beach has a population of approximately 448,573 residents, living in 177,029 households. A majority of Virginia Beach households are family households, containing two or more people related by birth, marriage, or adoption. The most numerous type of family household is married couples without children, of which there are 50,460. The second most numerous is married couples with children, of which there are 38,536. The city also has a large population of older adults, with nearly one-quarter of households led by seniors 65 and older.
+The City of Virginia Beach has a population of approximately 448,573 residents, living in 177,029 households. A majority of Virginia Beach households are family households, containing two or more people related by birth, marriage, or adoption. The most numerous type of family household is married couples without children, of which there are 50,460. The second most numerous is married couples with children, of which there are 38,536. The City also has a large population of older adults, with nearly one-quarter of households led by seniors 65 and older.
 
 Dwelling unit sizes are generally mismatched with household size: 60% of Virginia Beach households consist of one or two people, yet three-quarters of dwelling units have three or more bedrooms. Senior householders are more likely to live alone than other age cohorts. Focus groups participants expressed concern about the isolation and poor living conditions endured by seniors living alone. Many suggested that the City increase outreach and services for this population, including case management, home modifications and in-home aid services where desired, and affordable options for assisted living. Focus group participants expressed the importance of seniors having a choice when either relocating to assisted living or aging in place.
 
@@ -98,7 +98,7 @@ Approximately 53,429 householders are baby boomers, aged between 57 and 75 in 20
 {{< pagebreak >}}
 
 ::: callout-note
-## Housing Preferences by Age
+## Housing preferences by age
 
 Households of retired persons or those close to retirement prioritize proximity to friends and family as well as conveniences when choosing a home location. Homebuyers 60 and older prefer suburban, small-town, and resort living over urban or rural places.[^hh-trends-11] Convenience to family/friends, health facilities, and shopping --- as well as overall affordability --- were the highest-ranking factors for buyers 68 and older.[^hh-trends-12]
 
@@ -149,7 +149,7 @@ ggplot(race,
 
 Over 65% of Virginia Beach householders identify as white, 18% as Black, and 7% as Asian. Seven percent of householders identify as Hispanic of any race.
 
-## Composition and Living Arrangement
+## Composition and living arrangement
 
 The median household size in Virginia Beach is two people. One-person households make up 25% of households in Virginia Beach, and two-person households make up 35%. Seventeen percent of households are three-person, 13% are four-person, and 9% of households are five or more persons.
 

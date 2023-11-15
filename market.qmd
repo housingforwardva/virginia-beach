@@ -1,4 +1,4 @@
-# Market Dynamics
+# Market dynamics
 
 ```{r}
 #| label: setup
@@ -103,7 +103,7 @@ ggplot(units_rent,
 
 ```
 
-The median gross rent, which includes utilities, is \$1,433, and the median contract rent is \$1,260. A large majority of rental units in Virginia Beach have a gross rent of between \$1,000 and \$2,000. Over 45% of units rent for between \$1,000 and \$1,499, while 31% rent for between \$1,500 and \$1,999. Tabulation of ACS data shows a rental market vacancy rate of 4.97% in 2021. This represents a small decline from the 2014 market vacancy rate of 5.33% but not a statistically significant change. The market vacancy rate is calculated from vacant rental units listed for rent, as a percentage of all rental housing units. CoStar offers more recent data (2023-Q1) for most rental units in Virginia (i.e. those located in mid- to large-sized multifamily buildings and those single-family units that are professionally-managed. The vacancy rate among these properties is 4.9%. Vacancy rates from both ACS data and CoStar data suggest that the city has a healthy quantity of rental units and that units should be added to keep up with demand.
+The median gross rent, which includes utilities, is \$1,433, and the median contract rent is \$1,260. A large majority of rental units in Virginia Beach have a gross rent of between \$1,000 and \$2,000. Over 45% of units rent for between \$1,000 and \$1,499, while 31% rent for between \$1,500 and \$1,999. Tabulation of ACS data shows a rental market vacancy rate of 4.97% in 2021. This represents a small decline from the 2014 market vacancy rate of 5.33% but not a statistically significant change. The market vacancy rate is calculated from vacant rental units listed for rent, as a percentage of all rental housing units. CoStar offers more recent data (2023-Q1) for most rental units in Virginia (i.e. those located in mid- to large-sized multifamily buildings and those single-family units that are professionally-managed. The vacancy rate among these properties is 4.9%. Vacancy rates from both ACS data and CoStar data suggest that the City has a healthy quantity of rental units and that units should be added to keep up with demand.
 
 ::: callout-note
 Housing markets have been theorized as segmented markets, meaning a region's housing market is made up of overlapping submarkets distinguished by price, location, and other qualitative differences. When a tenant's apartment search yields many costly but few affordable units, it can lead to the perception that the rental market is tighter on the lower end. PUMS data partially validates this perception --- with the important caveat that the small sample size of vacant for-rent units in the PUMS yields lower-confidence estimates. The market vacancy rate among units renting below the median rent level is 4.5%, while market vacancy among above-median units is 5.8%. These lower-confidence findings show that among the bottom half of rental units by price, demand is higher in relation to supply.
@@ -124,7 +124,7 @@ Construction of new apartments has been steadily decreasing since 2018, and alth
 
 ## Homeownership
 
-The Virginia Beach homeownership market has attracted a healthy demand, following the Great Recession and a period of stagnant prices and slow pace that lasted until 2016. Median price grew 8% over 2005-2015, which includes the ups and downs of the housing "bubble" period, the Great Recession, federal tax credit support for first-time homebuyers (2009)[^market-1], decline following the removal of those tax credits (2010-2011), and the initiation of unsupported recovery. From 2011-2015, Virginia Beach lagged behind the state in price recovery from the recession, and stagnant demand was associated with less-than-adequate investments in the city's housing stock.
+The Virginia Beach homeownership market has attracted a healthy demand, following the Great Recession and a period of stagnant prices and slow pace that lasted until 2016. Median price grew 8% over 2005-2015, which includes the ups and downs of the housing "bubble" period, the Great Recession, federal tax credit support for first-time homebuyers (2009)[^market-1], decline following the removal of those tax credits (2010-2011), and the initiation of unsupported recovery. From 2011-2015, Virginia Beach lagged behind the state in price recovery from the recession, and stagnant demand was associated with less-than-adequate investments in the City's housing stock.
 
 [^market-1]: The Housing Economic Recovery Act of 2008 established a \$7,500 tax credit that is similar to a no-interest loan and must be repaid in 15 equal, annual installments beginning in 2010. For homes purchased in 2009, the credit does not have to be paid back unless the home ceases to be the taxpayer's main residence within a three-year period following the purchase. https://www.irs.gov/taxtopics/tc611
 
@@ -189,7 +189,7 @@ Virginia Beach will need to continue to add new housing units to meet demand and
 
 ```
 
-## Vacant Housing
+## Vacant housing
 
 There are approximately 12,141 vacant housing units in Virginia Beach. Approximately 3,297 are vacant for rent and 1,353 are vacant for sale, while 1,578 units have been rented or sold but not yet occupied. Approximately 2,891 vacant units, about 1.53% of total units, are vacant for seasonal, recreational, or occasional use. Approximately 3,022 units, about 1.6% of total housing units, are vacant for other reasons. See \[Figure X\] for vacant housing units by status.
 

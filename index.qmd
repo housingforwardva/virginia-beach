@@ -1,51 +1,11 @@
-# About {.unnumbered}
+# About this study {.unnumbered}
 
-`ADD BRIEF INTRO`
+This study is a follow-up to the previous *Virginia Beach Housing Needs Assessment and Market Analysis* completed by the Virginia Center for Housing Research at Virginia Tech (VCHR) in 2016. The goals for this update included analyzing more recent data on housing needs, and the creation of detailed, actionable policy recommendations.
 
-<!-- ## Outline -->
+For this report, VCHR conducted stakeholder outreach and completed a new housing affordability assessment. HousingForward Virginia (HFV), a statewide nonprofit organization that provides research and technical assistance to practitioners across the Commonwealth, also contributed to this report by developing the solutions and assembling this final document.
 
-<!-- Current outline: -->
+The findings and recommendations provided here reflect multiple rounds of input from elected officials, city staff, community organizations, and residents throughout Virginia Beach. Additional details on the study process and engagement activities are provided in the preface and appendix.
 
-<!-- ``` -->
-<!-- Executive summary -->
-
-<!-- Preface -->
-<!-- └── About VCHR and HFV -->
-<!-- └── Acknowledgements -->
-<!-- └── Scope of work and process -->
-
-<!-- Introduction -->
-<!-- └── Major changes since 2016 -->
-
-<!-- Data and methodological notes -->
-<!-- └── Quantitative analysis -->
-<!-- └── Qualitative analysis -->
-
-<!-- Important terms and references -->
-
-<!-- Household characteristics -->
-<!-- └── Household demographics -->
-<!-- └── Household composition and living arrangement -->
-<!-- └── Households by tenure -->
-
-<!-- Market dynamics -->
-<!-- └── Rental -->
-<!-- └── Homeownership -->
-<!-- └── Vacant housing -->
-
-<!-- Housing affordability -->
-<!-- └── Workforce housing affordability -->
-<!-- └── Affordable housing -->
-<!-- └── Owned/for─sale gap analysis -->
-<!-- └── Naturally occurring affordable housing (NOAH) -->
-
-<!-- Conclusions -->
-
-<!-- Solutions -->
-<!-- └── Overview -->
-<!-- └── Strategic priorities -->
-<!-- └── Easy wins -->
-<!-- └── Background work -->
 
 <!-- Appendices -->
 <!-- └── Appendix 1: Public and expert engagement -->
@@ -53,51 +13,3 @@
 <!-- └── Appendix 3: Naturally occurring affordable housing analysis -->
 <!-- ``` -->
 
-<!-- Revised outline? -->
-
-<!-- ``` -->
-<!-- Executive summary -->
-
-<!-- Preface -->
-<!-- └── About VCHR and HFV -->
-<!-- └── Acknowledgements -->
-<!-- └── Scope of work and process -->
-
-<!-- Introduction -->
-<!-- └── Major changes since 2016 -->
-<!-- └── Data and methodological notes -->
-<!--   └── Quantitative analysis -->
-<!--   └── Qualitative analysis -->
-<!-- └── Important terms and references -->
-
-<!-- Household characteristics -->
-<!-- └── Household demographics -->
-<!-- └── Household composition and living arrangement -->
-<!-- └── Households by tenure -->
-
-<!-- Market dynamics -->
-<!-- └── Rental -->
-<!-- └── Homeownership -->
-<!-- └── Vacant housing -->
-
-<!-- Housing affordability -->
-<!-- └── Workforce housing affordability -->
-<!-- └── Affordable housing -->
-<!-- └── Owned/for-sale gap analysis -->
-<!-- └── Naturally occurring affordable housing (NOAH) -->
-
-<!-- Conclusions -->
-
-<!-- Solutions -->
-<!-- └── Overview -->
-<!-- └── Strategic priorities -->
-<!-- └── Easy wins -->
-<!-- └── Background work -->
-
-<!-- Appendices -->
-<!-- └── Appendix 1: Public and expert engagement -->
-<!-- └── Appendix 2: Workforce housing affordability analysis -->
-<!-- └── Appendix 3: Naturally occurring affordable housing analysis -->
-<!-- ``` -->
-
-<!-- {{< pagebreak >}} -->

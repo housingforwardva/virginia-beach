@@ -1,4 +1,4 @@
-# Housing Affordability
+# Housing affordability {#sec-affordability}
 
 ```{r}
 #| label: setup
@@ -276,7 +276,7 @@ Family households, shown in green, tend to have incomes enabling them to afford 
 
 Among senior-led, one-person households (shown in yellow), only the median cost of owning free and clear is affordable to the median household. This means that long-term owners can afford to stay in their homes but may be unable to relocate to smaller or more accessible dwellings. The lack of other affordable options can keep seniors in homes unsuitable for aging in place. It can also prevent those homes from being vacated and becoming available to younger families facing a shortage of starter homes, as many survey respondents noted.
 
-## Workforce Housing Affordability
+## Workforce housing affordability {#sec-affordability-workforce}
 
 City staff, councilmembers, employers, and citizens all expressed concerns about workforce housing affordability in the study's engagement process. Employers discussed instances of employees having difficulty securing housing and even turning down contracts because they couldn't find housing. Working citizens recounted difficulties finding affordable housing that meets their needs and promotes their financial goals. Indeed, many resident workers in Virginia Beach do not earn enough to comfortably afford rent, and even more do not earn enough to access homeownership opportunities. 
 
@@ -300,9 +300,9 @@ hh_workers |>
 ```
 
 ::: callout-note
-## Commuting Patterns
+## Commuting patterns
 
-Nearly 75,900 workers, roughly half (47%) of Virginia Beach's workforce, commute into the city for their primary job. In-commuters are disproportionately aged 29 or younger, earning \$1,250-\$3,333 per month (low-income for a single-earner household or a dual-earner household supporting a dependent), and working in the trade, transportation, and utilities industries. Meanwhile, resident workers are disproportionately 55 and older and earning more than \$3,333 per month. Lower-income workers earning less than \$1,250 per month make up 24% of the workforce and 24% of in-commuters, indicating they're not excluded from the city even though they're likely to endure housing cost burden and associated hardship. (As discussed earlier in the report, 76% of low-income households experience housing cost burden.)
+Nearly 75,900 workers, roughly half (47%) of Virginia Beach's workforce, commute into the City for their primary job. In-commuters are disproportionately aged 29 or younger, earning \$1,250-\$3,333 per month (low-income for a single-earner household or a dual-earner household supporting a dependent), and working in the trade, transportation, and utilities industries. Meanwhile, resident workers are disproportionately 55 and older and earning more than \$3,333 per month. Lower-income workers earning less than \$1,250 per month make up 24% of the workforce and 24% of in-commuters, indicating they're not excluded from the City even though they're likely to endure housing cost burden and associated hardship. (As discussed earlier in the report, 76% of low-income households experience housing cost burden.)
 
 `ADD FIGURE: In-commuting, Resident Workers, and Out-commuting for Primary Jobs`
 
@@ -315,11 +315,11 @@ Nearly 75,900 workers, roughly half (47%) of Virginia Beach's workforce, commute
 
 ```
 
-The majority of workers in the top 10 occupations by employment, primarily service sector roles with typically lower wages, face challenges in securing affordable housing. Eight out of these 10 occupations can't afford the lower quartile rent when they're single earners. For the majority (7/10), even earning in the 90th percentile doesn't allow them to affordably rent or own in the city as single earners. Housing affordability improves in a dual-earner household scenario (both at median wage), but workers in three roles (fast food and counter workers, cashiers, and home health and personal care aides) still find the median rent unaffordable. Only the general and operations manager role can afford homeownership as a single earner, with registered nurses also being able to manage homeownership costs under specific conditions.
+The majority of workers in the top 10 occupations by employment, primarily service sector roles with typically lower wages, face challenges in securing affordable housing. Eight out of these 10 occupations can't afford the lower quartile rent when they're single earners. For the majority (7/10), even earning in the 90th percentile doesn't allow them to affordably rent or own in the City as single earners. Housing affordability improves in a dual-earner household scenario (both at median wage), but workers in three roles (fast food and counter workers, cashiers, and home health and personal care aides) still find the median rent unaffordable. Only the general and operations manager role can afford homeownership as a single earner, with registered nurses also being able to manage homeownership costs under specific conditions.
 
 VCHR also identified disparities in housing affordability among selected state and local government sector and mandatory service occupations. Home health and personal care aides and childcare workers face severe housing affordability challenges. Neither can afford the lower quartile rent as a single earner, even when earning at the 90th percentile. In dual-earning scenarios, they can't manage the median rent. Firefighters and postal service mail carriers are better positioned. They can afford the median rent at the 90th percentile and homeownership when their earnings are combined with that of another earner. Other occupations like teachers (spanning from kindergarten to secondary) and registered nurses can afford the median rent as single earners. When their earnings are at the 90th percentile or combined, they can also manage homeownership costs.
 
-Housing affordability remains a significant concern in the city of Virginia Beach, particularly for those in service-sector roles and mandatory service positions. Although workers in some occupations manage to find affordable housing, a significant share of the workforce is either cost-burdened or unable to access suitable housing altogether. This analysis highlights an urgent need for policy and strategic interventions to bridge the affordability gap for these essential roles.
+Housing affordability remains a significant concern in the City of Virginia Beach, particularly for those in service-sector roles and mandatory service positions. Although workers in some occupations manage to find affordable housing, a significant share of the workforce is either cost-burdened or unable to access suitable housing altogether. This analysis highlights an urgent need for policy and strategic interventions to bridge the affordability gap for these essential roles.
 
 Further tabulations and analysis are included in \[Appendix X\].
 :::
@@ -327,9 +327,9 @@ Further tabulations and analysis are included in \[Appendix X\].
 {{< pagebreak >}}
 
 ::: callout-note
-## Military Households
+## Military households
 
-There are approximately 15,893 Virginia Beach households with at least one member in active-duty military service ("military households"), around 11% of all households in the city. Families account for 77% of military households, while non-family living arrangements, mostly people living alone, make up 23% of military households.
+There are approximately 15,893 Virginia Beach households with at least one member in active-duty military service ("military households"), around 11% of all households in the City. Families account for 77% of military households, while non-family living arrangements, mostly people living alone, make up 23% of military households.
 
 Around 50% of military households own their homes, and 49% rent. The vast majority of homeowner households have a mortgage or loan.[^affordability-3]
 
@@ -340,11 +340,11 @@ The median household income of military households is approximately \$87,140, ar
 
 [^affordability-4]: Torres 2023, accessed October 2023, https://bipartisanpolicy.org/blog/faqs-housing-military-families/#:\~:text=Service%20members%20living%20in%20government,rents%20above%20the%20BAH%20rate.
 
-## Affordable Housing
+## Affordable housing
 
 VCHR conducted an affordable housing gap analysis and estimated the extent to which affordable housing occurs “naturally” in the market to evaluate whether available affordable housing can meet the needs of current and future Virginia Beach residents. 
 
-### Rental Housing Gap Analysis
+### Rental housing gap analysis
 
 Each pair of columns in figure X compares the number of households in each income group to the number of housing units affordable to that group. Each column provides additional information: cost burden in the “households” column and information about the income of the unit occupants in the other column. 
 
@@ -363,7 +363,7 @@ Building units on either end of the 50%-80% income category would help relieve c
 
 ```
 
-## Owned/For-Sale Gap Analysis
+## Owned/for-sale gap analysis
 
 Affordability concerns and gap analysis for owners differ substantially from the gap analysis for renters. The mortgage finance system generally prevents homeowners from being cost-burdened when they buy their home, and often homeowners’ income increases over the life of their mortgage. Homeowners also face relatively little change in housing costs compared to renters. When homeowners do become cost-burdened, it’s often due to economic hardship such as job loss, death of a family member, or fixed incomes that do not keep up with rising costs of taxes, utilities, and insurance. Because many homeowners had the opportunity to reduce their housing costs by refinancing their mortgages during the 2014-2021 period, decreased rates of cost burden among owners with a mortgage are expected. However, inflation and associated increasing interest rates since 2021 have decreased access to homeownership among low- and moderate-income buyers.
 
@@ -380,7 +380,7 @@ Quantity and occupancy of the housing stock across income affordability levels, 
 
 ```
 
-## Naturally Occurring Affordable Housing (NOAH) 
+## Naturally occurring affordable housing (NOAH) 
 
 VCHR used HUD FY 2022 Income Limits to categorize affordability levels for 145,498 units in Virginia Beach real estate assessment data. The categorization is based on income limits for two household sizes (1.5-person and 4.5-person) intended to proxy the position of first-time homebuyers and more-established households who benefit from longer careers and existing home equity. VCHR adjusted the tax-assessed values based on differences observed in close prices in the Virginia Beach sale data for 2022, providing a more realistic estimate of market prices. Using Freddie Mac's 30-year fixed rate from December 2022 and standard mortgage formulae, VCHR estimated mortgage payments for each unit. 
 
@@ -388,7 +388,7 @@ This analysis considers two down-payment scenarios: 5% and 10%. The monthly mort
 
 Of 145,498 units from the Virginia Beach assessment data, using a 5% down payment as a criterion, about 8,123 properties were found to be affordable to first-time homebuyers (households with income up to the 1.5-person limit) with an income in the 80%-100% range. When considering the same down payment, roughly 9,213 units were within reach for those earning \$70,150 or less, while around 45,091 units were accessible for more-established households (households with income up to the 4.5-person limit) earning $97,250 or less. However, while these units are theoretically affordable, many are occupied by households with incomes that exceed the designated affordability brackets. This means that even though a property might be affordable on paper, it isn't necessarily available in the market for lower-income families. The analysis also indicated a scarcity of affordable housing options, with only 35% of the overall housing market deemed affordable to households with income less than 100% AMI when considering a 10% down payment. Potential additional costs for maintenance and renovation due to age are also a concern since 98% of these affordable units were constructed before 2000.
 
-The disparity in affordable units across city council districts further emphasizes the uneven distribution of affordable housing options. For instance, City Council District 4 exhibited a significantly higher proportion of affordable units compared to City Council District 2, which had a notably lower percentage.
+The disparity in affordable units across City Council districts further emphasizes the uneven distribution of affordable housing options. For instance, City Council District 4 exhibited a significantly higher proportion of affordable units compared to City Council District 2, which had a notably lower percentage.
 
 `ADD FIGURE: Share of Affordable Units to 4.5-person household with below 80% AMI`
 

@@ -58,10 +58,13 @@ The City should strive to design a Housing Assistance Fund with as little additi
 
 ## WHO DOES WHAT
 
-* **Department of Housing and Neighborhood Preservation:** Design and administer the program, set criteria and guidelines, process applications, determine eligibility, disburse financial assistance, and monitor program successes. 
-* **Public and private sector employers:** Help identify critical roles that need to be filled, promote the program to current and prospective employees, and potentially match funds.
-* **Local banks and lenders:** Help facilitate DPA funds and pair with other attractive financial products, and provide financial literacy education.
-* **Community organizations:** Provide outreach, education, and support to potential applicants, and assist the City with fine-tuning the program as needed.
+**Department of Housing and Neighborhood Preservation:** Design and administer the program, set criteria and guidelines, process applications, determine eligibility, disburse financial assistance, and monitor program successes. 
+
+**Public and private sector employers:** Help identify critical roles that need to be filled, promote the program to current and prospective employees, and potentially match funds.
+
+**Local banks and lenders:** Help facilitate DPA funds and pair with other attractive financial products, and provide financial literacy education.
+
+**Community organizations:** Provide outreach, education, and support to potential applicants, and assist the City with fine-tuning the program as needed.
 
 ## FUNDING SCOPE
 
@@ -76,16 +79,18 @@ A hypothetical DPA program for workers could provide assistance up to \$16,750 p
 
 ## POTENTIAL FUNDING SOURCES
 
-* Virginia Beach can pilot a Housing Assistance Fund most quickly by allocating a portion of the city’s general revenue. This does not obligate the City to dedicate money to the fund in future years.
-* The City should pursue partial (or full) matching funds from major employers to demonstrate a joint public-private investment in workforce development and retention.
-* In the long term, the City should secure an ongoing, dedicated source of revenue for this program. If desired, this can be done within the recommended Housing Trust Fund solution described earlier. The Housing Assistance Fund could be a special reserve account within the HTF that is funded generally by the same mechanism(s) as the whole HTF; or it could have a specific dedicated revenue source not shared among other uses of HTF dollars.
+Virginia Beach can pilot a Housing Assistance Fund most quickly by allocating a portion of the city’s general revenue. This does not obligate the City to dedicate money to the fund in future years.
+
+The City should pursue partial (or full) matching funds from major employers to demonstrate a joint public-private investment in workforce development and retention.
+
+In the long term, the City should secure an ongoing, dedicated source of revenue for this program. If desired, this can be done within the recommended Housing Trust Fund solution described earlier. The Housing Assistance Fund could be a special reserve account within the HTF that is funded generally by the same mechanism(s) as the whole HTF; or it could have a specific dedicated revenue source not shared among other uses of HTF dollars.
 
 ::: callout-note
 ### Dedicated revenue options
 See the Housing Trust Fund solution for examples of dedicated revenue options for funding housing investments in Virginia Beach.
 :::
 
-**METRICS TO EVALUATE SUCCESS**
+## METRICS TO EVALUATE SUCCESS
 
 * Number and demographics of workers (households) served
 * Salaries and wages of workers served
@@ -93,18 +98,18 @@ See the Housing Trust Fund solution for examples of dedicated revenue options fo
 * Increased employee retention
 * Years of professional experience across workers
 
-**IMPORTANT CONSIDERATIONS**
+## IMPORTANT CONSIDERATIONS
 
 Many examples, like in Fairfax and Loudoun, pair assistance with affordable dwelling unit (ADU) programs to simultaneously achieve smart growth goals in desirable areas. Virginia Beach should explore a similar path if its existing Workforce Housing Program is reevaluated and strengthened.
 
-**EXAMPLES**
+## EXAMPLES
 
 [Henrico County Home Purchase Assistance Program](https://henrico.us/revit/henricos-home-purchase-assistance-program/)
 
-Additional information: [Boosting Affordable Housing Through Employer Housing Assistance Programs](https://planrva.org/boosting-affordable-housing-through-employer-housing-assistance-programs/) (PlanRVA, August 2023)
-
 * Up to $20,000 in home purchase assistance to full-time county employees who are first-time homebuyers. Home must be located in Henrico.
 * Income eligibility set by Virginia Housing’s limits. Employees must match DPA with at least $1,000 of their own dollars, complete a homebuyer education course, obtain home inspection, and occupy their home for at least five years.
+
+Additional information: [Boosting Affordable Housing Through Employer Housing Assistance Programs](https://planrva.org/boosting-affordable-housing-through-employer-housing-assistance-programs/) (PlanRVA, August 2023)
 
 [Fairfax County First-Time Homebuyers Program](https://www.fairfaxcounty.gov/housing/homeownership/firsttimehomebuyers)
 
