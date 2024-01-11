@@ -241,11 +241,9 @@ Survey responses noted a lack of affordable housing options for seniors, especia
 
 Households with low incomes and high housing costs are at particular risk of homelessness in the event of sudden income loss or emergency expenses. Approximately 18,847 households in Virginia Beach are at risk of homelessness. That's over 10% of all Virginia Beach households. Approximately 10,953 households have incomes below 30% AMI and have housing costs of at least 30% of household income. Another 7,894 households have incomes between 30% and 50% of AMI and pay at least 50% of household income in housing costs.
 
-`ADD FIGURE: Vulnerability by Household Type`
 
 ```{r}
 #| label: fig-vulnerability
-#| eval: false
 #| fig-cap: "Vulnerability by Household Type"
 
 vulnerability <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "vulnerability") |> 
@@ -271,7 +269,11 @@ ggplot(vulnerability,
   geom_hline(yintercept = 75520, color = "red") +
   geom_text(aes(y = 75520, x = 0.85, label = "Mortgage"), size = 3, color = "red") +
   theme_hfv() +
-  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
+  scale_y_continuous(labels = dollar_format()) +
+  scale_fill_hfv() +
+  labs(title = "Vulnerability by Household Type",
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data.")
 
 ```
 
