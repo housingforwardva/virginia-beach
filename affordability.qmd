@@ -311,14 +311,12 @@ hh_workers |>
 
 Nearly 75,900 workers, roughly half (47%) of Virginia Beach's workforce, commute into the City for their primary job. In-commuters are disproportionately aged 29 or younger, earning \$1,250-\$3,333 per month (low-income for a single-earner household or a dual-earner household supporting a dependent), and working in the trade, transportation, and utilities industries. Meanwhile, resident workers are disproportionately 55 and older and earning more than \$3,333 per month. Lower-income workers earning less than \$1,250 per month make up 24% of the workforce and 24% of in-commuters, indicating they're not excluded from the City even though they're likely to endure housing cost burden and associated hardship. (As discussed earlier in the report, 76% of low-income households experience housing cost burden.)
 
-`ADD FIGURE: In-commuting, Resident Workers, and Out-commuting for Primary Jobs`
 
 ```{r}
 #| label: fig-otm
-#| eval: false
 #| fig-cap: "In-commuting, Resident Workers, and Out-commuting for Primary Jobs"
 
-# Insert image
+knitr::include_graphics("img/vb_otm.png")
 
 ```
 
@@ -431,7 +429,9 @@ The disparity in affordable units across City Council districts further emphasiz
 ```{r}
 #| label: fig-aff-4-5
 #| eval: false
-#| fig-cap: "Share of Affordable Units to 4.5-person household with below 80% AMI"
+#| fig-cap: "Share of Units Affordable to 4.5-person households with Income Below 80% of AMI"
+
+knitr::include_graphics("img/vb_share.png")
 
 
 ```
