@@ -118,6 +118,17 @@ Construction of new apartments has been steadily decreasing since 2018, and alth
 #| eval: false
 #| fig-cap: "New Apartment Construction"
 
+apts <- read_excel("data/construction_data.xlsx", sheet = "construction_mf") |> 
+  mutate(year = as.character(year))
+
+ggplot(apts,
+       aes(x = year,
+           y = mf)) +
+  geom_col(fill = "#40c0c0") +
+  theme_hfv() +
+  labs(title = "New Apartment Construction",
+       caption = "**Source:** City of Virginia Beach Real Estate Assessor's Annual Reports, FY 2013 and FY 2024")
+
 
 
 ```
@@ -185,6 +196,20 @@ Virginia Beach will need to continue to add new housing units to meet demand and
 #| label: fig-new-sf
 #| eval: false
 #| fig-cap: "New Single Family and Condo Units Constructed Annually"
+
+
+sf <- read_excel("data/construction_data.xlsx", sheet = "construction_sf") |> 
+  mutate(year = as.character(year))
+
+ggplot(sf,
+       aes(x = year,
+           y = sf)) +
+  geom_col(fill = "#40c0c0") +
+  theme_hfv() +
+  labs(title = "New Single Family and Condo Units Constructed Annually",
+       caption = "**Source:** City of Virginia Beach Real Estate Assessor's Annual Reports, FY 2013 and FY 2024")
+
+
 
 
 ```
