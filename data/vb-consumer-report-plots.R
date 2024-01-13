@@ -60,8 +60,8 @@ timeline <- tibble(mgr, msp) |>
   )
 
 ggplot(timeline, aes(y = -1:-8)) +
-  geom_line(aes(x = mgr), color = "#1b99d6", linewidth = 1.5, alpha = 0.2) +
-  geom_line(aes(x = msp), color = "#0b3b60", linewidth = 1.5, alpha = 0.2) +
+  geom_line(aes(x = mgr_pct), color = "#1b99d6", linewidth = 1.5, alpha = 0.8) +
+  geom_line(aes(x = msp_pct), color = "#0b3b60", linewidth = 1.5, alpha = 0.8) +
   #geom_point(color = "#0b3b60", size = 3) +
   scale_x_continuous(expand = c(0.01,0.01)) +
   scale_y_continuous(expand = c(0.01,0.01)) +
@@ -101,12 +101,12 @@ hhbr <- hhsize |>
 
 ggplot(hhbr, aes(x = rev(var), y = pct, fill = val)) +
   geom_col(show.legend = F) +
-  geom_text(
-    aes(label = paste0(pct, "%")),
-    color = "white",
-    size = 3,
-    position = position_stack(vjust = 0.5),
-    ) +
+  #geom_text(
+  #  aes(label = paste0(pct, "%")),
+  #  color = "white",
+  #  size = 3,
+  #  position = position_stack(vjust = 0.5),
+  #  ) +
   scale_x_discrete(expand = c(0.01,0.01)) +
   scale_y_continuous(expand = c(0.01,0.01)) +
   scale_fill_vb() +
@@ -138,18 +138,18 @@ ggplot(genten, aes(x = var, y = pct, group = val, color = val)) +
   geom_text(
     data = filter(genten, var == "Boomer"),
     aes(label = paste0(pct, "%")),
-    size = 3,
+    size = 4.5,
     show.legend = F,
-    nudge_x = -0.1
+    nudge_x = -0.15
     ) +
   geom_text(
     data = filter(genten, var == "Millennial"),
     aes(label = paste0(pct, "%")),
-    size = 3,
+    size = 4.5,
     show.legend = F,
-    nudge_x = 0.1
+    nudge_x = 0.15
   ) +
-  scale_x_discrete(expand = c(0.1,0.1)) +
+  scale_x_discrete(expand = c(0.15,0.15)) +
   scale_y_continuous(limits = c(0, 60), expand = c(0.01,0.01)) +
   scale_color_vb() +
   theme_void()
@@ -225,178 +225,124 @@ ggsave("vb-rent.svg", width = 3, height = 3.5, units = "in", dpi = 300)
 
 # Cost burden ---------------
 
-cb_cols = c("cb0" = "#e5e8ec", "cb30" = "#199ad6", "cb50" = "#0b3b60")
+library(showtext)
+
+font_add("proxima", "proxima.otf")
+
+showtext_auto()
+
+cb_cols = c("cb0" = "#e5e8ec", "cb30" = "#199ad6", "cb50" = "#003764")
 
 cb <- tibble(
   var = c("hh", "renters", "owners", "ami30", "ami50", "ami80", "senior75", "senior1"),
-  cb3_0 = c(117664, 30685, 85365, 2504, 2492, 8830,  10138, 8471),
-  cb1_30 = c(35064, 16666, 18398, 1132, 3658, 14095, 2885,  4707),
-  cb2_50 = c(24301, 13159, 11142, 9821, 7894, 4672,  3661,  5790)
+  cb1_50 = c(24301, 13159, 11142, 9821, 7894, 4672,  3661,  5790),
+  cb2_30 = c(35064, 16666, 18398, 1132, 3658, 14095, 2885,  4707),
+  cb3_0 = c(117664, 30685, 85365, 2504, 2492, 8830,  10138, 8471)
   ) |> 
   pivot_longer(
     cols = 2:4, names_to = "level", values_to = "n"  
   ) |> 
   mutate(
-    cols = case_match(
+    col_fill = case_match(
       level,
       "cb3_0" ~ "#e5e8ec",
-      "cb1_30" ~ "#199ad6",
-      "cb2_50" ~ "#0b3b60"
+      "cb2_30" ~ "#199ad6",
+      "cb1_50" ~ "#003764"
+    ),
+    col_color = case_match(
+      level,
+      "cb3_0" ~ "grey10",
+      "cb2_30" ~ "#003764",
+      .default = "white"
     )
   ) |> 
   group_by(var) |> 
   mutate(
     pct = round(n/sum(n), 2),
     ymax = cumsum(pct),
-    ymin = c(0, head(ymax, n = -1))
+    ymin = c(0, head(ymax, n = -1)),
+    #pct_label = 1 - (cumsum(pct) - 0.5*pct),
+    pct_label = (ymax + ymin)/2
     ) |> 
-  #mutate(ypos = cumsum(pct) - 0.65*pct) |> 
   ungroup() 
-  #mutate(level = fct_relevel(level, "cb30", "cb50", "cb0"))
 
-
-
-
-
-
-ggplot(data = filter(cb, var == "hh"), aes(x = "", y = pct, fill = level, label = pct)) +
-  geom_col(width = 1, show.legend = F) +
-  coord_polar("y", start = 0) +
-  geom_text(
-    data = filter(cb, var == "hh" & level != "cb0"),
-    aes(y = ypos, label = paste0(pct, "%")),
-    color = "white",
-    hjust = 0.8
-    ) +
-  scale_fill_manual(values = cb_cols) +
-  theme_void()
-
-
-
-
-ggplot(data = filter(cb, var == "hh"), aes(ymax = ymax, ymin = ymin, xmax = 2, xmin = 1, fill = level, label = pct)) +
-  geom_rect() +
-  coord_polar(theta = "y", start = -pi/2, direction = 1) +
-  xlim(c(0, 2)) + ylim(c(0, 4)) +
-  scale_fill_manual(values = cb_cols)
-  theme_void()
+half_circle_plot <- function(data, x) {
   
-  
-  geom_col(width = 1, show.legend = F) +
-  coord_polar("y", start = 0) +
-  geom_text(
-    data = filter(cb, var == "hh" & level != "cb0"),
-    aes(y = ypos, label = paste0(pct, "%")),
-    color = "white",
-    hjust = 0.8
-  ) +
-  scale_fill_manual(values = cb_cols) +
-  theme_void()
-
-  
-  
-ggplot(data = filter(cb, var == "hh")) +
-  geom_arcbar(aes(shares = pct, r0 = 2, r1 = 4, fill = level), show.legend = F, sep = 0, color = NA) +
-  geom_text(aes(label = pct)) +
-  scale_fill_manual(values = cb_cols) +
-  coord_fixed() +
-  theme_void()
-  
-  
-  
-plot_cb <- function(input, variable) {
-  
-  ggplot(data = filter(input, var == variable), aes(x = "", y = pct, fill = level, label = pct)) +
-    geom_col(width = 1, show.legend = F) +
-    coord_polar("y", start = 0) +
-    geom_text(
-      data = filter(input, var == variable & level != "cb0"),
-      aes(y = ypos, label = paste0(pct, "%")),
-      color = "white",
-      hjust = 0.8
-    ) +
-    scale_fill_manual(values = cb_cols) +
-    theme_void()
+  data |> 
+    filter(var == x) |>
+    ggplot(aes(ymax = ymax, ymin = ymin, xmax = 4, xmin = 3, fill = col_fill)) +
+    geom_rect(alpha = 0.9) +
+    geom_text(x = 3.6, aes(y = pct_label, label = label_percent()(pct), color = col_color), size = 9, family = "proxima") +
+    coord_polar("y", start = -pi/2, direction = 1) +
+    scale_y_continuous(limits = c(0, 2)) + 
+    scale_fill_identity() +
+    scale_color_identity() +
+    xlim(c(2.25, 4)) +
+    theme_void() +
+    theme(
+      plot.margin = unit(c(-0.5, -0.5, -3.5, -0.5), "in")
+    )
   
 }
 
-ggsave("vb-cb-hh.svg", width = 2, height = 2, units = "in", dpi = 300)
+half_circle_plot(cb, "hh")
+ggsave("vb-cb-hh.svg", width = 5, height = 3, units = "in", dpi = 300)
+
+half_circle_plot(cb, "renters")
+ggsave("vb-cb-renters.svg", width = 5, height = 3, units = "in", dpi = 300)
+
+half_circle_plot(cb, "owners")
+ggsave("vb-cb-owners.svg", width = 5, height = 3, units = "in", dpi = 300)
+
+half_circle_plot(cb, "ami30")
+ggsave("vb-cb-ami30.svg", width = 5, height = 3, units = "in", dpi = 300)
+
+half_circle_plot(cb, "ami50")
+ggsave("vb-cb-ami50.svg", width = 5, height = 3, units = "in", dpi = 300)
+
+half_circle_plot(cb, "ami80")
+ggsave("vb-cb-ami80.svg", width = 5, height = 3, units = "in", dpi = 300)
+
+half_circle_plot(cb, "senior75")
+ggsave("vb-cb-senior75.svg", width = 5, height = 3, units = "in", dpi = 300)
+
+half_circle_plot(cb, "senior1")
+ggsave("vb-cb-senior1.svg", width = 5, height = 3, units = "in", dpi = 300)
 
 
-plot_cb(cb, "owners")
 
+## HTF map ------------------
 
+library(tigris)
+library(mapview)
 
-# data = cb
-# filter = `var` column
-# input = `var` selection ("hh")
-# levels = `level` (cb0, cb30, cb50)  parties
-# value = `pct`                       shares
+va_counties <- counties(state = 51, cb = TRUE, resolution = "5m") |> 
+  select(name = NAMELSAD)
 
-cb_hh <- filter(cb, var == "hh") |> 
-  mutate(level = fct_relevel(level, "cb1_30", "cb2_50", "cb3_0"))
+htfs <- c(
+  "Alexandria city",
+  "Arlington County",
+  #"Charlottesville city",
+  "Montgomery County", "Radford city", "Pulaski County", "Floyd County", "Giles County",
+  "Fairfax County",
+  "Loudoun County"
+  #"Richmond city"
+  )
 
-cb_donut <- function(levels, values, cols = NULL, repr=c("absolute", "proportion")) {
-  
-  repr = match.arg(repr)
-  stopifnot(length(levels) == length(values))
-  if (repr == "proportion") {
-    stopifnot(sum(values) == 1)
-  }
-  if (!is.null(cols)) {
-    names(cols) <- levels
-  }
-  
-  # arc start/end in rads, last one reset bc rounding errors
-  cc <- cumsum(c(-pi/2, switch(repr, "absolute" = (values / sum(values)) * pi, "proportion" = values * pi)))
-  cc[length(cc)] <- pi/2
-  
-  # get angle of arc midpoints
-  meanAngles <- colMeans(rbind(cc[2:length(cc)], cc[1:length(cc)-1]))
-  
-  # unit circle
-  labelX <- sin(meanAngles)
-  labelY <- cos(meanAngles)
-  
-  # prevent bounding box < y=0
-  labelY <- ifelse(labelY < 0.015, 0.015, labelY)
-  
-  p <- ggplot() + theme_no_axes() + coord_fixed() +
-    #expand_limits(x = c(-1.3, 1.3), y = c(0, 1.3)) + 
-    theme(panel.border = element_blank()) +
-    theme(legend.position = "none") +
-    
-    geom_arc_bar(aes(x0 = 0, y0 = 0, r0 = 0.5, r = 1,
-                     start = cc[1:length(values)], 
-                     end = c(cc[2:length(values)], pi/2), fill = levels), color = NA) +
-    
-    switch(is.null(cols)+1, scale_fill_manual(values = cols), NULL) + 
-    
-    # for label and line positions, just scale sin & cos to get in and out of arc
-    #geom_path(aes(x = c(0.9 * labelX, 1.15 * labelX), y = c(0.9 * labelY, 1.15 * labelY),
-    #              group = rep(1:length(values), 2)), colour = "white", size = 2) +
-    #geom_path(aes(x = c(0.9 * labelX, 1.15 * labelX), y = c(0.9 * labelY, 1.15 * labelY),
-    #              group = rep(1:length(values), 2)), size = 1) +
-    
-    geom_text(
-      aes(x = 0.75 * labelX, y = 0.75 * labelY, 
-                   label = switch(repr,
-                                  "absolute" = paste0(values),
-                                  "proportion" = paste0(values*100, "%"))), color = "white", size = 5)
-    
-    #geom_point(aes(x = 0.9 * labelX, y = 0.9 * labelY), colour = "white", size = 2) +
-    #geom_point(aes(x = 0.9 * labelX, y = 0.9 * labelY))
-  
-  return(p)
-}
+va_htfs <- va_counties |> 
+  mutate(
+    htf = case_match(
+      name,
+      htfs ~ "TRUE",
+      .default = "FALSE"
+    )
+    )
 
-cb_hh <- data.frame(
-  level = c("cb1_30", "cb2_50", "cb3_0"),
-  pct = c(0.20, 0.14, 0.66),
-  cols = c("#199ad6", "#0b3b60", "#e5e8ec")
-)
+ggplot(va_htfs, aes(fill = htf, color = htf)) +
+  geom_sf() +
+  scale_color_manual(values = c("TRUE" = "#74cb80", "FALSE" = "#eeeeee")) +
+  scale_fill_manual(values = c("TRUE" = "#74cb80", "FALSE" = "#eeeeee")) +
+  theme_void() +
+  theme(legend.position = "none")
 
-cb_donut(cb_hh$level, cb_hh$pct, cb_hh$cols, repr = "proportion")
-
-
-ggsave("vb-cb-hh.svg", width = 3, height = 2, units = "in", dpi = 300)
+ggsave("vb-htf-map.svg", width = 3, height = 1.5, units = "in", dpi = 300)
