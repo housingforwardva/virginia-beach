@@ -21,11 +21,9 @@ library(ggtext)
 
 VCHR uses housing cost burden to measure the need for more affordable housing and to identify associated housing insecurity. When homeowners are cost-burdened, they may choose to defer maintenance or forgo upgrades in favor of necessities like food, childcare, and medical care. When renters are cost-burdened, they may make choices between housing and other necessities, and their limited ability to save makes them vulnerable to eviction or homelessness in the event of an unexpected expense. Furthermore, inability to save may effectively prevent households from investing in educational enrichment to advance their earnings and from building wealth and security through homeownership. Approximately 59,365 Virginia Beach households, over one-third, are cost-burdened, meaning their housing costs are at least 30% of household income. Among cost-burdened households, 41%, approximately 24,301 households, are severely cost-burdened, paying 50% or more of household income in housing costs.
 
-`ADD FIGURE: Cost-burdened Households`
 
 ```{r}
 #| label: fig-cb-hh
-#| eval: false
 #| fig-cap: "Cost-burdened Households"
 
 cb_hh <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_hh") |> 
@@ -41,14 +39,21 @@ general <- cb_hh |>
            y = cb_pct,
            fill = cb)) +
   geom_col() + 
-  theme_hfv()
+  theme_hfv() +
+  scale_fill_hfv() +
+  labs(title = "Total Households") + 
+  scale_y_continuous(label = percent_format())
 
 detail <- cb_hh |> 
   filter(cb != "Not Cost-burdened") |> 
   ggplot(aes(x = detail,
            y = det_pct)) +
-  geom_col() +
-  theme_hfv()
+  geom_col(fill = "#66788d") +
+  theme_hfv() + 
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) + 
+  scale_y_continuous(label = percent_format()) +
+  labs(title = "Cost-Burdened Households",
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data .")
 
 
 general|detail
@@ -236,11 +241,9 @@ Survey responses noted a lack of affordable housing options for seniors, especia
 
 Households with low incomes and high housing costs are at particular risk of homelessness in the event of sudden income loss or emergency expenses. Approximately 18,847 households in Virginia Beach are at risk of homelessness. That's over 10% of all Virginia Beach households. Approximately 10,953 households have incomes below 30% AMI and have housing costs of at least 30% of household income. Another 7,894 households have incomes between 30% and 50% of AMI and pay at least 50% of household income in housing costs.
 
-`ADD FIGURE: Vulnerability by Household Type`
 
 ```{r}
 #| label: fig-vulnerability
-#| eval: false
 #| fig-cap: "Vulnerability by Household Type"
 
 vulnerability <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "vulnerability") |> 
@@ -266,7 +269,11 @@ ggplot(vulnerability,
   geom_hline(yintercept = 75520, color = "red") +
   geom_text(aes(y = 75520, x = 0.85, label = "Mortgage"), size = 3, color = "red") +
   theme_hfv() +
-  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
+  scale_y_continuous(labels = dollar_format()) +
+  scale_fill_hfv() +
+  labs(title = "Vulnerability by Household Type",
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data.")
 
 ```
 
@@ -304,14 +311,12 @@ hh_workers |>
 
 Nearly 75,900 workers, roughly half (47%) of Virginia Beach's workforce, commute into the City for their primary job. In-commuters are disproportionately aged 29 or younger, earning \$1,250-\$3,333 per month (low-income for a single-earner household or a dual-earner household supporting a dependent), and working in the trade, transportation, and utilities industries. Meanwhile, resident workers are disproportionately 55 and older and earning more than \$3,333 per month. Lower-income workers earning less than \$1,250 per month make up 24% of the workforce and 24% of in-commuters, indicating they're not excluded from the City even though they're likely to endure housing cost burden and associated hardship. (As discussed earlier in the report, 76% of low-income households experience housing cost burden.)
 
-`ADD FIGURE: In-commuting, Resident Workers, and Out-commuting for Primary Jobs`
 
 ```{r}
 #| label: fig-otm
-#| eval: false
 #| fig-cap: "In-commuting, Resident Workers, and Out-commuting for Primary Jobs"
 
-# Insert image
+knitr::include_graphics("img/vb_otm.png")
 
 ```
 
@@ -354,12 +359,26 @@ More than half (60%) of rental stock in Virginia Beach has rent affordable to ho
 
 Building units on either end of the 50%-80% income category would help relieve competition to access these units. Some higher-income renters may choose to “upgrade” to a unit with more space, amenities, nicer features, and/or a better location if the unit were available and still affordable to them. Renters who are currently enduring a housing cost burden would likely welcome a unit that is affordable and meets their needs. Some renters may also choose to become homeowners if a unit that is affordable and meets their needs were available. Availability of homeownership opportunities is discussed more in the following sections.
 
-`ADD FIGURE: Virginia Beach Rented/For-rent Housing Gap`
-
 ```{r}
 #| label: fig-renter-gap
-#| eval: false
-#| fig-cap: "Virginia Beach Rented/For-rent Housing Gap"
+#| fig-cap: "Virginia Beach Rented/For-Rent Housing Gap"
+
+rent_gap <- read_excel("data/vchr_gap.xlsx", sheet = "renter_gap")
+
+ggplot(rent_gap,
+       aes(x = type,
+           y = count,
+           fill = factor(label, levels = c("Cost-Burdened", "Not Cost-Burdened", "Vacant", "Income < Affordable Income Range", "Income within Affordable Income Range", "Income > Affordable Income Range")))) +
+  geom_col() +
+  facet_wrap(~factor(ami, c("30% AMI or Less", "30-50% AMI", "50-80% AMI", "80% AMI or More")), 
+             nrow = 1,
+             labeller = label_wrap_gen(width = 10)) + 
+  theme_hfv() +
+  theme(legend.position = "right",
+        axis.text.x = element_text(angle = 90)) +
+  labs(title = "Virginia Beach Rented/For-Rent Housing Gap",
+       caption = "**Source:** VCHR tabulation of 2015–2019 CHAS Data.") +
+  scale_y_continuous(label = number_format(big.mark = ","))
 
 ```
 
@@ -371,12 +390,27 @@ Housing cost burdens shown in the lefthand column of each pair are far more comm
 
 Quantity and occupancy of the housing stock across income affordability levels, shown in the righthand columns, also provide important insights. Most owners have higher incomes than they need to comfortably afford their unit, which though anticipated based on relatively fixed housing costs and expected increases in income, also represents the potential for upgrade. Over time, as households’ size and income grow, many owners will seek to move to new homes that better accommodate new needs. However, there is not enough housing stock to accommodate households with incomes above 120%  AMI. This gap in housing for higher-income households may limit options to upgrade and require higher-income households to stay in their starter home longer, restricting supply housing that is affordable for first-time homebuyers and to lower- and moderate-income households and also potentially inflating the price of that stock. 
 
-`ADD FIGURE: Virginia Beach Owned/For-sale Housing Gap`
 
 ```{r}
 #| label: fig-owner-gap
-#| eval: false
-#| fig-cap: "Virginia Beach Owned/For-sale Housing Gap"
+#| fig-cap: "Virginia Beach Owned/For-Sale Housing Gap"
+
+owner_gap <- read_excel("data/vchr_gap.xlsx", sheet = "owner_gap")
+
+ggplot(owner_gap,
+       aes(x = type,
+           y = count,
+           fill = factor(label, levels = c("Cost-Burdened", "Not Cost-Burdened", "Vacant", "Income < Affordable Income Range", "Income within Affordable Income Range", "Income > Affordable Income Range")))) +
+  geom_col() +
+  facet_wrap(~factor(ami, c("50% AMI or Less", "50-80% AMI", "80-100% AMI", "100% AMI or More")), 
+             nrow = 1,
+             labeller = label_wrap_gen(width = 10)) + 
+  theme_hfv() +
+  theme(legend.position = "right",
+        axis.text.x = element_text(angle = 90)) +
+  labs(title = "Virginia Beach Owned/For-Sale Housing Gap",
+       caption = "**Source:** VCHR tabulation of 2015–2019 CHAS Data.") +
+  scale_y_continuous(label = number_format(big.mark = ","))
 
 ```
 
@@ -395,7 +429,9 @@ The disparity in affordable units across City Council districts further emphasiz
 ```{r}
 #| label: fig-aff-4-5
 #| eval: false
-#| fig-cap: "Share of Affordable Units to 4.5-person household with below 80% AMI"
+#| fig-cap: "Share of Units Affordable to 4.5-person households with Income Below 80% of AMI"
+
+knitr::include_graphics("img/vb_share.png")
 
 
 ```

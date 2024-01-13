@@ -34,4 +34,38 @@ The remaining six occupations --- postsecondary teachers; kindergarten teachers,
 
 `ADD TABLE: Housing Affordability for Mandatory Service Occupations`
 
-`ADD FIGURE: Housing Affordability for the Top 10 Occupations by Employment in MSA`
+
+```{r}
+#| label: fig-owner-gap
+#| fig-cap: "Housing Affordability for the Top 10 Occupations by Employment in MSA"
+
+
+library(tidyverse)
+library(readxl)
+library(patchwork)
+library(ggtext)
+
+top_occ <- read_excel("data/vchr_occ_aff.xlsx", sheet = "table")
+
+subtitle_text <- "Compared to <span style = 'color:#FFA500'><b>VB Median Owner Cost: $1,888 </b></span> and <span style = 'color:#FF0000'><b>VB Median Gross Rent: $1,433</span>"
+
+
+ggplot(top_occ,
+       aes(x = factor(Attribute, level = c("Single Earner", "Doubled Up", "Max Affordable Housing Cost")),
+          y = Value,
+           fill = factor(Attribute, level = c("Single Earner", "Doubled Up", "Max Affordable Housing Cost")))) +
+  geom_col(position = "dodge") +
+  facet_wrap(~Occupation, nrow = 2, labeller = label_wrap_gen(width = 15)) +
+  scale_y_continuous(labels = dollar_format()) +
+  theme_hfv() +
+  scale_fill_hfv() +
+  theme(axis.text.x = element_blank(),
+        legend.position = "right") +
+  labs(title = "Housing Affordability for Top 10 Occupations by Employment in MSA",
+       subtitle = subtitle_text,
+       caption = "**Source:** Tabulation of 2022 JobsEQ Employment, 2021 ACS 5-Year Estimates.") +
+  geom_hline(yintercept = 1888, color = "orange") +
+  geom_hline(yintercept = 1433, color = "red")
+
+
+```
