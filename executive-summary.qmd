@@ -1,18 +1,40 @@
 # Executive summary {.unnumbered}
 
-Virginia Beach's housing market has improved substantially since a [previous study in 2016](https://s3.us-east-1.amazonaws.com/virginia-beach-departments-docs/housing/AboutUs/PlansReports/Virginia-Beach-Housing-Needs-Assessment-and-Market-Analysis.pdf): Median price has increased 36%, and days on the market sits at 40, indicating a balanced market. Sellers can feel confident that they will sell their home in a reasonable amount of time, and buyers have time to consider multiple properties and not feel pressured to waive inspections. The rental market shows a similar balance, with a vacancy rate of approximately 5%, meaning lease-up is not an issue for property managers and most renters can shop for well-managed properties. However, the market is trending toward tightness, and gaps in the housing stock persist.
+Virginia Beach’s housing market has progressed since 2016, showing both positive growth and emerging challenges. Home prices are rising yet remain reasonably accessible. The pace of sales and vacancy rates indicates market balance. However, increasing market tightness presents challenges, notably the scarcity of affordable homes for low-income families. The study outlines these trends and proposes policy solutions to ensure housing opportunities for all.
 
-There are too few rental units affordable to households with very-low income, many of whom work in the city's top 10 occupations (by employment) and who must accept housing cost burdens to retain housing in the city. Furthermore, a shortage of higher-end units puts pressure on the stock priced within \$500 of the median. Many of the rental units that would be affordable to low- and moderate-income households are occupied by households making higher incomes.
+::: callout-note
+The original 2016 report (*Virginia Beach Housing Needs Assessment, Market Analysis, and Re-Investment Study*), along with the full version of this study update, are available on the Department of Housing & Neighborhood Preservation page of the City’s website: [**VirginiaBeach.gov/HousingStudy**](https://www.VirginiaBeach.gov/HousingStudy)
+:::
 
-Similarly, the city needs more homeownership opportunities for low- and moderate-income households. Focus group participants explained that households needing unconventional financing (e.g., FHA, VA, or Virginia Housing financing) are disadvantaged in the tightening market. Approvals for these loans take longer, and condition requirements make it harder for home buyers who are "taking what they can get." Participants described families earning too much to qualify for support but still unable to afford to buy a home. When working households don't have the opportunity to build wealth in Virginia Beach, they will seek housing elsewhere, making it hard for Virginia Beach businesses to attract and retain workers.
+## Market strengths
 
-To sustain market health and support existing and new businesses, the City must strategically address housing gaps by supporting the addition of appropriate, attainable housing options. This study provides specific policy and programmatic solutions to address Virginia Beach's housing needs. These recommendations are organized into three distinct but complementary groups: Strategic Priorities, Easy Wins, and Background Work. Strategic Priorities focus on long-term systemic change. They include establishing a Housing Trust Fund as a sustainable financial backbone for affordable housing initiatives and using recently expanded powers of the City of Virginia Beach Development Authority to develop large-scale projects that simultaneously stimulate economic growth and affordable housing opportunities. In addition, a well-designed housing education campaign would give residents a rich, well-informed perspective on housing issues across Virginia Beach.
+The city’s housing market is healthier now than in 2016. The median price of homes has increased by 36%, indicating strong demand, and homes typically remain on the market for 40 days, indicating a balanced market. This balance benefits both sellers, who can expect to sell their homes within a reasonable period at a good price, and buyers, who have the luxury of time to explore multiple options without pressure.
 
-Easy Wins offer quicker, more straightforward solutions that can make an immediate difference. Creating a new Housing Assistance Fund would directly benefit important workers and their families who may be struggling to find homes that meet their needs and budgets. Leveraging the Virginia Statewide Community Land Trust could also bring near-term benefits by introducing permanently affordable homeownership opportunities.
+In the rental sector, a 5% vacancy rate also suggests a well-balanced market, providing renters with a variety of well-managed properties to choose from and ensuring efficient lease-up times for property managers. These trends depict a housing market that is not only stable but also accommodating for most participants in the current scenario.
 
-Background Work includes important tasks needed within current and future planning efforts to prime Virginia Beach's core operations in support of its long-term housing goals. These include exploring innovative financing models for mixed-income, mixed-use developments; streamlining permitting and review processes; and establishing a diverse stakeholder group to transform housing elements within the City's upcoming comprehensive plan into new zoning regulations that promote --- not hinder --- housing affordability.
+## Emerging challenges
 
-The full descriptions of each solution offer realistic implementation steps for city leaders, staff, and other partners to follow. While these recommendations are tailored specifically to Virginia Beach, relevant examples of best practices from different communities --- both in Virginia and in other states --- are included for inspiration.
+Despite these positive trends, Virginia Beach now faces significant affordability and accessibility challenges. A critical concern is the lack of rental units affordable to very-low-income households, many of whom are employed in the city’s top 10 most common occupations. These individuals often bear the burden of high housing costs to remain in the city. Additionally, a shortage of units for above-average earners creates undue pressure on moderately priced housing stock.
+
+Limited homeownership opportunities for low- and moderate-income households represent another pressing issue. The tightening market, coupled with today’s less favorable mortgage options, places these potential buyers at a disadvantage. The inability of working households to build wealth through homeownership could prompt them to seek housing in other areas, adversely impacting the local workforce and business retention in Virginia Beach.
+
+## New solutions
+
+When working households don’t have the opportunity to find an affordable apartment or buy a home and build wealth in Virginia Beach, they will seek housing elsewhere. This makes it hard for businesses and other essential public services --- including schools and hospitals --- to attract and retain workers. Virginia Beach must address its housing gaps by adding suitable, attainable options. This study presents eight policy and program solutions in three categories:
+
+[Strategic priorities]{.hfv-grass-bold}
+
+Strategic priorities focus on long-term systemic change. They include establishing a Housing Trust Fund as a sustainable financial backbone for affordable housing initiatives and using recently expanded powers of the City of Virginia Beach Development Authority to develop large-scale projects that simultaneously stimulate economic growth and affordable housing opportunities. In addition, a well-designed housing education campaign would give residents a rich, well-informed perspective on housing issues across Virginia Beach.
+
+[Easy wins]{.hfv-shadow-bold}
+
+Easy wins offer quicker, more straightforward solutions that can make an immediate difference. Creating a new Housing Assistance Fund would directly benefit important workers and their families who may be struggling to find homes that meet their needs and budgets. Leveraging the Virginia Statewide Community Land Trust could also bring near-term benefits by introducing permanently affordable homeownership opportunities.
+
+[Background work]{.hfv-desert-bold}
+
+Background work includes important tasks needed within current and future planning efforts to prime Virginia Beach’s core operations in support of its long-term housing goals. These include exploring self-sustaining financing models for mixed-income, mixed-use developments; streamlining permitting and review processes; and establishing a diverse stakeholder group to transform housing elements within the City’s upcoming comprehensive plan into new zoning regulations that promote --- not hinder --- housing affordability.
+
+The full descriptions of each solution offer realistic implementation steps for City leaders, staff, and other partners to follow. While these recommendations are tailored specifically to Virginia Beach, relevant examples of best practices from different communities --- both in Virginia and in other states --- are included for inspiration.
 
 Informed by thorough analysis of housing market dynamics and meaningful community engagement, this study is a roadmap to lead Virginia Beach toward greater economic opportunity and community stability by making it easier for residents to find, afford, and thrive in their homes.
 
