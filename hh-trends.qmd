@@ -24,6 +24,8 @@ Dwelling unit sizes are generally mismatched with household size: 60% of Virgini
 A majority of Virginia Beach households own their homes, although the frequency of each form of tenure varies by householder race, householder age, and household income. A majority of Virginia Beach householders identify as white, non-Hispanic. Householders who identify as Black or Hispanic are more likely to rent than householders identifying as white or Asian.
 
 ::: callout-note
+## Racial disparities in housing
+
 In the United States, the homeownership rate of white households is 20%-30% higher than that of Black households, and the disparity increased from the 1970s to the 2010s.[^hh-trends-1] Researchers investigating the causes of racial/ethnic disparities in homeownership have noted inter-group differences in important predictors of homeownership.[^hh-trends-2] However, the disparity between white and Black households remains statistically significant when controlling for economic indicators, and the size of the disparity increases as household affluence decreases.[^hh-trends-3]
 
 The extent and direction of kin-network wealth transfers likely contributes to this disparity. For moderate-wealth households, financial transfers from parents or extended family members are instrumental to meeting down-payment and closing costs.[^hh-trends-4] In addition, access to kin-network wealth helps households deal with the costs of emergency repairs and other shocks, making homeownership more secure, and it may influence a household's decision to apply for mortgage financing.[^hh-trends-5] Moderate-income Black households are less likely to receive financial assistance from parents or relatives and more likely to provide such support to parents or relatives in need.[^hh-trends-6]
@@ -35,7 +37,7 @@ Quantitative analysis cannot evaluate racial discrimination as a causal factor i
 
 [^hh-trends-1]: Goodman, L. S., & Mayer, C. (2018). Homeownership and the American dream. Journal of Economic Perspectives, 32(1), 31-58.
 
-[^hh-trends-2]: See  Alba, R. D., & Logan, J. R. (1992). Assimilation and stratification in the homeownership patterns of racial and ethnic groups. International migration review, 26(4), 1314-1341.
+[^hh-trends-2]: See Alba, R. D., & Logan, J. R. (1992). Assimilation and stratification in the homeownership patterns of racial and ethnic groups. International migration review, 26(4), 1314-1341.
 
     Wachter, S. M., & Megbolugbe, I. F. (1992). Impacts of housing and mortgage market discrimination racial and ethnic disparities in homeownership. Housing Policy Debate, 3(2), 332-370.
 
@@ -55,7 +57,7 @@ Quantitative analysis cannot evaluate racial discrimination as a causal factor i
 
 [^hh-trends-8]: Faber, J. W. (2018). Segregation and the geography of creditworthiness: Racial inequality in a recovered mortgage market. Housing Policy Debate, 28(2), 215-247.
 
-[^hh-trends-9]: Pager, D., & Shepherd, H. (2008). The sociology of discrimination: Racial discrimination in employment, housing, credit, and consumer markets. Annual Review of Sociolology, 34, 181-209.
+[^hh-trends-9]: Pager, D., & Shepherd, H. (2008). The sociology of discrimination: Racial discrimination in employment, housing, credit, and consumer markets. Annual Review of Sociology, 34, 181-209.
 
 [^hh-trends-10]: Kuebler, M., & Rugh, J. S. (2013). New evidence on racial and ethnic disparities in homeownership in the United States from 2001 to 2010. Social Science Research, 42(5), 1357-1374.
 
@@ -79,17 +81,15 @@ age$age = factor(age$age, levels = c("Under 25","25 to 34","35 to 44",
                                      "75 to 84","85+"))
 
 ggplot(age,
-       aes(x = forcats::fct_rev(age),
-           y = count)) +
+       aes(y = forcats::fct_rev(age),
+           x = count)) +
   geom_col(position = "dodge", fill = "#40c0c0") +
-  coord_flip() +
   theme_hfv() +
-  scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
-  theme(panel.grid.major.x = element_line(color = "#f5f5f5", size = 0.5),
-        panel.grid.major.y = element_blank()) +
+  add_zero_line("x") +
+  flip_gridlines() +
+  scale_x_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0.01, 0.05))) +
   labs(title = "Households by Householder Age",
        caption = "**Source:** VCHR Tabulation of ACS 5-year 2021 PUMS Data") 
-
 
 ```
 
@@ -130,17 +130,16 @@ Both renters and owners are gravitating toward single-family homes, and preferen
 race <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "race")
 
 ggplot(race,
-       aes(x = reorder(race, pct),
-           y = pct,
+       aes(y = reorder(race, pct),
+           x = pct,
            fill = race)) +
   geom_col(position = "dodge") +
-  coord_flip() +
   theme_hfv() +
   scale_fill_hfv() +
-  theme(panel.grid.major.x = element_line(color = "#f5f5f5", size = 0.5),
-        panel.grid.major.y = element_blank()) +
-  scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.15))) +
-  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  add_zero_line("x") +
+  flip_gridlines() +
+  scale_x_continuous(labels = percent_format(), expand = expansion(mult = c(0.01, 0.15))) +
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 12)) +
   labs(title = "Households by Householder Race/Ethnicity",
        caption = "**Source:** VCHR Tabulation of ACS 5-year 2021 PUMS Data") 
 
@@ -152,8 +151,6 @@ Over 65% of Virginia Beach householders identify as white, 18% as Black, and 7% 
 ## Composition and living arrangement
 
 The median household size in Virginia Beach is two people. One-person households make up 25% of households in Virginia Beach, and two-person households make up 35%. Seventeen percent of households are three-person, 13% are four-person, and 9% of households are five or more persons.
-
-While 60% of Virginia Beach households are one- or two-person, over three-quarters of dwellings have three or more bedrooms: 39% have three bedrooms, 24% have four bedrooms, and 6% have five or more bedrooms. Twenty-two percent of dwellings have two bedrooms that can accommodate a three-person family. Only 7% of housing units are efficiency/studio style or one-bedroom units. Adding smaller, multifamily units could increase the number of affordable, high-quality units without subsidy in the market. These units would have more appropriate square footage and number of bedrooms, and land costs would be distributed among a large number of units.
 
 ```{r}
 #| label: fig-hh-size
@@ -168,20 +165,20 @@ size$size = factor(size$size, levels = c("One person","Two people",
                                          "Five or more people"))
 
 ggplot(size,
-       aes(x = forcats::fct_rev(size),
-           y = pct)) +
+       aes(y = forcats::fct_rev(size),
+           x = pct)) +
   geom_col(position = "dodge", fill = "#40c0c0") +
-  coord_flip() +
   theme_hfv() +
-  scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.15))) +
-  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  add_zero_line("x") +
+  scale_x_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.15))) +
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 14)) +
   flip_gridlines() +
   labs(title = "Households by Household Size",
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
 
-
-
 ```
+
+While 60% of Virginia Beach households are one- or two-person, over three-quarters of dwellings have three or more bedrooms: 39% have three bedrooms, 24% have four bedrooms, and 6% have five or more bedrooms. Twenty-two percent of dwellings have two bedrooms that can accommodate a three-person family. Only 7% of housing units are efficiency/studio style or one-bedroom units. Adding smaller, multifamily units could increase the number of affordable, high-quality units without subsidy in the market. These units would have more appropriate square footage and number of bedrooms, and land costs would be distributed among a large number of units.
 
 ```{r}
 #| label: fig-bedrooms
@@ -192,44 +189,44 @@ ggplot(size,
 br <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "bedrooms")
 
 ggplot(br,
-       aes(x = forcats::fct_rev(br),
-           y = pct)) +
+       aes(y = forcats::fct_rev(br),
+           x = pct)) +
   geom_col(position = "dodge", fill = "#40c0c0") +
-  coord_flip() +
-  theme_hfv() +
-  scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.15))) +
-  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+    theme_hfv() +
+  add_zero_line("x") +
+  scale_x_continuous(labels = percent_format(), expand = expansion(mult = c(0.01, 0.15))) +
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 10)) +
   flip_gridlines() +
   labs(title = "Dwelling Units by Number of Bedrooms",
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
 
 ```
 
+Smaller households are particularly common among senior households, the age group most likely to live alone. Approximately 35% of householders aged 65 to 74, and 42% of householders aged 75 to 84, live alone. Nearly two-thirds of householders aged 85 or older live alone. Single-person households who are dependent on fixed Social Security and/or retirement income can be vulnerable to rising rents or owner costs such as taxes, utilities, and insurance.
+
 ```{r}
 #| label: fig-one-hh
 #| fig-cap: "One-Person Households by Householder Age"
-
 
 hh1 <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "one_hh")
 
 ggplot(hh1,
        aes(x = count,
            y = age,
-           fill = forcats::fct_rev(living_arrangement))) +
+           fill = (living_arrangement))) +
   geom_col(position = "stack") +
   theme_hfv() +
-  scale_fill_hfv() +
-  scale_x_continuous(labels = number_format(big.mark = ",")) +
+  scale_fill_hfv(guide = guide_legend(reverse = TRUE)) +
+  add_zero_line("x") +
+  scale_x_continuous(expand = c(0.01, 0.05),labels = number_format(big.mark = ",")) +
   flip_gridlines() +
   labs(title = "One-Person Households by Householder Age",
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data") +
   theme(legend.position = "top")
   
-
-
 ```
 
-Smaller households are particularly common among senior households, the age group most likely to live alone. Approximately 35% of householders aged 65 to 74, and 42% of householders aged 75 to 84, live alone. Nearly two-thirds of householders aged 85 or older live alone. Single-person households who are dependent on fixed Social Security and/or retirement income can be vulnerable to rising rents or owner costs such as taxes, utilities, and insurance. Focus group participants expressed concern about the isolation and poor living conditions endured by seniors living alone. Many suggested that the City increase outreach and services for this population, including case management, home modifications and in-home aid services where desired, and affordable options for assisted living. Focus group participants expressed the importance of seniors having a choice when either relocating to assisted living or aging in place.
+Focus group participants expressed concern about the isolation and poor living conditions endured by seniors living alone. Many suggested that the City increase outreach and services for this population, including case management, home modifications and in-home aid services where desired, and affordable options for assisted living. Focus group participants expressed the importance of seniors having a choice when either relocating to assisted living or aging in place.
 
 ```{r}
 #| label: fig-hh-type
@@ -240,15 +237,15 @@ Smaller households are particularly common among senior households, the age grou
 hh_type <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hh_type")
 
 ggplot(hh_type,
-       aes(x = reorder(type, hh),
-           y = hh,
+       aes(y = reorder(type, hh),
+           x = hh,
            fill = family)) +
   geom_col(position = "dodge") +
-  coord_flip() +
   theme_hfv() +
   scale_fill_hfv() +
-  scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
-  scale_x_discrete(labels = function(x) str_wrap(x, width = 20)) +
+  add_zero_line("x") +
+  scale_x_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0.01, 0.05))) +
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 20)) +
   flip_gridlines() +
   labs(title = "Household and Family Types",
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data") +
@@ -258,7 +255,7 @@ ggplot(hh_type,
 
 There are approximately 120,016 family households[^hh-trends-16] in Virginia Beach, accounting for 70% of all households. The most common family household configuration is married couples without children, of which there are 50,460. There are approximately 57,511 households with children: 38,536 are married couples with children, 13,850 are led by single mothers, 4,383 by single fathers, and approximately 742 with another living arrangement. There are 12,787 other family households with unmarried householders: around two-thirds are led by women and one-third by men. There are 7,212 multigenerational households, meaning at least three generations, making up 6% of family households of any configuration. Some focus group participants highlighted multigenerational households seeking larger homes as a new trend in city homebuying.
 
-[^hh-trends-16]: The U.S. Census Bureau defines family household as two or more people related by birth, marriage, or adoption. Family households may include other members who are non-related. See: https://www.census.gov/programs-surveys/cps/technical-documentation/subject-definitions.html#family
+[^hh-trends-16]: The U.S. Census Bureau defines family households as two or more people related by birth, marriage, or adoption. Family households may include other members who are non-related. See: <https://www.census.gov/programs-surveys/cps/technical-documentation/subject-definitions.html#family>
 
 There are approximately 50,713 nonfamily households, and the most common form is one person living alone. Approximately 26,050 women and 18,289 live alone in one-person households. Approximately 6,374 households are made up of unrelated roommates, which accounts for 4% of all Virginia Beach households.
 
@@ -274,7 +271,6 @@ tenure <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "tenure")
 
 subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free and Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
 
-
 ggplot(tenure,
        aes(x = tenure,
            y = value,
@@ -282,14 +278,12 @@ ggplot(tenure,
   geom_col() + 
   theme_hfv() +
   scale_fill_hfv() +
-  scale_y_continuous(labels = number_format(big.mark = ",")) + 
+  add_zero_line() +
+  scale_y_continuous(limits = c(0, 125000), labels = number_format(big.mark = ",")) + 
   labs(title = "Households by Tenure",
        subtitle = subtitle_text,
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
   
-  
-
-
 ```
 
 ```{r}
@@ -300,7 +294,6 @@ gen <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "generation")
 
 subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free and Clear</b></span>, <span style = 'color:#40C0C0'><b>Owned with a Mortgage</span>, or <span style = 'color:#8B85CA'><b>Rented</span>"
 
-
 ggplot(gen,
        aes(x = tenure,
            y = value,
@@ -309,25 +302,25 @@ ggplot(gen,
   facet_wrap(~generation) +
   theme_hfv() +
   scale_fill_hfv() +
+  add_zero_line() +
   scale_y_continuous(labels = number_format(big.mark = ",")) + 
   labs(title = "Household Tenure by Generational Cohort",
        subtitle = subtitle_text,
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
 
-
 ```
 
 Household tenure varies considerably by generational cohort. Nearly 80% of baby boomer–headed households own their homes. Only 1 in 5 boomers rent, compared to over half of millennials and over 90% of Gen Z households. Furthermore, among homeowner households, nearly one-third of boomers own their home without a mortgage or loan payments, compared to under one-tenth of millennial households.
 
-Millennials face a tougher homeownership landscape than both preceding and succeeding generations.[^hh-trends-17][^hh-trends-18] They have lower homeownership rate than baby boomers at the same age. The disparity is attributed to economic challenges stemming from entering the workforce during the 2001 recession and the subsequent 2008 financial crisis. These factors curtailed earnings, wealth accumulation, and the ability to purchase homes for an extended period.[^hh-trends-19]
+Millennials face a tougher homeownership landscape than both preceding and succeeding generations.[^hh-trends-17][^hh-trends-18] They have lower homeownership rates than baby boomers at the same age. The disparity is attributed to economic challenges stemming from entering the workforce during the 2001 recession and the subsequent 2008 financial crisis. These factors curtailed earnings, wealth accumulation, and the ability to purchase homes for an extended period.[^hh-trends-19]
 
-[^hh-trends-17]:  Anderson, D., & Bokhari, S. (2023). The Race to Homeownership: Gen Z Tracking Ahead of Their Parents' Generation, Millennials Tracking Behind. REDFIN. <https://www.redfin.com/news/gen-z-millennial-homeownership-rate-home-purchases/>
+[^hh-trends-17]: Anderson, D., & Bokhari, S. (2023). The Race to Homeownership: Gen Z Tracking Ahead of Their Parents' Generation, Millennials Tracking Behind. REDFIN. <https://www.redfin.com/news/gen-z-millennial-homeownership-rate-home-purchases/>
 
-[^hh-trends-18]: Myers, D., Lee, H., & Simmons, P. A. (2020). Cohort insights into recovery of Millennial homeownership after the Great Recession. Journal of Housing Economics, 47, 101619.
+[^hh-trends-18]: Myers, D., Lee, H., & Simmons, P. A. (2020). Cohort insights into recovery of Millennial homeownership after the Great Recession. Journal of Housing Economics, 47, 101619.
 
 [^hh-trends-19]: *Ibid.*
 
-On the other hand, Gen Z has a higher homeownership rate compared to other generations at the same age.[^hh-trends-20] Gen Z's success in homeownership is attributed to various factors. Many capitalized on historically low mortgage rates during the pandemic, notably in 2020 and 2021. Additionally, a robust job market and substantial wage growth played a pivotal role. Despite graduating from college around the pandemic's onset, Gen Z experienced advantageous financial circumstances including federal financial supports and near record-low unemployment rates. Remote work also enabled them to explore more affordable housing markets.
+On the other hand, Gen Z has a higher homeownership rate compared to other generations at the same age.[^hh-trends-20] Gen Z's success in homeownership is attributed to various factors. Many capitalized on historically low mortgage rates during the pandemic, notably in 2020 and 2021. Additionally, a robust job market and substantial wage growth played a pivotal role. Despite graduating from college around the pandemic's onset, Gen Z experienced advantageous financial circumstances including federal financial support and near record-low unemployment rates. Remote work also enabled them to explore more affordable housing markets.
 
 [^hh-trends-20]: Anderson, D., & Bokhari, S. (2023). The Race to Homeownership: Gen Z Tracking Ahead of Their Parents' Generation, Millennials Tracking Behind. REDFIN. <https://www.redfin.com/news/gen-z-millennial-homeownership-rate-home-purchases/>
 
@@ -343,60 +336,43 @@ hh_ami$ami = factor(hh_ami$ami, levels = c("Under 30% AMI","30-50% AMI","50-80% 
                                            "80-100% AMI","100-120% AMI","Over 120% AMI"))
 
 ggplot(hh_ami,
-       aes(x = forcats::fct_rev(ami),
-           y = value,
+       aes(y = ami,
+           x = value,
            fill = tenure)) +
   geom_col(position = "dodge") +
   facet_wrap(~tenure) +
-  coord_flip() +
   theme_hfv() +
   scale_fill_hfv() +
-  scale_y_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0, 0.15))) +
-  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  add_zero_line("x") +
+  scale_x_continuous(labels = number_format(big.mark = ","), expand = expansion(mult = c(0.01, 0.15))) +
+  scale_y_discrete() +
   flip_gridlines() +
   labs(title = "Household Tenure by AMI Level",
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
-  
-  
 
 ```
 
-Tenure also varies based on income. HUD definitions of income (figure X) are applied in this analysis because they constitute the basis for many of the programs addressing disparities in access to homeownership and other housing challenges. Although 2021 limits are used in the data analysis to align with the data’s vintage, VCHR has provided the most-recent income limits, which better reflect current incomes in Virginia Beach. 
+Tenure also varies based on income. HUD definitions of income (@tbl-hudami2021) are applied in this analysis because they constitute the basis for many of the programs addressing disparities in access to homeownership and other housing challenges. 
 
-`ADD TABLE: HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2021`
+::: {#tbl-hudami2021}
 
-```{r}
-#| label: tbl-hud-inc-21
-#| eval: false
+![](img/hud-ami-2021.png)
 
-# tbl-cap: "HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2021"
+HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2021
 
-hud_21 <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hud_21")
+:::
 
-hud_21 |> 
-  kbl(align = "lcccc") 
-  kable_styling(bootstrap_options = c("striped", "condensed"))
+Although 2021 limits are used in the data analysis to align with the data’s vintage, VCHR has provided the most-recent income limits, which better reflect current incomes in Virginia Beach. 
 
-```
+::: {#tbl-hudami2023}
 
-`ADD TABLE: HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2023`
+![](img/hud-ami-2023.png)
 
-```{r}
-#| label: tbl-hud-inc-23
-#| eval: false
+HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2023
 
-# tbl-cap: "HUD Fair Market Rent (FMR) Income Limits, Virginia Beach-Norfolk-Newport News, 2023"
+:::
 
-hud_23 <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hud_23") |> 
-  mutate_at(vars(2:5), ~ currency(., digits = 0))
-
-hud_23 |> 
-  kbl(align = "lcccc")
-  kable_styling(bootstrap_options = c("striped", "condensed"))
-
-```
-
-Households with higher incomes relative to AMI are more likely to own their homes. Nearly 60% of homeowners have household incomes above 120% of AMI, while over 60% of renters have household incomes below 100% of AMI. Nearly 80% of households above 120% AMI are owners, while only 22% are renters. Among extremely low-income households — those at 30% AMI or less — 60% are renters and 40% are owners.
+Households with higher incomes relative to AMI are more likely to own their homes. Nearly 60% of homeowners have household incomes above 120% of AMI, while over 60% of renters have household incomes below 100% of AMI. Nearly 80% of households above 120% AMI are owners, while only 22% are renters. Among extremely low-income households --- those at 30% AMI or less --- 60% are renters and 40% are owners.
 
 ```{r}
 #| label: fig-det-ami
@@ -414,23 +390,20 @@ subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free and Clear</b></spa
 ggplot(det_ami,
        aes(x = forcats::fct_rev(ami),
            y = pct,
-           fill = tenure)) +
+           fill = rev(tenure))) +
   geom_col() +
   coord_flip() +
   theme_hfv() +
-  scale_fill_hfv() +
+  scale_fill_hfv(-1) +
   scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.02))) +
   flip_gridlines() +
   labs(title = "Detailed Household Tenure by AMI Level",
        subtitle = subtitle_text,
        caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
-  
-
-
 
 ```
 
-Households at lower AMI levels are less likely to own their homes, but, as shown in Figure X, lower-income households who do own their homes are more likely to own free and clear. For example, among households below 30% AMI, 40% are homeowners but nearly 60% of homeowners own free and clear. In contrast, among households above 120% AMI, nearly 80% are homeowners, but under 20% of homeowners own free and clear. Given the high cost of homeownership with a mortgage, homeowner households at lower AMI levels are likely to be older households living in a home they have already paid off.
+Households at lower AMI levels are less likely to own their homes, but, as shown in @fig-det-ami, lower-income households who do own their homes are more likely to own free and clear. For example, among households below 30% AMI, 40% are homeowners but nearly 60% of homeowners own free and clear. In contrast, among households above 120% AMI, nearly 80% are homeowners, but under 20% of homeowners own free and clear. Given the high cost of homeownership with a mortgage, homeowner households at lower AMI levels are likely to be older households living in a home they have already paid off.
 
 ```{r}
 #| label: fig-ten-race
@@ -445,11 +418,11 @@ subtitle_text <- "<span style = 'color:#011E41'><b>Owned Free and Clear</b></spa
 ggplot(ten_race,
        aes(x = race,
            y = pct,
-           fill = tenure)) +
+           fill = rev(tenure))) +
   geom_col() +
   coord_flip() +
   theme_hfv() +
-  scale_fill_hfv() +
+  scale_fill_hfv(-1) +
   scale_y_continuous(labels = percent_format(), expand = expansion(mult = c(0, 0.02))) +
   flip_gridlines() +
   labs(title = "Household Tenure by Householder Race/Ethnicity",
@@ -460,4 +433,6 @@ ggplot(ten_race,
 
 Finally, household tenure and form of ownership vary by householder race and ethnicity. White and Asian households are twice as likely to own than to rent. A narrow majority of Hispanic households own their homes, while 55% of Black households rent. Among homeowners, a higher share of white and Asian households (over one-quarter) own their homes free and clear, compared to 1 in 5 Hispanic and 1 in 7 Black homeowner households.
 
-Tenure plays a crucial role in housing affordability, with renters more vulnerable to increasing housing costs than homeowners, and a higher rate of housing cost burden among renters than among owners. By definition, cost-burdened households spend more than 30% of their income on housing costs, which can make it difficult to afford other necessities like food, healthcare, and transportation. While homeowners generally have fixed mortgage payments that change little from year to year, renters often face increased housing costs annually. In competitive markets, they may also be subject to turnover in unit ownership, which is often associated with higher rent increases. Housing affordability is discussed in more depth in the “Housing Affordability” chapter.
+Tenure plays a crucial role in housing affordability, with renters more vulnerable to increasing housing costs than homeowners, and a higher rate of housing cost burden among renters than among owners. By definition, cost-burdened households spend more than 30% of their income on housing costs, which can make it difficult to afford other necessities like food, healthcare, and transportation.
+
+While homeowners generally have fixed mortgage payments that change little from year to year, renters often face increased housing costs annually. In competitive markets, they may also be subject to turnover in unit ownership, which is often associated with higher rent increases. Housing affordability is discussed in more depth in @sec-affordability.

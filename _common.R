@@ -34,6 +34,6 @@ if (knitr::is_html_output()) {
     )
   
     ggplot2::theme_set(
-      hdatools::theme_hfv(base_size = 9)
+      hdatools::theme_hfv(base_size = 8)
     )
 }

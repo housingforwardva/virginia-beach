@@ -1,30 +1,53 @@
 # Workforce housing affordability analysis {#sec-a2}
 
-Using annual wage data of the Virginia Beach-Norfolk-Newport News MSA from the Bureau of Labor Statistics (BLS), VCHR calculated maximum affordable monthly housing costs (30% of monthly income) for each occupation using three scenarios: 
+```{r}
+#| label: setup
+#| echo: false
+#| message: false
+#| warning: false
+
+source("_common.R")
+
+library(readxl)
+library(kableExtra)
+library(patchwork)
+library(scales)
+library(formattable)
+library(ggtext)
+
+```
+
+Using annual wage data of the Virginia Beach-Norfolk-Newport News MSA from the Bureau of Labor Statistics (BLS), VCHR calculated maximum affordable monthly housing costs (30% of monthly income) for each occupation using three scenarios:
 
 -   a single earner with a median wage
 
--   a single earner with a 90th percentile wage to represent highly skilled or experienced workers 
+-   a single earner with a 90th percentile wage to represent highly skilled or experienced workers
 
 -   two earners with a median wage for a single occupation to represent a dual earner household
 
 This analysis investigates housing affordability in Virginia Beach for employees working in the Virginia Beach-Norfolk-Newport News MSA. It helps to evaluate whether the housing market adequately meets the needs of the labor market. Households spending more than 30% of household income each month for housing are considered cost-burdened and may have to sacrifice other necessities to obtain housing. VCHR compared the maximum affordable housing costs by occupation for workers in the scenarios described above to the lower quartile rent (\$1,169), median rent (\$1,433), upper quartile rent (\$1,766), and median owner costs with a mortgage (\$1,888) in Virginia Beach to identify workers (by occupation) who may not be able to access appropriate, affordable housing in the city.
 
-VCHR analyzed housing affordability and occupational wages for the following occupation groups: 
+VCHR analyzed housing affordability and occupational wages for the following occupation groups:
 
--   the top 10 Virginia Beach city occupations by employment 
+-   the top 10 Virginia Beach city occupations by employment
 
--   selected state and local government sector and mandatory service occupations 
+-   selected state and local government sector and mandatory service occupations
 
 ## Housing affordability for the top 10 occupations in Virginia Beach
 
 VCHR analyzed housing affordability for the top 10 occupations by employment --- those with the highest number of employees --- in Virginia Beach. Combined, these occupations make up about 21% of all employees who work in the MSA. These occupations can for the most part be categorized as service sector occupations and generally have the lowest wages. VCHR analyzed housing affordability for households in three household/earner scenarios (single earner with median wage, single earner with 90th percentile wage, and two earners with the same median wage).
 
-As shown in \[table X\] below, workers in most of these occupations (8/10) cannot afford lower quartile rent as single earners, with two exceptions: general and operations managers (who can afford owner cost with a mortgage) and registered nurses (who can afford upper quartile rent). In fact, workers in the majority of these occupations (7/10) cannot afford to rent or own even if they earn in the 90th percentile. If a household has two earners at the same median wage, the situation improves. However, workers in three occupations --- fast food and counter workers, cashiers, and home health and personal care aides --- still cannot afford the median rent.
+As shown in @tbl-affordtop10 afford below, workers in most of these occupations (8/10) cannot afford lower quartile rent as single earners, with two exceptions: general and operations managers (who can afford owner cost with a mortgage) and registered nurses (who can afford upper quartile rent). In fact, workers in the majority of these occupations (7/10) cannot afford to rent or own even if they earn in the 90th percentile. If a household has two earners at the same median wage, the situation improves. However, workers in three occupations --- fast food and counter workers, cashiers, and home health and personal care aides --- still cannot afford the median rent.
 
 In terms of homeownership, the only occupation that can afford the owner costs with a mortgage for a single earner is the general and operations manager. When considering a single earner at the 90th percentile wage or a dual-earner scenario, registered nurses can also manage the owner costs.
 
-`ADD TABLE: Housing Affordability for the Top 10 Occupations by Employment`
+::: {#tbl-affordtop10}
+
+![](img/affordability-top-10.png)
+
+Housing Affordability for the Top 10 Occupations by Employment
+
+:::
 
 ## Housing affordability for state and local government employees/mandatory services
 
@@ -32,40 +55,46 @@ The state and local government sector is the essential job sector in the city, t
 
 The remaining six occupations --- postsecondary teachers; kindergarten teachers, except special education; elementary school teachers, except special education; middle school teachers, except special and career/technical education; secondary school teachers, except special and career/technical education; and registered nurses --- can afford the median rent as a single earner. Moreover, they can manage ownership costs when earning at the 90th percentile or when doubled-up.
 
-`ADD TABLE: Housing Affordability for Mandatory Service Occupations`
+::: {#tbl-affordservice}
 
+![](img/affordability-service.png)
+
+Housing Affordability for Mandatory Service Occupations
+
+:::
 
 ```{r}
 #| label: fig-owner-gap
 #| fig-cap: "Housing Affordability for the Top 10 Occupations by Employment in MSA"
 
-
-library(tidyverse)
-library(readxl)
-library(patchwork)
-library(ggtext)
-
 top_occ <- read_excel("data/vchr_occ_aff.xlsx", sheet = "table")
 
-subtitle_text <- "Compared to <span style = 'color:#FFA500'><b>VB Median Owner Cost: $1,888 </b></span> and <span style = 'color:#FF0000'><b>VB Median Gross Rent: $1,433</span>"
-
+subtitle_text <- paste0(
+  "Max affordable monthly housing cost for <span style = 'color:#011E41'><b>Single earner (median wage)</b></span>, <span style = 'color:#40C0C0'><b>Single earner (90th percentile wage)</span>, and <span style = 'color:#8B85CA'><b>Doubled up</span><br>",
+  "Compared to <span style = 'color:#FF0000'><b> Median Owner Cost ($1,888) </b></span> and <span style = 'color:#FFA500'><b>Median Gross Rent ($1,433)</span> in Virginia Beach"
+)
 
 ggplot(top_occ,
-       aes(x = factor(Attribute, level = c("Single Earner", "Doubled Up", "Max Affordable Housing Cost")),
+       aes(x = factor(Attribute, level = c("Single earner (median wage)", "Single earner (90th percentile wage)", "Doubled up")),
           y = Value,
-           fill = factor(Attribute, level = c("Single Earner", "Doubled Up", "Max Affordable Housing Cost")))) +
+           fill = factor(Attribute, level = c("Single earner (median wage)", "Single earner (90th percentile wage)", "Doubled up")))) +
   geom_col(position = "dodge") +
-  facet_wrap(~Occupation, nrow = 2, labeller = label_wrap_gen(width = 15)) +
-  scale_y_continuous(labels = dollar_format()) +
+  facet_wrap(~Occupation, nrow = 2, labeller = label_wrap_gen(width = 22), strip.position = "bottom") +
+  scale_y_continuous(expand = c(0,0.02), breaks = c(0, 1433, 1888, 2500, 5000), labels = label_dollar()) +
   theme_hfv() +
   scale_fill_hfv() +
   theme(axis.text.x = element_blank(),
         legend.position = "right") +
   labs(title = "Housing Affordability for Top 10 Occupations by Employment in MSA",
        subtitle = subtitle_text,
-       caption = "**Source:** Tabulation of 2022 JobsEQ Employment, 2021 ACS 5-Year Estimates.") +
-  geom_hline(yintercept = 1888, color = "orange") +
-  geom_hline(yintercept = 1433, color = "red")
+       caption = "**Source:** VCHR Tabulation of 2022 JobsEQ Employment and 2021 ACS 5-Year Estimates.") +
+  add_zero_line() +
+  geom_hline(yintercept = 1888, color = "red") +
+  geom_hline(yintercept = 1433, color = "orange") +
+  theme(
+    legend.position = "none"
+  )
 
+ggsave("test.png")
 
 ```
