@@ -19,9 +19,9 @@ By cutting down on procedural barriers, developers get to construction faster. A
 ::: callout-note
 ### The Virginia Beach Development Services Center
 
-The Department of Planning and Community Development already has a Development Liaison team within the Development Services Center (DSC). This team guides and coordinates development proposals for applicants, for a range of project types and sizes.
+In FY 2022-23, Development Services Center (DSC) reviewed nearly 2,800 plans. Its FY 2023-24 budget is about $3.1 million, which funds 28 FTE positions. This reflects no change from the previous year.
 
-In FY 2022-23, DSC reviewed nearly 2,800 plans. Its FY 2023-24 budget is about $3.1 million, which funds 28 FTE positions. This reflects no change from the previous year.
+The Department of Planning and Community Development also has a Development Liaison team, which is not part of DSC. This team guides and coordinates development proposals for applicants, for a range of project types and sizes.
 :::
 
 While Virginia Beach has made intentional efforts to improve its development review process—and notably performs higher than some comparable cities in Virginia—feedback received from stakeholders for this study emphasized a need to reduce wait times and identify opportunities to reduce regulatory burdens.
@@ -34,9 +34,9 @@ A comprehensive assessment of current systems would best identify specific chall
 * Office workflow and technology inefficiencies
 * DSC review and feedback procedures (and coordination with other departments)
 
-The assessment can also align with two ongoing upgrades for the department.
+The assessment can also align with two recent upgrades for the department.
 
-* **Revised stormwater management regulations:** Staff are currently implementing changes to these regulations approved by the City Council in early 2022, with a focus on streamlining development plan reviews. Recent changes include simplifying stormwater assessments by using Excel spreadsheet calculations rather than more complex modeling software. Similar improvements should be explored in other processes.
+* **Revised stormwater management regulations:** Staff have implemented changes to these regulations approved by the City Council in early 2022, with a focus on streamlining development plan reviews. Recent changes include simplifying stormwater assessments by using Excel spreadsheet calculations rather than more complex modeling software. Similar improvements should be explored in other processes.
 * **Accela software improvements:** The planning department is currently working with the Information Technology Department to address functionality gaps and issues in the Accela software platform, which connects citizens with planning and permitting services.
 
 The City should evaluate the benefits and drawbacks of whether this assessment is conducted internally or by an external third party. This decision should be made collaboratively between staff and the City Council, perhaps via the Process Improvement Steering Committee.
@@ -64,15 +64,23 @@ For example, a “fast track” for ADUs might include:
 * Reviews completed within two or three business days
 * A series of pre-approved designs and floor plans
 
-To ensure smart development, the City could set specific criteria for benefitting from the “fast track,” such as requiring the property to be in a designated growth zone. Aligning the “fast track” with the future residential use recommendations in the new comprehensive plan is also critical. For a “fast track” to be effective, it should likely only apply to developments that are a permitted use in the property’s base zoning. Public hearings to approve a conditional or special use would introduce significantly higher costs and timelines.
+::: callout-tip
+### Norfolk “Missing Middle” Pattern Book
+
+The Norfolk Missing Middle Pattern Book serves as an exemplary model for localities seeking to promote affordable housing. This resource showcases pre-approved building designs that align with the specific needs and characteristics of Norfolk, facilitating easier and more efficient development processes for builders and developers. By offering a range of vetted design options, the Pattern Book streamlines the approval process, reduces uncertainties, and encourages the development of diverse housing types. This approach can be adapted by other localities to address their unique housing challenges, supporting strategic growth and affordability in housing markets.
+
+For more information: [City of Norfolk Missing Middle Pattern Book](https://www.norfolk.gov/DocumentCenter/View/66555/MissingMiddlePatternBook) (PDF)
+:::
+
+To ensure smart development, the City could set specific criteria to benefit from the “fast track,” such as requiring the property to be in a designated growth zone. Aligning the “fast track” with the future residential use recommendations in the new comprehensive plan is also critical. For a “fast track” to be effective, it should likely only apply to developments that are a permitted use in the property’s base zoning. Public hearings to approve a conditional or special use would introduce significantly higher costs and timelines.
 
 Streamlining certain projects may raise equity concerns, especially if they benefit specific developers or types of housing. Therefore, the City should be transparent about what applications are eligible and why those particular projects align with pre-established growth objectives in the 2040 Comprehensive Plan and other guiding policies.
 
 **“Green tape” incentives for new affordable housing**
 
-Larger multifamily and mixed-use projects that include affordable housing are generally more difficult to finance and often face additional opposition from a vocal minority of residents. Unexpected costs and delays that a market rate proposal could absorb can much more easily sink its affordable counterpart.
+Larger multifamily and mixed-use projects that include affordable housing are generally more difficult to finance and often face additional opposition from a vocal minority of residents. Unexpected costs and delays that a market-rate proposal could absorb can much more easily sink its affordable counterpart.
 
-To mitigate these challenges, local governments can leverage their development approval powers to proactively help affordable housing projects succeed. This approach is sometimes referred to as a “green tape” program. Whereas “fast track” programs look to simplify the process, “green tape” programs offer much more substantial incentives, and are generally designed for larger projects.
+To mitigate these challenges, local governments can leverage their development approval powers to proactively help affordable housing projects succeed. This approach is sometimes referred to as a “green tape” program. Whereas “fast track” programs look to simplify the process, “green tape” programs offer much more substantial incentives, and are generally designed for larger projects. Strategic Growth Area (SGAs) would be the ideal places to offer green tape incentives within the city. 
 
 These incentives could include:
 
@@ -102,8 +110,8 @@ Virginia Beach should consider other minimum criteria but should avoid artificia
 
 **Within 6 months:**
 
-* Outline methods and objectives for a needs assessment to identify specific areas of the permitting and * approval process that most need streamlining or that cause the biggest barriers for developers.
-* Determine whether assessment can be conducted internally or if an external consultant would be more * appropriate. Draft and prepare RFP if outside firm is desired.
+* Outline methods and objectives for a needs assessment to identify specific areas of the permitting and approval process that most need streamlining or that cause the biggest barriers for developers.
+* Determine whether assessment can be conducted internally or if an external consultant would be more appropriate. Draft and prepare RFP if outside firm is desired.
 * Based on historical trends, set desired timelines for permit issuance.
 
 **Within 1 year: **

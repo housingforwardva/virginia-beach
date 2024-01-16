@@ -17,7 +17,7 @@ library(ggtext)
 
 ```
 
-The City of Virginia Beach has a population of approximately 448,573 residents, living in 177,029 households. A majority of Virginia Beach households are family households, containing two or more people related by birth, marriage, or adoption. The most numerous type of family household is married couples without children, of which there are 50,460. The second most numerous is married couples with children, of which there are 38,536. The City also has a large population of older adults, with nearly one-quarter of households led by seniors 65 and older.
+The City of Virginia Beach has a population of approximately 448,573 residents, living in 177,029 households. A majority of Virginia Beach households are family households, containing two or more people related by birth, marriage, or adoption. The most numerous type of family household is married couples without children, of which there are 50,460. The second most numerous is married couples with children, of which there are 38,536. The city also has a large population of older adults, with nearly one-quarter of households led by seniors 65 and older.
 
 Dwelling unit sizes are generally mismatched with household size: 60% of Virginia Beach households consist of one or two people, yet three-quarters of dwelling units have three or more bedrooms. Senior householders are more likely to live alone than other age cohorts. Focus groups participants expressed concern about the isolation and poor living conditions endured by seniors living alone. Many suggested that the City increase outreach and services for this population, including case management, home modifications and in-home aid services where desired, and affordable options for assisted living. Focus group participants expressed the importance of seniors having a choice when either relocating to assisted living or aging in place.
 
@@ -257,11 +257,11 @@ There are approximately 120,016 family households[^hh-trends-16] in Virginia Bea
 
 [^hh-trends-16]: The U.S. Census Bureau defines family households as two or more people related by birth, marriage, or adoption. Family households may include other members who are non-related. See: <https://www.census.gov/programs-surveys/cps/technical-documentation/subject-definitions.html#family>
 
-There are approximately 50,713 nonfamily households, and the most common form is one person living alone. Approximately 26,050 women and 18,289 live alone in one-person households. Approximately 6,374 households are made up of unrelated roommates, which accounts for 4% of all Virginia Beach households.
+There are approximately 50,710 nonfamily households, and the most common form is one person living alone. Approximately 26,050 women and 18,289 live alone in one-person households. Approximately 6,374 households are made up of unrelated roommates, which accounts for 4% of all Virginia Beach households.
 
 ## Tenure
 
-Approximately 114,905 households in Virginia Beach are homeowners: 65% of all households. Around three-quarters of owned homes are owned with a mortgage or loan, while one-quarter are owned free and clear. Approximately 60,510 households are renters: 34% of all households.
+Approximately 114,900 households in Virginia Beach are homeowners: 65% of all households. Around three-quarters of owned homes are owned with a mortgage or loan, while one-quarter are owned free and clear. Approximately 60,510 households are renters: 34% of all households.
 
 ```{r}
 #| label: fig-tenure

@@ -19,12 +19,11 @@ library(ggtext)
 
 ## Cost burden
 
-VCHR uses housing cost burden to measure the need for more affordable housing and to identify associated housing insecurity. When homeowners are cost-burdened, they may choose to defer maintenance or forgo upgrades in favor of necessities like food, childcare, and medical care. When renters are cost-burdened, they may make choices between housing and other necessities, and their limited ability to save makes them vulnerable to eviction or homelessness in the event of an unexpected expense. Furthermore, inability to save may effectively prevent households from investing in educational enrichment to advance their earnings and from building wealth and security through homeownership. Approximately 59,365 Virginia Beach households, over one-third, are cost-burdened, meaning their housing costs are at least 30% of household income. Among cost-burdened households, 41%, approximately 24,301 households, are severely cost-burdened, paying 50% or more of household income in housing costs.
-
+VCHR uses housing cost burden to measure the need for more affordable housing and to identify associated housing insecurity. When homeowners are cost-burdened, they may choose to defer maintenance or forgo upgrades in favor of necessities like food, childcare, and medical care. When renters are cost-burdened, they may make choices between housing and other necessities, and their limited ability to save makes them vulnerable to eviction or homelessness in the event of an unexpected expense. Furthermore, inability to save may effectively prevent households from investing in educational enrichment to advance their earnings and from building wealth and security through homeownership.
 
 ```{r}
-#| label: fig-cb-hh
-#| fig-cap: "Cost-burdened Households"
+#| label: fig-cb-hh-total
+#| fig-cap: "Number and Percent of Households with Cost Burden"
 
 cb_hh <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_hh") |> 
   group_by(cb) |> 
@@ -32,35 +31,55 @@ cb_hh <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_hh") |>
   ungroup() |> 
   mutate(cb_pct = value/sum(value))
 
-general <- cb_hh |> 
+cb_hh |> 
   group_by(cb) |> 
-  summarise(cb_pct = sum(cb_pct)) |> 
+  summarise(
+    value = sum(value),
+    cb_pct = sum(cb_pct)
+    ) |> 
   ggplot(aes(x = cb,
-           y = cb_pct,
-           fill = cb)) +
+           y = value,
+           fill = cb,
+           label = label_comma()(value))) +
   geom_col() + 
+  geom_text(color = "white", nudge_y = -7000) +
+  geom_text(aes(label = label_percent()(cb_pct)), color = "white", nudge_y = -15000) +
   theme_hfv() +
   scale_fill_hfv() +
-  labs(title = "Total Households") + 
-  scale_y_continuous(label = percent_format())
-
-detail <- cb_hh |> 
-  filter(cb != "Not Cost-burdened") |> 
-  ggplot(aes(x = detail,
-           y = det_pct)) +
-  geom_col(fill = "#66788d") +
-  theme_hfv() + 
-  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) + 
-  scale_y_continuous(label = percent_format()) +
-  labs(title = "Cost-Burdened Households",
-       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data .")
-
-
-general|detail
+  add_zero_line() +
+  labs(title = "Number and Percent of Households with Cost Burden") + 
+  scale_y_continuous(label = label_comma())
 
 ```
 
-Cost burden has been trending down in Virginia Beach: cost burden among all households fell from 40% in 2014 to 33% in 2021, according to ACS five-year estimates. However, some improvements likely resulted from temporary pandemic-related programs in 2020-2021, including the Child Tax Credit and moratoria on evictions and rent increases. The COVID-19 pandemic had a mixed effect on housing insecurity. The pandemic initiated an economic shock disproportionately impacting lower-income, Black, and Hispanic households, but the policy response saw an unprecedented expansion of eviction moratoria, renter assistance funding, and unemployment insurance payments surpassing 100% wage replacement for some low-income workers. Implementation varied widely by jurisdictional boundaries, however, and not all households in need were able to receive assistance.[^affordability-1] As lower-income households face more competitive housing markets without this added support, gains in affordability may begin to erode. Indeed, cost burdens have increased post-pandemic, among all income levels and racial/ethnic groups, and the increase is driven mostly by renter households.[^affordability-2]
+Approximately 59,365 Virginia Beach households, over one-third, are cost-burdened, meaning their housing costs are at least 30% of household income. Among cost-burdened households, 41%, approximately 24,301 households, are severely cost-burdened, paying 50% or more of household income in housing costs.
+
+```{r}
+#| label: fig-cb-hh-detail
+#| fig-cap: "Cost-Burdened Households by Type"
+
+cb_hh |> 
+  filter(cb != "Not Cost-burdened") |> 
+  mutate(detail = str_replace_all(detail, " \\(", "\n(")) |> 
+  ggplot(aes(x = detail,
+           y = value)) +
+  geom_col(fill = "#c84c8f") +
+  geom_text(aes(label = label_comma()(value)), color = "white", nudge_y = -2500) +
+  geom_text(aes(label = label_percent()(det_pct)), color = "white", nudge_y = -6000) +
+  theme_hfv() + 
+  #scale_x_discrete(labels = function(x) str_wrap(x, width = 24)) + 
+  scale_y_continuous(label = label_comma()) +
+  add_zero_line() +
+  labs(title = "Cost-Burdened Households by Type",
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
+
+```
+
+Cost burden has been trending down in Virginia Beach: cost burden among all households fell from 40% in 2014 to 33% in 2021, according to ACS 5-year estimates. However, some improvements likely resulted from temporary pandemic-related programs in 2020-2021, including the Child Tax Credit and moratoria on evictions and rent increases.
+
+The COVID-19 pandemic had a mixed effect on housing insecurity. The pandemic initiated an economic shock disproportionately impacting lower-income, Black, and Hispanic households, but the policy response saw an unprecedented expansion of eviction moratoria, renter assistance funding, and unemployment insurance payments surpassing 100% wage replacement for some low-income workers. Implementation varied widely by jurisdiction, however, and not all households in need were able to receive assistance.[^affordability-1]
+
+As lower-income households face more competitive housing markets without this added support, gains in affordability may begin to erode. Indeed, cost burdens have increased post-pandemic, among all income levels and racial/ethnic groups, and the increase is driven mostly by renter households.[^affordability-2]
 
 [^affordability-1]: Benfer, E. A., Koehler, R., Mark, A., Nazzaro, V., Alexander, A. K., Hepburn, P., \... & Desmond, M. (2022). COVID-19 housing policy: State and federal eviction moratoria and supportive measures in the United States during the pandemic. Housing Policy Debate, 1-25.
 
@@ -72,17 +91,36 @@ Cost burden has been trending down in Virginia Beach: cost burden among all hous
 
 cb_tenure <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_tenure") |> 
   group_by(tenure) |> 
-  mutate(pct = value/sum(value))
+  mutate(detail = case_match(
+    detail,
+    "Severely Cost-burdened (50% of Income or more)" ~ "Severly cost-burdened",
+    "Cost-burdened (30%-49% of Income)" ~ "Cost-burdened",
+    "Not Cost-burdened" ~ "Not Cost-burdened"
+  )) |> 
+  mutate(
+    pct = value/sum(value),
+    detail = fct_relevel(detail, "Not Cost-burdened")
+  )
 
 ggplot(cb_tenure,
-       aes(x = cb,
+       aes(x = fct_rev(cb),
            y = pct,
            fill = detail)) +
   geom_col() +
+  geom_text(aes(label = label_comma()(value)), color = "white", position = position_stack(vjust = 0.5)) +
   facet_wrap(~tenure) +
   scale_fill_hfv() +
   scale_y_continuous(labels = label_percent()) +
-  theme_hfv()
+  add_zero_line() +
+  theme_hfv() +
+  theme(
+    legend.position = "top",
+    axis.text.x = element_blank()
+  ) +
+  labs(
+    title = "Cost-burdened Households by Tenure",
+    caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data"
+  )
 
 ```
 
@@ -91,6 +129,7 @@ Housing cost burden is more common among renter households than owner households
 ```{r}
 #| label: fig-cb-ami
 #| fig-cap: "Cost-burdened Households by AMI Level"
+#| fig-width: 6.5
 
 cb_ami <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_ami") |> 
   mutate(detail = case_match(
@@ -98,22 +137,31 @@ cb_ami <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_ami") |>
     "Severely Cost-burdened (50% of Income or more)" ~ "Severly cost-burdened",
     "Cost-burdened (30%-49% of Income)" ~ "Cost-burdened",
     "Not Cost-burdened" ~ "Not Cost-burdened"
-  ))
+  )) |> 
+  mutate(
+    detail = fct_relevel(detail, "Not Cost-burdened")
+    )
 
 cb_ami$ami <- fct_inorder(cb_ami$ami)
 
 ggplot(cb_ami,
-       aes(x = forcats::fct_rev(cb),
+       aes(x = fct_rev(cb),
            y = value,
            fill = detail)) +
   geom_col(position = "stack") + 
   theme_hfv() +
   scale_fill_hfv() +
   facet_wrap(~ami) +
+  scale_y_continuous(labels = label_comma()) +
+  add_zero_line() +
   theme(
     legend.position = "top",
     axis.text.x = element_blank()
-    )
+    ) +
+  labs(
+    title = "Cost-burdened Households by AMI Level",
+    caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data"
+  )
 
 
 ```
@@ -134,20 +182,26 @@ cb_race <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_race") |>
     "Severely Cost-burdened (50% of Income or more)" ~ "Severly cost-burdened",
     "Cost-burdened (30%-49% of Income)" ~ "Cost-burdened",
     "Not Cost-burdened" ~ "Not Cost-burdened"
-  ))
-  
-#cb_race$cb <- factor(cb_race$cb, levels = c("Not Cost-burdened", "Cost-burdened (30%-49% of Income)", "Severely Cost-burdened (50% of Income or more)"))
+  )) |> 
+  mutate(
+    cb = fct_relevel(cb, "Not Cost-burdened")
+    )
 
 ggplot(cb_race,
        aes(x = pct,
            y = race,
            fill = cb)) +
   geom_col() +
+  geom_text(aes(label = label_percent(accuracy = 1)(pct)), color = "white", position = position_fill(vjust = 0.5)) +
   scale_fill_hfv() +
-  scale_x_continuous(labels = label_percent()) +
+  scale_x_continuous(labels = label_percent(), expand = c(0.01, 0)) +
   theme_hfv() +
   flip_gridlines() +
-  theme(legend.position = "top")
+  theme(legend.position = "top") +
+  labs(
+    title = "Cost-burdened Households by Householder Race/Ethnicity",
+    caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data"
+  )
 
 ```
 
@@ -163,20 +217,30 @@ cb_gen <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_gen") |>
     "Severely Cost-burdened (50% of Income or more)" ~ "Severly cost-burdened",
     "Cost-burdened (30%-49% of Income)" ~ "Cost-burdened",
     "Not Cost-burdened" ~ "Not Cost-burdened"
-  ))
+  )) |> 
+  mutate(
+    detail = fct_relevel(detail, "Not Cost-burdened"),
+    gen = fct_relevel(gen, "Gen Z", "Millennial")
+    )
 
 ggplot(cb_gen,
-       aes(x = reorder(cb, value),
+       aes(x = fct_rev(cb),
            y = value,
            fill = detail)) +
   geom_col(position = "stack") + 
   theme_hfv() +
   facet_wrap(~gen) +
   scale_fill_hfv() +
+  scale_y_continuous(labels = label_comma()) +
+  add_zero_line() +
   theme(
     legend.position = "top",
     axis.text.x = element_blank()
-    )
+    ) +
+  labs(
+    title = "Cost-burdened Households by Generational Cohort",
+    caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data"
+  )
 
 ```
 
@@ -187,53 +251,85 @@ The share of cost-burdened millennial households is slightly higher than that of
 #| fig-cap: "Cost-burdened Senior-headed Households"
 
 cb_senior <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_senior") |> 
-  mutate(cb = case_match(
+  mutate(detail = case_match(
     cb,
     "Severely Cost-burdened (50% of Income or more)" ~ "Severly cost-burdened",
     "Cost-burdened (30%-49% of Income)" ~ "Cost-burdened",
     "Not Cost-burdened" ~ "Not Cost-burdened"
+  )) |> 
+  mutate(cb = case_match(
+    detail,
+    "Not Cost-burdened" ~ "Not Cost-burdened",
+    .default = "Cost-burdened"
   ))
 
-cb_senior$cb <- fct_inorder(cb_senior$cb)
+cb_senior$cb <- fct_relevel(cb_senior$cb, "Not Cost-burdened")
+cb_senior$detail <- fct_relevel(cb_senior$detail, "Not Cost-burdened")
 
 ggplot(cb_senior,
-       aes(x = age,
+       aes(x = cb,
            y = value,
-           fill = cb)) +
+           fill = detail)) +
+  facet_wrap(~age) +
   geom_col() +
   scale_fill_hfv() +
   theme_hfv() +
-  theme(legend.position = "top")
+  scale_y_continuous(labels = label_comma()) +
+  add_zero_line() +
+  theme(
+    legend.position = "top",
+    axis.text.x = element_blank()
+    ) +
+  labs(
+    title = "Cost-burdened Senior-headed Households",
+    caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data"
+  )
 
 
 ```
+
+Senior-headed households have high rates of cost burden and severe cost burden, particularly for seniors 75 and older. Nearly 40% of householders aged 75 and older are cost-burdened, and among these, over half are severely cost-burdened.
 
 ```{r}
 #| label: fig-cb-senior-alone
 #| fig-cap: "Cost-burdened Senior-headed, Living Alone Households"
 
 cb_senior_alone <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "cb_senior_alone") |> 
-  mutate(cb = case_match(
+  mutate(detail = case_match(
     cb,
     "Severely Cost-burdened (50% of Income or more)" ~ "Severly cost-burdened",
     "Cost-burdened (30%-49% of Income)" ~ "Cost-burdened",
     "Not Cost-burdened" ~ "Not Cost-burdened"
+  )) |> 
+  mutate(cb = case_match(
+    detail,
+    "Not Cost-burdened" ~ "Not Cost-burdened",
+    .default = "Cost-burdened"
   ))
 
-cb_senior_alone$cb <- fct_inorder(cb_senior_alone$cb)
+cb_senior_alone$cb <- fct_relevel(cb_senior_alone$cb, "Not Cost-burdened")
+cb_senior_alone$detail <- fct_relevel(cb_senior_alone$detail, "Not Cost-burdened")
 
 ggplot(cb_senior_alone,
-       aes(x = age,
+       aes(x = cb,
            y = value,
-           fill = cb)) +
+           fill = detail)) +
+  facet_wrap(~age) +
   geom_col() +
   scale_fill_hfv() +
   theme_hfv() +
-  theme(legend.position = "top")
+  scale_y_continuous(labels = label_comma()) +
+  add_zero_line() +
+  theme(
+    legend.position = "top",
+    axis.text.x = element_blank()
+    ) +
+  labs(
+    title = "Cost-burdened Senior-headed, Living Alone Households",
+    caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data"
+  )
 
 ```
-
-Senior-headed households have high rates of cost burden and severe cost burden, particularly for seniors 75 and older. Nearly 40% of householders aged 75 and older are cost-burdened, and among these, over half are severely cost-burdened.
 
 Seniors are more likely than other age groups to live alone, and housing cost burden is most acute among senior-headed, one-person households. A majority of these households are cost-burdened, and a majority of those are severely cost-burdened.
 
@@ -241,10 +337,10 @@ Survey responses noted a lack of affordable housing options for seniors, especia
 
 Households with low incomes and high housing costs are at particular risk of homelessness in the event of sudden income loss or emergency expenses. Approximately 18,847 households in Virginia Beach are at risk of homelessness. That's over 10% of all Virginia Beach households. Approximately 10,953 households have incomes below 30% AMI and have housing costs of at least 30% of household income. Another 7,894 households have incomes between 30% and 50% of AMI and pay at least 50% of household income in housing costs.
 
-
 ```{r}
 #| label: fig-vulnerability
 #| fig-cap: "Vulnerability by Household Type"
+#| fig-width: 6.5
 
 vulnerability <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "vulnerability") |> 
   mutate(type = case_when(
@@ -257,31 +353,38 @@ vulnerability <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "vulnerabili
     TRUE ~ "FAM"
   ))
 
+subtitle_text <- paste0(
+  "Minimum annual income needed to <span style = 'color:#b1005f'><b>Own with Mortgage</b></span>, <span style = 'color:#e0592a'><b>Rent</span>, or <span style = 'color:#d0669f'><b>Own without Mortgage</span>"
+)
+
 ggplot(vulnerability,
        aes(x = reorder(hh, med_income),
            y = med_income,
            fill = type)) +
-  geom_col() +
-  geom_hline(yintercept = 57320, color = "orange") +
-  geom_text(aes(y = 57320, x = 0.7, label = "Rent"), size = 3, color = "orange") +
-  geom_hline(yintercept = 25960, color = "red") +
-  geom_text(aes(y = 25960, x = 1.2, label = "Owned Free & Clear"), size = 3, color = "red") +
-  geom_hline(yintercept = 75520, color = "red") +
-  geom_text(aes(y = 75520, x = 0.85, label = "Mortgage"), size = 3, color = "red") +
-  theme_hfv() +
-  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
-  scale_y_continuous(labels = dollar_format()) +
+  geom_col(width = 0.8) +
+  geom_hline(yintercept = 75520, color = "#b1005f", linetype = 2, linewidth = 1) +
+  geom_label(aes(y = 75520, x = 1, label = "$75,520"), hjust = 0.5, vjust = 0.5, color = "white", fill = "#b1005f", label.size = NA) +
+  geom_hline(yintercept = 57320, color = "#e0592a", linetype = 2, linewidth = 1) +
+  geom_label(aes(y = 57320, x = 1, label = "$57,320"), hjust = 0.5, vjust = 0.5, color = "white", fill = "#e0592a", label.size = NA) +
+  geom_hline(yintercept = 25960, color = "#d0669f", linetype = 2, linewidth = 1) +
+  geom_label(aes(y = 25960, x = 1, label = "$25,960"), hjust = 0.5, vjust = 0.5, color = "white", fill = "#d0669f", label.size = NA) +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10), expand = c(0.05,0.05)) +
+  scale_y_continuous(labels = label_dollar(), expand = c(0,0.05), breaks = c(0, 50000, 100000)) +
   scale_fill_hfv() +
+  theme_hfv(base_size = 7) +
+  add_zero_line() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) +
   labs(title = "Vulnerability by Household Type",
-       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data.")
+       subtitle = subtitle_text,
+       caption = "**Source:** VCHR Tabulation of ACS 2021 5-year PUMS Data")
 
 ```
 
-\[Figure X\], above, shows median household income of common or notable household types in Virginia Beach. The red horizontal lines represent the annual income needed to afford the median housing unit by tenure. From highest to lowest, the lines illustrate owning with a mortgage or loan (\$75,520), renting (\$57,320), and owning free and clear (\$25,960).
+@fig-vulnerability shows median household income of common or notable household types in Virginia Beach. The red horizontal lines represent the annual income needed to afford the median housing unit by tenure. From highest to lowest, the lines illustrate owning with a mortgage or loan (\$75,520), renting (\$57,320), and owning free and clear (\$25,960).
 
-Family households, shown in green, tend to have incomes enabling them to afford the median housing unit for any form of tenure. Single-earner households are shown in blue when male-led and in pink when female-led. Both male- and female-led one-person households have median incomes below the amount needed to afford the median rental unit. Among single-parent households, the median single father household has an income high enough to afford the median owned unit with a mortgage, while the median single mother household is just above the level needed to afford the median rental unit.
+Family households, shown in light green, tend to have incomes enabling them to afford the median housing unit for any form of tenure. Single-earner households are shown in purple when male-led and in blue when female-led. Both male- and female-led one-person households have median incomes below the amount needed to afford the median rental unit. Among single-parent households, the median single father household has an income high enough to afford the median owned unit with a mortgage, while the median single mother household is just above the level needed to afford the median rental unit.
 
-Among senior-led, one-person households (shown in yellow), only the median cost of owning free and clear is affordable to the median household. This means that long-term owners can afford to stay in their homes but may be unable to relocate to smaller or more accessible dwellings. The lack of other affordable options can keep seniors in homes unsuitable for aging in place. It can also prevent those homes from being vacated and becoming available to younger families facing a shortage of starter homes, as many survey respondents noted.
+Among senior-led, one-person households (shown in dark green), only the median cost of owning free and clear is affordable to the median household. This means that long-term owners can afford to stay in their homes but may be unable to relocate to smaller or more accessible dwellings, and those who don't own their home free and clear may struggle to make ends meet. The lack of affordable options can keep seniors in homes unsuitable for aging in place. It can also prevent those homes from being vacated and becoming available to younger families facing a shortage of starter homes, as many survey respondents noted.
 
 ## Workforce housing affordability {#sec-affordability-workforce}
 
@@ -289,52 +392,42 @@ City staff, councilmembers, employers, and citizens all expressed concerns about
 
 Most households (81%) in Virginia Beach include at least one worker. Those households who are not working (19%) are likely to be retired, although a minority of households may have disabilities or family circumstances that prevent them from working. Twenty-three percent of households are headed by someone 65 and older, and 28% of households receive retirement income. Approximately 3% of households receive Supplemental Security Income (SSI), a good proxy for households that include at least one person with disabilities or an older adult who has little to no income or resources.
 
-`ADD TABLE: Households by Number of Workers`
+::: {#tbl-hhworkers}
 
-```{r}
-#| label: tbl-workers
-#| eval: false
+![](img/hh-workers.png)
 
-# tbl-cap: "Households by Number of Workers"
+Households by Number of Workers
 
-hh_workers <- read_excel("data/vchr_vb_data_clean.xlsx", sheet = "hh_workers") |> 
-  mutate(pct = percent(pct))
+:::
 
-hh_workers |> 
-  kbl(col.names = c("Number of workers", "Count", "Percent of Total"), align = "lcc") |> 
-  kable_styling(bootstrap_options = c("striped", "condensed"))
-
-```
-
-::: callout-note
+:::: callout-note
 ## Commuting patterns
 
-Nearly 75,900 workers, roughly half (47%) of Virginia Beach's workforce, commute into the City for their primary job. In-commuters are disproportionately aged 29 or younger, earning \$1,250-\$3,333 per month (low-income for a single-earner household or a dual-earner household supporting a dependent), and working in the trade, transportation, and utilities industries. Meanwhile, resident workers are disproportionately 55 and older and earning more than \$3,333 per month. Lower-income workers earning less than \$1,250 per month make up 24% of the workforce and 24% of in-commuters, indicating they're not excluded from the City even though they're likely to endure housing cost burden and associated hardship. (As discussed earlier in the report, 76% of low-income households experience housing cost burden.)
+::: {#fig-otm}
 
+![](img/vb_otm.png){width=70%}
 
-```{r}
-#| label: fig-otm
-#| fig-cap: "In-commuting, Resident Workers, and Out-commuting for Primary Jobs"
+In-commuting, Resident Workers, and Out-commuting for Primary Jobs
 
-knitr::include_graphics("img/vb_otm.png")
+:::
 
-```
+Nearly 75,900 workers, roughly half (47%) of Virginia Beach's workforce, commute into the city for their primary job. In-commuters are disproportionately aged 29 or younger, earning \$1,250-\$3,333 per month (low-income for a single-earner household or a dual-earner household supporting a dependent), and working in the trade, transportation, and utilities industries. Meanwhile, resident workers are disproportionately 55 and older and earning more than \$3,333 per month. Lower-income workers earning less than \$1,250 per month make up 24% of the workforce and 24% of in-commuters, indicating they're not excluded from the city even though they're likely to endure housing cost burden and associated hardship.
 
-The majority of workers in the top 10 occupations by employment, primarily service sector roles with typically lower wages, face challenges in securing affordable housing. Eight out of these 10 occupations can't afford the lower quartile rent when they're single earners. For the majority (7/10), even earning in the 90th percentile doesn't allow them to affordably rent or own in the City as single earners. Housing affordability improves in a dual-earner household scenario (both at median wage), but workers in three roles (fast food and counter workers, cashiers, and home health and personal care aides) still find the median rent unaffordable. Only the general and operations manager role can afford homeownership as a single earner, with registered nurses also being able to manage homeownership costs under specific conditions.
+The majority of workers in the top 10 occupations by employment, primarily service sector roles with typically lower wages, face challenges in securing affordable housing. Eight out of these 10 occupations can't afford the lower quartile rent when they're single earners. For the majority (7/10), even earning in the 90th percentile doesn't allow them to affordably rent or own in the city as single earners. Housing affordability improves in a dual-earner household scenario (both at median wage), but workers in three roles (fast food and counter workers, cashiers, and home health and personal care aides) still find the median rent unaffordable. Only the general and operations manager role can afford homeownership as a single earner, with registered nurses also being able to manage homeownership costs under specific conditions.
 
 VCHR also identified disparities in housing affordability among selected state and local government sector and mandatory service occupations. Home health and personal care aides and childcare workers face severe housing affordability challenges. Neither can afford the lower quartile rent as a single earner, even when earning at the 90th percentile. In dual-earning scenarios, they can't manage the median rent. Firefighters and postal service mail carriers are better positioned. They can afford the median rent at the 90th percentile and homeownership when their earnings are combined with that of another earner. Other occupations like teachers (spanning from kindergarten to secondary) and registered nurses can afford the median rent as single earners. When their earnings are at the 90th percentile or combined, they can also manage homeownership costs.
 
-Housing affordability remains a significant concern in the City of Virginia Beach, particularly for those in service-sector roles and mandatory service positions. Although workers in some occupations manage to find affordable housing, a significant share of the workforce is either cost-burdened or unable to access suitable housing altogether. This analysis highlights an urgent need for policy and strategic interventions to bridge the affordability gap for these essential roles.
+Housing affordability remains a significant concern in the City of Virginia Beach, particularly for those in service-sector roles and mandatory service positions. Although workers in some occupations manage to find affordable housing, a significant share of the workforce is either cost-burdened or unable to access suitable housing altogether. As discussed earlier in the report, 76% of low-income households experience housing cost burden.
 
-Further tabulations and analysis are included in \[Appendix X\].
-:::
+This analysis highlights an urgent need for policy and strategic interventions to bridge the affordability gap for these essential roles. Further tabulations and analysis are included in @sec-a2.
+::::
 
 {{< pagebreak >}}
 
 ::: callout-note
 ## Military households
 
-There are approximately 15,893 Virginia Beach households with at least one member in active-duty military service ("military households"), around 11% of all households in the City. Families account for 77% of military households, while non-family living arrangements, mostly people living alone, make up 23% of military households.
+There are approximately 15,893 Virginia Beach households with at least one member in active-duty military service ("military households"), around 11% of all households in the city. Families account for 77% of military households, while non-family living arrangements, mostly people living alone, make up 23% of military households.
 
 Around 50% of military households own their homes, and 49% rent. The vast majority of homeowner households have a mortgage or loan.[^affordability-3]
 
@@ -345,13 +438,49 @@ The median household income of military households is approximately \$87,140, ar
 
 [^affordability-4]: Torres 2023, accessed October 2023, https://bipartisanpolicy.org/blog/faqs-housing-military-families/#:\~:text=Service%20members%20living%20in%20government,rents%20above%20the%20BAH%20rate.
 
+{{< pagebreak >}}
+
 ## Affordable housing
 
 VCHR conducted an affordable housing gap analysis and estimated the extent to which affordable housing occurs “naturally” in the market to evaluate whether available affordable housing can meet the needs of current and future Virginia Beach residents. 
 
 ### Rental housing gap analysis
 
-Each pair of columns in figure X compares the number of households in each income group to the number of housing units affordable to that group. Each column provides additional information: cost burden in the “households” column and information about the income of the unit occupants in the other column. 
+Each pair of bars in @fig-renter-gap compares the number of households in each income group to the number of housing units affordable to that group. Each bar provides additional information: cost burden in the “households” bar and information about the income of the unit occupants in the other bar 
+
+```{r}
+#| label: fig-renter-gap
+#| fig-cap: "Virginia Beach Rented/For-Rent Housing Gap"
+#| fig-width: 6.5
+
+rent_gap <- read_excel("data/vchr_gap.xlsx", sheet = "renter_gap")
+
+gap_cols <- c(
+  "Cost-Burdened" = "#1a3454",
+  "Not Cost-Burdened" = "#53c6c6",
+  "Vacant" = "#b2bbc6",
+  "Income < Affordable Income Range" = "#b8196f",
+  "Income within Affordable Income Range" = "#9691cf",
+  "Income > Affordable Income Range" = "#248481"
+)
+
+ggplot(rent_gap,
+       aes(y = type,
+           x = count,
+           fill = factor(label, levels = c("Cost-Burdened", "Not Cost-Burdened", "Vacant", "Income < Affordable Income Range", "Income within Affordable Income Range", "Income > Affordable Income Range")))) +
+  geom_col() +
+  facet_wrap(~factor(ami, c("30% AMI or Less", "30-50% AMI", "50-80% AMI", "80% AMI or More")), 
+             ncol = 1) + 
+  scale_fill_manual(values = gap_cols) +
+  theme_hfv() +
+  flip_gridlines() +
+  theme(legend.position = "top", legend.text = element_text(size = 6), legend.justification = -0.2,
+        strip.text = element_text(hjust = 0)) +
+  labs(title = "Virginia Beach Rented/For-Rent Housing Gap",
+       caption = "**Source:** VCHR tabulation of 2015–2019 CHAS Data") +
+  scale_x_continuous(expand = c(0, 0.01), label = label_comma())
+
+```
 
 There aren’t enough housing units in Virginia Beach to serve extremely low (less than 30% of AMI) and very low (30%-50% of AMI) income renters living in Virginia Beach. As a result, most of these households struggle with housing cost burdens and may consume housing more affordable to households with incomes in the 50%-80% of AMI range. Housing that is affordable to and occupied by households with extremely low incomes (51% of the units in this category) is likely to be committed affordable units. This housing is reserved for households with low incomes through incentive or subsidy programs such as the Low-Income Housing Tax Credit or HUD’s project-based vouchers. However, 46% of units affordable to extremely low- and very low-income households are occupied by households in higher-income groups. 
 
@@ -359,60 +488,38 @@ More than half (60%) of rental stock in Virginia Beach has rent affordable to ho
 
 Building units on either end of the 50%-80% income category would help relieve competition to access these units. Some higher-income renters may choose to “upgrade” to a unit with more space, amenities, nicer features, and/or a better location if the unit were available and still affordable to them. Renters who are currently enduring a housing cost burden would likely welcome a unit that is affordable and meets their needs. Some renters may also choose to become homeowners if a unit that is affordable and meets their needs were available. Availability of homeownership opportunities is discussed more in the following sections.
 
-```{r}
-#| label: fig-renter-gap
-#| fig-cap: "Virginia Beach Rented/For-Rent Housing Gap"
-
-rent_gap <- read_excel("data/vchr_gap.xlsx", sheet = "renter_gap")
-
-ggplot(rent_gap,
-       aes(x = type,
-           y = count,
-           fill = factor(label, levels = c("Cost-Burdened", "Not Cost-Burdened", "Vacant", "Income < Affordable Income Range", "Income within Affordable Income Range", "Income > Affordable Income Range")))) +
-  geom_col() +
-  facet_wrap(~factor(ami, c("30% AMI or Less", "30-50% AMI", "50-80% AMI", "80% AMI or More")), 
-             nrow = 1,
-             labeller = label_wrap_gen(width = 10)) + 
-  theme_hfv() +
-  theme(legend.position = "right",
-        axis.text.x = element_text(angle = 90)) +
-  labs(title = "Virginia Beach Rented/For-Rent Housing Gap",
-       caption = "**Source:** VCHR tabulation of 2015–2019 CHAS Data.") +
-  scale_y_continuous(label = number_format(big.mark = ","))
-
-```
-
 ## Owned/for-sale gap analysis
-
-Affordability concerns and gap analysis for owners differ substantially from the gap analysis for renters. The mortgage finance system generally prevents homeowners from being cost-burdened when they buy their home, and often homeowners’ income increases over the life of their mortgage. Homeowners also face relatively little change in housing costs compared to renters. When homeowners do become cost-burdened, it’s often due to economic hardship such as job loss, death of a family member, or fixed incomes that do not keep up with rising costs of taxes, utilities, and insurance. Because many homeowners had the opportunity to reduce their housing costs by refinancing their mortgages during the 2014-2021 period, decreased rates of cost burden among owners with a mortgage are expected. However, inflation and associated increasing interest rates since 2021 have decreased access to homeownership among low- and moderate-income buyers.
-
-Housing cost burdens shown in the lefthand column of each pair are far more common among homeowners with low and very-low incomes. Like the rental scenario, these households may have to make choices between housing and other necessities. However, these owners may own their home free and clear or, when they have a mortgage, be able to work with their mortgage lender on a payment plan that keeps them from becoming delinquent. To avoid foreclosure and potential homelessness, they may defer home maintenance, forgo needed upgrades and modifications, and/or forgo utilities to pay for other necessities like food, medicine, or childcare. These sacrifices represent a clear threat to the household, but also represent a risk for the locality. While households come and go, housing units stay with a community for generations. Allowing the housing stock to deteriorate can decrease the competitiveness of the market overall and require substantial investments in rehabilitation or in demolition and infill development. Ensuring that owners who represent two-thirds of residents can maintain their homes is part of the stewardship responsibility of local governments and communities. 
-
-Quantity and occupancy of the housing stock across income affordability levels, shown in the righthand columns, also provide important insights. Most owners have higher incomes than they need to comfortably afford their unit, which though anticipated based on relatively fixed housing costs and expected increases in income, also represents the potential for upgrade. Over time, as households’ size and income grow, many owners will seek to move to new homes that better accommodate new needs. However, there is not enough housing stock to accommodate households with incomes above 120%  AMI. This gap in housing for higher-income households may limit options to upgrade and require higher-income households to stay in their starter home longer, restricting supply housing that is affordable for first-time homebuyers and to lower- and moderate-income households and also potentially inflating the price of that stock. 
-
 
 ```{r}
 #| label: fig-owner-gap
 #| fig-cap: "Virginia Beach Owned/For-Sale Housing Gap"
+#| fig-width: 6.5
 
 owner_gap <- read_excel("data/vchr_gap.xlsx", sheet = "owner_gap")
 
 ggplot(owner_gap,
-       aes(x = type,
-           y = count,
+       aes(y = type,
+           x = count,
            fill = factor(label, levels = c("Cost-Burdened", "Not Cost-Burdened", "Vacant", "Income < Affordable Income Range", "Income within Affordable Income Range", "Income > Affordable Income Range")))) +
   geom_col() +
   facet_wrap(~factor(ami, c("50% AMI or Less", "50-80% AMI", "80-100% AMI", "100% AMI or More")), 
-             nrow = 1,
-             labeller = label_wrap_gen(width = 10)) + 
+             ncol = 1) + 
+  scale_fill_manual(values = gap_cols) +
   theme_hfv() +
-  theme(legend.position = "right",
-        axis.text.x = element_text(angle = 90)) +
+  flip_gridlines() +
+  theme(legend.position = "top", legend.text = element_text(size = 6), legend.justification = -0.2,
+        strip.text = element_text(hjust = 0)) +
   labs(title = "Virginia Beach Owned/For-Sale Housing Gap",
-       caption = "**Source:** VCHR tabulation of 2015–2019 CHAS Data.") +
-  scale_y_continuous(label = number_format(big.mark = ","))
+       caption = "**Source:** VCHR tabulation of 2015–2019 CHAS Data") +
+  scale_x_continuous(expand = c(0, 0.01), label = label_comma())
 
 ```
+
+Affordability concerns and gap analysis for owners differ substantially from the gap analysis for renters. The mortgage finance system generally prevents homeowners from being cost-burdened when they buy their home, and often homeowners’ income increases over the life of their mortgage. Homeowners also face relatively little change in housing costs compared to renters. When homeowners do become cost-burdened, it’s often due to economic hardship such as job loss, death of a family member, or fixed incomes that do not keep up with rising costs of taxes, utilities, and insurance. Because many homeowners had the opportunity to reduce their housing costs by refinancing their mortgages during the 2014-2021 period, decreased rates of cost burden among owners with a mortgage are expected. However, inflation and associated increasing interest rates since 2021 have decreased access to homeownership among low- and moderate-income buyers.
+
+Housing cost burdens shown in the top bar of each pair are far more common among homeowners with low and very-low incomes. Like the rental scenario, these households may have to make choices between housing and other necessities. However, these owners may own their home free and clear or, when they have a mortgage, be able to work with their mortgage lender on a payment plan that keeps them from becoming delinquent. To avoid foreclosure and potential homelessness, they may defer home maintenance, forgo needed upgrades and modifications, and/or forgo utilities to pay for other necessities like food, medicine, or childcare. These sacrifices represent a clear threat to the household, but also represent a risk for the locality. While households come and go, housing units stay with a community for generations. Allowing the housing stock to deteriorate can decrease the competitiveness of the market overall and require substantial investments in rehabilitation or in demolition and infill development. Ensuring that owners who represent two-thirds of residents can maintain their homes is part of the stewardship responsibility of local governments and communities. 
+
+Quantity and occupancy of the housing stock across income affordability levels, shown in the bottom bar of each pair, also provide important insights. Most owners have higher incomes than they need to comfortably afford their unit, which though anticipated based on relatively fixed housing costs and expected increases in income, also represents the potential for upgrade. Over time, as households’ size and income grow, many owners will seek to move to new homes that better accommodate new needs. However, there is not enough housing stock to accommodate households with incomes above 120%  AMI. This gap in housing for higher-income households may limit options to upgrade and require higher-income households to stay in their starter home longer, restricting supply housing that is affordable for first-time homebuyers and to lower- and moderate-income households and also potentially inflating the price of that stock. 
 
 ## Naturally occurring affordable housing (NOAH) 
 
@@ -420,25 +527,85 @@ VCHR used HUD FY 2022 Income Limits to categorize affordability levels for 145,4
 
 This analysis considers two down-payment scenarios: 5% and 10%. The monthly mortgage was combined with average insurance payment, median utility costs, estimated real estate taxes, and estimated HOA and condo fees to determine the total housing expenditure.
 
-Of 145,498 units from the Virginia Beach assessment data, using a 5% down payment as a criterion, about 8,123 properties were found to be affordable to first-time homebuyers (households with income up to the 1.5-person limit) with an income in the 80%-100% range. When considering the same down payment, roughly 9,213 units were within reach for those earning \$70,150 or less, while around 45,091 units were accessible for more-established households (households with income up to the 4.5-person limit) earning $97,250 or less. However, while these units are theoretically affordable, many are occupied by households with incomes that exceed the designated affordability brackets. This means that even though a property might be affordable on paper, it isn't necessarily available in the market for lower-income families. The analysis also indicated a scarcity of affordable housing options, with only 35% of the overall housing market deemed affordable to households with income less than 100% AMI when considering a 10% down payment. Potential additional costs for maintenance and renovation due to age are also a concern since 98% of these affordable units were constructed before 2000.
+Of 145,498 units from the Virginia Beach assessment data, using a 5% down payment as a criterion, about 8,123 properties were found to be affordable to first-time homebuyers (households with income up to the 1.5-person limit) with an income in the 80%-100% range. When considering the same down payment, roughly 9,213 units were within reach for those earning \$70,150 or less, while around 45,091 units were accessible for more-established households (households with income up to the 4.5-person limit) earning $97,250 or less. 
+
+::: {#tbl-units-down-payment-1br}
+
+![](img/units-down-payment-1br.png)
+
+Number of Units by Down Payment Percentage (1.5 person / 1 bedroom)
+
+:::
+
+::: {#tbl-units-down-payment-3br}
+
+![](img/units-down-payment-3br.png)
+
+Number of Units by Down Payment Percentage (4.5 person / 3 bedrooms)
+
+:::
+
+However, while these units are theoretically affordable, many are occupied by households with incomes that exceed the designated affordability brackets. This means that even though a property might be affordable on paper, it isn't necessarily available in the market for lower-income families. The analysis also indicated a scarcity of affordable housing options, with only 35% of the overall housing market deemed affordable to households with income less than 100% AMI when considering a 10% down payment. Potential additional costs for maintenance and renovation due to age are also a concern since 98% of these affordable units were constructed before 2000.
 
 The disparity in affordable units across City Council districts further emphasizes the uneven distribution of affordable housing options. For instance, City Council District 4 exhibited a significantly higher proportion of affordable units compared to City Council District 2, which had a notably lower percentage.
 
-`ADD FIGURE: Share of Affordable Units to 4.5-person household with below 80% AMI`
-
 ```{r}
-#| label: fig-aff-4-5
 #| eval: false
-#| fig-cap: "Share of Units Affordable to 4.5-person households with Income Below 80% of AMI"
 
-knitr::include_graphics("img/vb_share.png")
+library(sf)
 
+cc_data <- read_xlsx("data/vchr/VB City_Council_District_Affordable_Units.xlsx")
+
+cc <- read_sf("data/cc_districts/City_Council_Districts.shp") |> 
+  left_join(cc_data)
+
+ggplot(cc) +
+  geom_sf(aes(fill = R_AFto80_3), color = "white") +
+  geom_sf_label(
+    aes(label = District), color = "grey10", fill = "#f5f5f5", size = 7,
+    label.size = 0, label.padding = unit(0.15, "lines")
+    ) +
+  scale_fill_gradientn(
+    colors = c("#f5ede4", "#d0669f", "#1a3454"),
+    values = rescale(
+      c(0, 0.09, 0.8)
+    ),
+    labels = label_percent(),
+    guide = guide_colorbar(ticks = FALSE, barheight = 10, barwidth = 1.5),
+    limits = c(0.0001, .801),
+    breaks = seq(0, .8, .1)
+    ) +
+  scale_x_continuous(limits = c(-76.229, -75.88), expand = c(0,0)) +
+  scale_y_continuous(limits = c(36.66, 36.94), expand = c(0,0)) +
+  labs(
+    title = "Share of Affordable Units by Council District",
+    subtitle = "Affordable to 4.5-person Households Below 80% AMI",
+    caption = "**Source:** VCHR Tabulation from Virginia Beach Assessment Data<br>"
+  ) +
+  theme_hfv(base_size = 20) +
+  theme(
+    panel.grid = element_blank(),
+    axis.text = element_blank(),
+    legend.position = "right",
+    legend.justification = "top",
+    legend.margin = margin(r = 0.5, unit = "in"),
+    plot.caption = element_textbox_simple(margin = margin(t = 0.1, b = -0.3, unit = "in"))
+  )
+
+ggsave("img/fig-cc-map.png", width = 4.5, height = 4, units = "in", bg = "white")
 
 ```
 
-Using HUD Income Limits and specific rules for occupancy and associated housing affordability (see Appendix X for details), VCHR also categorized the affordability levels of 42,021 units, representing about 81% of the estimated multifamily rentals in  Virginia Beach. Within the analyzed properties, 230 properties encompassing 36,367 units are entirely at market rate, with no subsidies or affordability restrictions. As such, the data reflects the present state of the multifamily rental market in Virginia Beach. 
+::: {#fig-cc-map}
+
+![](img/fig-cc-map.png)
+
+Share of Affordable Units to 4.5-person Households Below 80% AMI
+
+::: 
+
+Using HUD Income Limits and specific rules for occupancy and associated housing affordability (see @sec-a3 for details), VCHR also categorized the affordability levels of 42,021 units, representing about 81% of the estimated multifamily rentals in  Virginia Beach. Within the analyzed properties, 230 properties encompassing 36,367 units are entirely at market rate, with no subsidies or affordability restrictions. As such, the data reflects the present state of the multifamily rental market in Virginia Beach. 
 
 A notable observation from the data is how unit types are distributed based on affordability. Over half the affordable units are 2-bedroom units, followed by 29% being 1-bedroom units. The remaining distribution comprises 16% of 3+ bedroom units, with studios representing a mere 2%. While a large proportion of units (nearly 90%) are affordable for households with incomes ranging from 50%-100% of AMI, there's a lack of units affordable to those with incomes below 50% of AMI. While a substantial portion of units are accessible to mid-income households, there remains a need for more affordable housing options for extremely low- and very low-income households.
 
-Further tabulations and analysis are included in [Appendix X].
-
+Further tabulations and analysis are included in @sec-a3.

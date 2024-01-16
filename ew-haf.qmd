@@ -4,17 +4,17 @@
 
 ### Create a Housing Assistance Fund for workers {.unnumbered .unlisted}
 
-Rising housing costs and limited options in the city are forcing a high number of essential workers to live elsewhere in the region. Increasing commutes are contributing to more and more traffic congestion, as well as a decreasing sense of belonging in the community these workers serve. These challenges affect local government staff, hospitality workers, members of the military transitioning to the private sector, and many other important members of the workforce.
+Rising housing costs and limited options in the city are forcing a high number of essential workers to accept housing cost burdens or live elsewhere in the region. Increasing commutes are contributing to more and more traffic congestion, as well as a decreasing sense of belonging in the community these workers serve. These challenges affect local government staff, hospitality workers, members of the military transitioning to the private sector, and many other important members of the workforce.
 
-Providing down-payment or rental assistance can help ensure that these workers live in the same community where they dedicate their labor. These types of incentives can help attract and retain talent across many different occupations. Assistance can come in many forms, including grants and loans, and can be targeted to workers whose wages cannot easily cover average housing prices.
+Providing down-payment or rental assistance can help ensure that these workers live affordably in the same community where they dedicate their labor. These types of incentives can help attract and retain talent across many different occupations. Assistance can come in many forms, including grants and loans, and can be targeted to workers whose wages cannot easily cover average housing prices.
 
 ## HOW IT WORKS
 
 **Forms of assistance**
 
-Virginia Beach can structure awards from a Housing Assistance Fund in a number of ways to best meet workers’ needs. At this time, the following three options seem most appropriate. However, the City may want to consider selecting only one of these approaches to begin as a pilot program to demonstrate success.
+Virginia Beach could structure awards from a Housing Assistance Fund in a number of ways to best meet workers’ needs. At this time, the following three options seem most appropriate. However, the City may want to consider selecting only one of these approaches to begin as a pilot program to demonstrate success.
 
-* **Down payment assistance** (DPA) to help with the purchase of a home. DPA could be offered as “soft second” mortgages to ensure that funds are used effectively. This involves structuring the DPA as a loan subordinate to the first mortgage, provided at zero (or very low) interest and with deferred payments. The DPA can be forgiven if the borrower lives in the home for a certain amount of time, or it could be repaid from sale proceeds.
+* **Down payment assistance** (DPA) to help with the purchase of a home. DPA could be offered as “soft second” mortgages to ensure that funds are used effectively. This involves structuring the DPA as a loan subordinate to the first mortgage, provided at zero (or very low) interest and with deferred payments. The DPA can be forgiven if the borrower lives in the home for a set of time, or it could be repaid from sale proceeds.
 * **Short-term rental assistance** to cover temporary financial challenges faced by current workers. Funds can be distributed based on documented needs, be used only for certain eligible expenses, and have specific dollar and/or time limits. This approach would effectively serve as an eviction prevention program to proactively keep workers and their families in a stable home.
 * **Relocation assistance** to help fill critical positions with skilled workers from outside the city. Grants can help pay for moving expenses, security deposits, and other one-time costs associated with relocation. 
 
@@ -46,7 +46,7 @@ The City should strive to design a Housing Assistance Fund with as little additi
 
 **Within 1 year:**
 
-* Secure general revenue funds in the city budget to implement the pilot program.
+* Secure general revenue funds in the City budget to implement the pilot program.
 * Establish partnerships with local employers and nonprofits to broaden reach and effectiveness.
 * Roll out additional forms of assistance based on the success of the pilot.
 
@@ -58,7 +58,7 @@ The City should strive to design a Housing Assistance Fund with as little additi
 
 ## WHO DOES WHAT
 
-**Department of Housing and Neighborhood Preservation:** Design and administer the program, set criteria and guidelines, process applications, determine eligibility, disburse financial assistance, and monitor program successes. 
+**Department of Housing and Neighborhood Preservation:** Design the fund and application process, provide housing assistance to approved applicants, and report on program successes. 
 
 **Public and private sector employers:** Help identify critical roles that need to be filled, promote the program to current and prospective employees, and potentially match funds.
 
@@ -79,9 +79,9 @@ A hypothetical DPA program for workers could provide assistance up to \$16,750 p
 
 ## POTENTIAL FUNDING SOURCES
 
-Virginia Beach can pilot a Housing Assistance Fund most quickly by allocating a portion of the city’s general revenue. This does not obligate the City to dedicate money to the fund in future years.
+Virginia Beach can pilot a Housing Assistance Fund most quickly by allocating a portion of the City’s general revenue. This does not obligate the City to dedicate money to the fund in future years.
 
-The City should pursue partial (or full) matching funds from major employers to demonstrate a joint public-private investment in workforce development and retention.
+The City could pursue partial (or full) matching funds from major employers to demonstrate a joint public-private investment in workforce development and retention.
 
 In the long term, the City should secure an ongoing, dedicated source of revenue for this program. If desired, this can be done within the recommended Housing Trust Fund solution described earlier. The Housing Assistance Fund could be a special reserve account within the HTF that is funded generally by the same mechanism(s) as the whole HTF; or it could have a specific dedicated revenue source not shared among other uses of HTF dollars.
 
@@ -108,8 +108,7 @@ Many examples, like in Fairfax and Loudoun, pair assistance with affordable dwel
 
 * Up to $20,000 in home purchase assistance to full-time county employees who are first-time homebuyers. Home must be located in Henrico.
 * Income eligibility set by Virginia Housing’s limits. Employees must match DPA with at least $1,000 of their own dollars, complete a homebuyer education course, obtain home inspection, and occupy their home for at least five years.
-
-Additional information: [Boosting Affordable Housing Through Employer Housing Assistance Programs](https://planrva.org/boosting-affordable-housing-through-employer-housing-assistance-programs/) (PlanRVA, August 2023)
+* Additional information: [Boosting Affordable Housing Through Employer Housing Assistance Programs](https://planrva.org/boosting-affordable-housing-through-employer-housing-assistance-programs/) (PlanRVA, August 2023)
 
 [Fairfax County First-Time Homebuyers Program](https://www.fairfaxcounty.gov/housing/homeownership/firsttimehomebuyers)
 

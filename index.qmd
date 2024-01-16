@@ -1,3 +1,7 @@
+---
+engine: knitr
+---
+
 # About this study {.unnumbered}
 
 This study is a follow-up to the previous *Virginia Beach Housing Needs Assessment and Market Analysis* completed by the Virginia Center for Housing Research at Virginia Tech (VCHR) in 2016. The goals for this update included analyzing more recent data on housing needs, and the creation of detailed, actionable policy recommendations.
@@ -5,3 +9,5 @@ This study is a follow-up to the previous *Virginia Beach Housing Needs Assessme
 For this report, VCHR conducted stakeholder outreach and completed a new housing affordability assessment. HousingForward Virginia (HFV), a statewide nonprofit organization that provides research and technical assistance to practitioners across the Commonwealth, also contributed to this report by developing the solutions and assembling this final document.
 
 The findings and recommendations provided here reflect multiple rounds of input from elected officials, City staff, community organizations, and residents throughout Virginia Beach. Additional details on the study process and engagement activities are provided in the Preface and Appendices.
+
+*Completed `r format(Sys.Date(), "%B %d, %Y")`*

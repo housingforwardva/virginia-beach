@@ -22,7 +22,6 @@ book:
   
   chapters:
     - index.qmd
-    #- test.qmd
     - executive-summary.qmd
     - preface.qmd
     - part: "Introduction"

@@ -6,7 +6,7 @@
 
 Community land trusts (CLTs) allow low- and moderate-income individuals and families to access homeownership in markets where homeownership is out of reach. They stand apart from other varieties of affordable development in how they preserve investments into single-family homes and offer stability against gentrification and escalating housing costs.
 
-While some may balk at the idea of limited equity, CLTs can establish a crucial step between renting and fee-simple homeownership. The majority of CLT homeowners who sell their homes gain enough equity to purchase a market rate (AKA, fee-simple) home and effectively move up the ladder of wealth generation. 
+Using limited equity, CLTs can establish a crucial step between renting and fee-simple homeownership. The majority of CLT homeowners who sell their homes gain enough equity to purchase a market rate (AKA, fee-simple) home and effectively move up the ladder of wealth generation. 
 
 Virginia Beach has an important opportunity to tap into a growing statewide CLT program that can deliver this model without the need to design and stand up new programs. Today, the Virginia Statewide Community Land Trust (VSCLT) can be an important partner to bring permanently affordable homeownership to the city.
 
@@ -45,7 +45,7 @@ Each of these formulas offers a different approach to maintaining affordability 
 
 **Joining an existing CLT**
 
-[The Virginia Statewide Community Land Trust](https://www.vsclt.org/) (VSCLT) is an operational CLT that already serves the commonwealth and can be readily implemented in your community. Joining an existing CLT bypasses the time and resources needed to establish a new organization, and uses established channels to facilitate new home sales and development immediately. 
+[The Virginia Statewide Community Land Trust](https://www.vsclt.org/) (VSCLT) is an operational CLT that already serves the commonwealth and can be readily implemented in any community. Joining an existing CLT bypasses the time and resources needed to establish a new organization, and uses established channels to facilitate new home sales and development immediately. 
 
 ::: callout-tip
 ### VSCLT accomplishments so far
@@ -61,7 +61,7 @@ Virginia Beach can help bring VSCLT to the city via both financial incentives an
 
 **Financial incentives**
 
-* **Federal funding:** The City can orient a share of its CDBG and HOME funds to homes supported by VSCLT. HUD has steadily embraced the CLT model and does not have major barriers preventing the use of federal housing and community development dollars for CLT homes.
+* **Federal funding:** The City can orient a share of its Community Development Block Grant (CDBG) and HOME funds to homes supported by VSCLT. HUD has steadily embraced the CLT model and does not have major barriers preventing the use of federal housing and community development dollars for CLT homes.
 * **City funding:** Locally generated funds for housing—potentially within a new Housing Trust Fund—can be prioritized for CLT homeownership. Dollars can be used to cover land acquisition and construction or to contribute to homebuyer assistance. These funds should be used to strategically supplement any federal dollars.
 * **Fee waivers:** The City can explore waiving or reducing development fees (e.g., utility hookups, permit application fees) to lower development costs and streamline the construction of CLT homes.
 
@@ -94,7 +94,7 @@ Virginia Beach can help bring VSCLT to the city via both financial incentives an
 
 ## WHO DOES WHAT
 
-**Department of Housing and Neighborhood Preservation:** Engage with VSCLT and coordinate conversations between VSCLT and other potential supporters in the community (e.g. funders, lenders). Assist VSCLT with tax assessments (with Real Estate Assessor’s Office), provide local funding, and ensure that CLT is eligible for federal housing fund support, including HOME and CDBG.
+**Department of Housing and Neighborhood Preservation:** Engage with VSCLT and coordinate conversations between VSCLT and other potential supporters in the community (e.g. funders, lenders). Assist VSCLT with tax assessments (with Real Estate Assessor’s Office), provide local funding, and promote CLT model in plans for federal housing fund support, including HOME and CDBG.
 
 **VSCLT:** Work with City staff to identify barriers and opportunities, participate in conversations with community members and partners, assist local developers with creation of CLT homes, and steward buyers and their homes throughout purchase and ownership.
 
@@ -110,14 +110,14 @@ As a relatively new organization, VSCLT needs operational funding to support its
 
 ## POTENTIAL FUNDING SOURCES
 
-**Public funds:** As described above, Virginia Beach can use both federal funds (CDBG, HOME) and city-generated funds. Successfully deploying federal grants requires additional diligence and planning due to the unique equity-sharing model, mainly via updates to plans submitted to HUD.
+**Public funds:** As described above, Virginia Beach can use both federal funds (CDBG, HOME) and City-generated funds. Successfully deploying federal grants requires additional diligence and planning due to the unique equity-sharing model, mainly via updates to plans submitted to HUD.
 
 **Private funds:** CLTs in Virginia and nationwide have been successful in securing funding from philanthropic organizations interested in homeownership and community development. Major employers and institutions should also be solicited.
 
 ## METRICS TO EVALUATE SUCCESS
 
-* Operational and acquisition funding received from multiple sources.
 * Properties identified and selected for CLT acquisition.
+* Number of properties acquired and developed by VSCLT and community partners.
 * Homebuyers cultivated, educated, and placed in homes.
 * Homeownership rate, especially for low- and moderate-income families, increases in target neighborhoods.
 * Household wealth created over time by appreciation in CLT home values.

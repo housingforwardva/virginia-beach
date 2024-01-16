@@ -25,7 +25,7 @@ There are several possible avenues for incorporating an HTF, including:
 * Delegating authority to an existing or new nonprofit organization
 * Using a public-private hybrid model
 
-The most appropriate option for Virginia Beach will likely be to create an HTF as a program administered by the Department of Housing and Neighborhood Preservation.
+The most appropriate option for Virginia Beach will likely be to create a HTF as a program administered by the Department of Housing and Neighborhood Preservation.
 
 *Governance and oversight*
 
@@ -52,7 +52,7 @@ Important administrative decisions include:
 * Who accepts, reviews, and recommends applications for approval
 * Who monitors awardees for compliance and success
 
-If the HTF is housed within the city, department leaders and the City Council should determine the expected increase in staff workload to make appropriate investments in new positions.
+If the HTF is housed within the City, department leaders and the City Council should determine the expected increase in staff workload to make appropriate investments in new positions.
 
 *Strategic partnerships*
 
@@ -68,7 +68,7 @@ HTF stakeholders should conduct strategic outreach to:
 
 *Funding amounts and sources*
 
-An HTF needs financial seeding to get off the ground, but long-term financial sustainability is just as important. HTFs require a dedicated revenue source that comes either from an annual budget appropriation or through a revenue source such as real estate transfer taxes or developer fees. Determining funding levels is contextual on community needs and requires an understanding of housing needs.
+A HTF needs financial seeding to get off the ground, but long-term financial sustainability is just as important. HTFs require a dedicated revenue source that comes either from an annual budget appropriation or through a revenue source such as real estate transfer taxes or developer fees. Determining funding levels is contingent on community needs and requires an understanding of housing needs.
 
 Important funding-related decisions include:
 
@@ -128,13 +128,13 @@ Important actions to ensure fund sustainability include:
 * Investigating ways to diversify revenue sources, such as corporate and philanthropic gifts
 * Understanding the differences between and weighing costs/benefits for pure grants versus low-to-zero interest loans, which are paid back to the fund
 
-To maximize the City’s investments, designing the HTF as a revolving fund would likely be the most appropriate approach. The fund can provide working capital to affordable housing developers at rates well below market, paired with repayment schedules that allow the project to sustainably transition to permanent financing.
+Designing the HTF as a revolving fund would likely be the most appropriate approach to maximize the City’s investments. The fund can provide working capital to affordable housing developers at rates well below market, paired with repayment schedules that allow the project to sustainably transition to permanent financing.
 
 ## HOW TO DO IT
 
 **Within 6 months:**
 
-* Create a task force to guide the HTF’s design and creation. This group should pull from existing experts and leaders, especially the Housing Advisory Board and ideally one or two members of the City Council.
+* Create a task force to guide the design and creation of the HTF. This group should pull from existing experts and leaders, especially the Housing Advisory Board and ideally one or two members of the City Council.
 * Design a curriculum to guide the task force throughout the HTF development process. The program design elements described above can be a starting point.
 * Determine a meeting schedule for the task force, along with clear plans for receiving input from other partners and the public.
 * Start the task force work on legal and governance decisions so that core design aspects are agreed upon early in the process.
